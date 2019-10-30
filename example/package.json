@@ -1,5 +1,5 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "gatsby-theme-nodeschool-example",
   "private": true,
   "description": "A simple starter to get up and developing quickly with Gatsby",
   "version": "0.1.0",
@@ -8,13 +8,14 @@
     "gatsby": "^2.17.6",
     "gatsby-plugin-manifest": "^2.2.26",
     "gatsby-source-filesystem": "^2.1.35",
-    "gatsby-theme-nodeschool": "../"
+    "gatsby-theme-nodeschool": "../",
+    "gh-pages": "^2.1.1"
   },
   "license": "MIT",
   "scripts": {
     "build": "TZ=UTC gatsby build",
     "build:pp": "TZ=UTC gatsby build --prefix-paths",
-    "build:gh": "run-s clean build:pp deploy",
+    "build:gh": "run-s clean build:pp deploy:github",
     "clean": "rm -rf public",
     "develop": "gatsby develop -p 3000 -H 0.0.0.0",
     "deploy:github": "gh-pages -d public",
