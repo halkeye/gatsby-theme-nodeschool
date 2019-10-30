@@ -3,6 +3,7 @@ module.exports = (options = {}) => {
   options = {
     title: `Unknown Nodeschool`,
     description: `Website for NodeSchool Vancouver.`,
+    url: ``,
     twitter: ``,
     github: ``,
     slack: ``,
@@ -20,7 +21,7 @@ module.exports = (options = {}) => {
 
   return {
     siteMetadata: options,
-    pathPrefix: require('url').parse(require(`./data/path-prefix.js`)).path,
+    pathPrefix: options.url ? require('url').parse(require(`./data/path-prefix.js`)).path : '',
     plugins: [
       `gatsby-plugin-emotion`,
       `gatsby-plugin-react-helmet`,
