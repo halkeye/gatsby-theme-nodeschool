@@ -40,6 +40,7 @@ module.exports = {
         description: `Website for NodeSchool Vancouver.`,
         twitter: `@NodeSchoolYVR`,
         github: `nodeschool/vancouver`,
+        url: `https://halkeye.github.io/gatsby-theme-nodeschool/`,
         slack: ``,
         meetupGroup: `nodeschool-vancouver`,
         email: `organizers@nodeschoolyvr.com`,
