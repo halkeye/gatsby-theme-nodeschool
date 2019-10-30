@@ -2,10 +2,19 @@
   "name": "gatsby-theme-nodeschool",
   "private": true,
   "description": "Gatsby Theme for NodeSchool",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "author": "Nodeschool YVR <npm@gavinmogan.com>",
   "homepage": "https://halkeye.github.io/gatsby-theme-nodeschool/",
   "main": "index.js",
+  "files":[
+    "gatsby-browser.js",
+    "gatsby-config.js",
+    "gatsby-node.js",
+    "gatsby-ssr.js",
+    "index.js",
+    "README.md",
+    "src"
+  ],
   "dependencies": {
     "@emotion/core": "^10.0.22",
     "@emotion/styled": "^10.0.22",
