@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Nodeschool YVR <organizers@nodeschoolyvr.com>",
   "homepage": "https://nodeschool.io/vancouver/",
+  "main": "index.js",
   "dependencies": {
     "@emotion/core": "^10.0.22",
     "@emotion/styled": "^10.0.22",
