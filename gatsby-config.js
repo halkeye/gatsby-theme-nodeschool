@@ -21,7 +21,7 @@ module.exports = (options = {}) => {
 
   return {
     siteMetadata: options,
-    pathPrefix: options.url ? require('url').parse(require(`./data/path-prefix.js`)).path : '',
+    pathPrefix: options.url ? require('url').parse(options.url).path : '',
     plugins: [
       `gatsby-plugin-emotion`,
       `gatsby-plugin-react-helmet`,

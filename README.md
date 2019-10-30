@@ -56,7 +56,6 @@ Everything for your nodeschool event should be managed in the data/ directory
     ├── attendees
     ├── photos
     ├── config.js
-    ├── path-prefix.js
 
 1.  **`/data/mentors`**: This contains a list of your mentors. One yaml file per mentor. Icons are taken from github
 
@@ -65,8 +64,6 @@ Everything for your nodeschool event should be managed in the data/ directory
 3.  **`/data/photos`**: Your events photos. **Not yet implemented**
 
 5.  **`config.js`**: Your main configuration file, all your chapter's specific information should go here
-
-6.  **`path-prefix.js`** : Your specific url for your chapter. So "vancouver" for https://nodeschool.io/vancouver
 
 ## 💫 Deploy
 
