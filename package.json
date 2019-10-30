@@ -5,7 +5,7 @@
   "author": "Nodeschool YVR <npm@gavinmogan.com>",
   "homepage": "https://halkeye.github.io/gatsby-theme-nodeschool/",
   "main": "index.js",
-  "files":[
+  "files": [
     "gatsby-browser.js",
     "gatsby-config.js",
     "gatsby-node.js",
@@ -44,6 +44,7 @@
     "eslint-plugin-jest": "^22.20.0",
     "eslint-plugin-promise": "^4.2.1",
     "gh-pages": "^2.1.1",
+    "np": "^5.1.2",
     "npm-run-all": "^4.1.5",
     "prettier": "^1.18.2",
     "prettier-eslint-cli": "^5.0.0"
