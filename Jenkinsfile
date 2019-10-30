@@ -23,7 +23,7 @@ pipeline {
       steps {
         dir('example') {
           sh 'yarn clean'
-          sh 'yar build:pp'
+          sh 'yarn build:pp'
           sh 'test -e public/index.html || exit 1'
         }
       }
