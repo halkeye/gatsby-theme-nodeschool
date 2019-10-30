@@ -1,6 +1,5 @@
 {
   "name": "gatsby-theme-nodeschool",
-  "private": true,
   "description": "Gatsby Theme for NodeSchool",
   "version": "0.0.1",
   "author": "Nodeschool YVR <npm@gavinmogan.com>",
