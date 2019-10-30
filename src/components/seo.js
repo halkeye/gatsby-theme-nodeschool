@@ -18,11 +18,11 @@ function SEO({ description, lang, meta, title }) {
           siteMetadata {
             title
             description
-            author
+            twitter
           }
         }
       }
-    `
+    `,
   );
 
   const metaDescription = description || site.siteMetadata.description;
@@ -51,15 +51,15 @@ function SEO({ description, lang, meta, title }) {
           property: `og:type`,
           content: `website`,
         },
-        {
+        site.siteMetadata.twitter && {
           name: `twitter:card`,
           content: `summary`,
         },
-        {
+        site.siteMetadata.twitter && {
           name: `twitter:creator`,
-          content: site.siteMetadata.author,
+          content: site.siteMetadata.twitter,
         },
-        {
+        site.siteMetadata.twitter && {
           name: `twitter:title`,
           content: title,
         },
@@ -67,7 +67,7 @@ function SEO({ description, lang, meta, title }) {
           name: `twitter:description`,
           content: metaDescription,
         },
-      ].concat(meta)}
+      ].filter(Boolean).concat(meta)}
     />
   );
 }

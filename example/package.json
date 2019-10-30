@@ -1,0 +1,34 @@
+{
+  "name": "gatsby-starter-default",
+  "private": true,
+  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "version": "0.1.0",
+  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "dependencies": {
+    "gatsby": "^2.17.6",
+    "gatsby-plugin-manifest": "^2.2.26",
+    "gatsby-source-filesystem": "^2.1.35",
+    "gatsby-theme-nodeschool": "../"
+  },
+  "license": "MIT",
+  "scripts": {
+    "build": "TZ=UTC gatsby build",
+    "build:pp": "TZ=UTC gatsby build --prefix-paths",
+    "build:gh": "run-s clean build:pp deploy",
+    "clean": "rm -rf public",
+    "develop": "gatsby develop -p 3000 -H 0.0.0.0",
+    "deploy:github": "gh-pages -d public",
+    "dev": "npm run develop",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+  },
+  "bugs": {
+    "url": "https://github.com/gatsbyjs/gatsby/issues"
+  }
+}
