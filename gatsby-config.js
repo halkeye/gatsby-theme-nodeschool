@@ -1,26 +1,23 @@
 /* eslint-env node */
 module.exports = (options = {}) => {
-  options = {
-    title: `Unknown Nodeschool`,
-    description: `Website for NodeSchool Vancouver.`,
-    url: ``,
-    twitter: ``,
-    github: ``,
-    slack: ``,
-    meetupGroup: ``,
-    email: ``,
-    mailchimpSubscribeUrl: ``,
-    credits: {
-      logo: {
-        name: ``,
-        url: ``,
+  return {
+    siteMetadata: {
+      title: `Unknown Nodeschool`,
+      description: `Website for NodeSchool Vancouver.`,
+      url: ``,
+      twitter: ``,
+      github: ``,
+      slack: ``,
+      meetupGroup: ``,
+      email: ``,
+      mailchimpSubscribeUrl: ``,
+      credits: {
+        logo: {
+          name: ``,
+          url: ``,
+        },
       },
     },
-    ...options,
-  };
-
-  return {
-    siteMetadata: options,
     pathPrefix: options.url ? require('url').parse(options.url).path : '',
     plugins: [
       `gatsby-plugin-emotion`,
