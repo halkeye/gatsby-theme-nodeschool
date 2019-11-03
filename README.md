@@ -32,7 +32,7 @@ We usually like mentors to have come to a session before, and read up on the htt
 
 This is heavily based off the nodeschool toronto template. It used jekyll which when I tried it wouldn't compile properly, and as a node group, figured all node was better.
 
-## Install all depenendancies
+## Install all dependencies
 
 ```
 npm install
