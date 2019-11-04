@@ -21,17 +21,27 @@ module.exports = (options = {}) => {
         },
       },
       `gatsby-plugin-sass`,
-      {
-        resolve: `gatsby-source-filesystem`,
-        options: {
-          name: `images`,
-          path: `${__dirname}/src/images`,
-        },
-      },
       `gatsby-transformer-sharp`,
       `gatsby-transformer-yaml`,
-      `gatsby-transformer-json`,
-      `gatsby-plugin-sharp`,
+      {
+        resolve: `gatsby-plugin-mdx`,
+        options: {
+          extensions: [`.mdx`, `.md`],
+          gatsbyRemarkPlugins: [
+            {
+              resolve: `gatsby-remark-images`,
+              options: {
+                // should this be configurable by the end-user?
+                maxWidth: 1380,
+                linkImagesToOriginal: false,
+              },
+            },
+            { resolve: `gatsby-remark-copy-linked-files` },
+            { resolve: `gatsby-remark-smartypants` },
+          ],
+          remarkPlugins: [require(`remark-slug`)],
+        },
+      },
       themeOptions.meetupGroup ? {
         resolve: `gatsby-source-meetup`,
         options: {
@@ -44,9 +54,22 @@ module.exports = (options = {}) => {
       // this (optional) plugin enables Progressive Web App + Offline functionality
       // To learn more, visit: https://gatsby.dev/offline
       // `gatsby-plugin-offline`,
-      `gatsby-transformer-sharp`,
-      `gatsby-plugin-sharp`,
       `gatsby-plugin-catch-links`,
+      `gatsby-plugin-sharp`,
+      {
+        resolve: `gatsby-source-filesystem`,
+        options: {
+          name: `images`,
+          path: `${__dirname}/src/images`,
+        },
+      },
+      {
+        resolve: `gatsby-source-filesystem`,
+        options: {
+          path: 'data/docs',
+          name: 'data/docs'
+        },
+      },
     ].filter(Boolean),
   };
 };

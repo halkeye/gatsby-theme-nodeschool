@@ -3,6 +3,7 @@ const path = require(`path`)
 const mkdirp = require(`mkdirp`)
 const crypto = require(`crypto`)
 const Debug = require(`debug`)
+const { createFilePath } = require('gatsby-source-filesystem');
 
 const debug = Debug(`gatsby-theme-nodeschool`)
 const withDefaults = require(`./utils/default-options`)
@@ -16,7 +17,7 @@ exports.onPreBootstrap = ({ store }, themeOptions) => {
     path.join(program.directory, 'data/attendees'),
     path.join(program.directory, 'data/mentors'),
     path.join(program.directory, 'data/photos'),
-    path.join(program.directory, 'data/pages'),
+    path.join(program.directory, 'data/docs'),
   ]
 
   dirs.forEach(dir => {
@@ -26,3 +27,65 @@ exports.onPreBootstrap = ({ store }, themeOptions) => {
     }
   })
 }
+
+// These templates are simply data-fetching wrappers that import components
+// const PostTemplate = require.resolve(`./src/templates/posts-query`)
+
+/*
+ * Create a slug for each doc. This allows for the docs to be nested in folders
+ * and have the URLs match the folder structure.
+ *
+ * For example, if a doc is created at `docs/install/quickstart.md`, the slug
+ * created for it would be `/install/quickstart/`.
+ */
+exports.onCreateNode = ({ node, getNode, actions: { createNodeField } }) => {
+  if (node.internal.type === 'Mdx') {
+    createNodeField({
+      node,
+      name: 'slug',
+      value: createFilePath({ node, getNode })
+    });
+  }
+};
+
+  /*
+exports.createPages = async ({ graphql, actions, reporter }, themeOptions) => {
+  const { createPage } = actions
+  const { basePath } = withDefaults(themeOptions)
+
+  const result = await graphql(`
+    {
+      allBlogPost(sort: { fields: [date, title], order: DESC }, limit: 1000) {
+        edges {
+          node {
+            id
+            slug
+          }
+        }
+      }
+    }
+  `)
+
+  if (result.errors) {
+    reporter.panic(result.errors)
+  }
+
+  // Create Posts and Post pages.
+  const { allBlogPost } = result.data
+  const posts = allBlogPost.edges
+
+  // Create a page for each Post
+  posts.forEach(({ node: post }, index) => {
+    const previous = index === posts.length - 1 ? null : posts[index + 1]
+    const next = index === 0 ? null : posts[index - 1]
+    const { slug } = post
+    createPage({
+      path: slug,
+      component: PostTemplate,
+      context: {
+        id: post.id,
+      },
+    })
+  })
+}
+  */
