@@ -1,24 +1,11 @@
 /* eslint-env node */
+const withDefault = require('./utils/default-options')
+const url = require('url');
 module.exports = (options = {}) => {
+  const themeOptions = withDefault(options);
   return {
-    siteMetadata: {
-      title: `Unknown Nodeschool`,
-      description: `Website for NodeSchool Vancouver.`,
-      url: ``,
-      twitter: ``,
-      github: ``,
-      slack: ``,
-      meetupGroup: ``,
-      email: ``,
-      mailchimpSubscribeUrl: ``,
-      credits: {
-        logo: {
-          name: ``,
-          url: ``,
-        },
-      },
-    },
-    pathPrefix: options.url ? require('url').parse(options.url).path : '',
+    siteMetadata: themeOptions,
+    pathPrefix: themeOptions.url ? url.parse(themeOptions.url).path : '',
     plugins: [
       `gatsby-plugin-emotion`,
       `gatsby-plugin-react-helmet`,
@@ -45,10 +32,10 @@ module.exports = (options = {}) => {
       `gatsby-transformer-yaml`,
       `gatsby-transformer-json`,
       `gatsby-plugin-sharp`,
-      options.meetupGroup ? {
+      themeOptions.meetupGroup ? {
         resolve: `gatsby-source-meetup`,
         options: {
-          groupUrlName: options.meetupGroup,
+          groupUrlName: themeOptions.meetupGroup,
           status: `upcoming,past`,
           desc: `true`,
           page: 10,
