@@ -9,7 +9,7 @@
     "gatsby-plugin-manifest": "^2.2.26",
     "gatsby-plugin-sentry": "^1.0.1",
     "gatsby-source-filesystem": "^2.1.33",
-    "gatsby-theme-nodeschool": "*",
+    "gatsby-theme-nodeschool": "^0.1.0",
     "gh-pages": "^2.1.1"
   },
   "license": "MIT",
