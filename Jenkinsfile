@@ -14,7 +14,7 @@ pipeline {
     stage('Install') {
       steps {
         sh 'yarn lerna bootstrap'
-        dir('example') {
+        dir('packages/gatsby-theme-nodeschool-example') {
           sh 'yarn install'
         }
       }
@@ -22,7 +22,7 @@ pipeline {
 
     stage('Build') {
       steps {
-        dir('example') {
+        dir('packages/gatsby-theme-nodeschool-example') {
           sh 'yarn clean'
           sh 'yarn build:pp'
           sh 'test -e public/index.html || exit 1'
@@ -36,7 +36,7 @@ pipeline {
       steps {
         sh 'git config --global user.email "jenkins@gavinmogan.com"'
         sh 'git config --global user.name "jenkins.gavinmogan.com"'
-        dir('example') {
+        dir('packages/gatsby-theme-nodeschool-example') {
           sh "npm run deploy:github -- -r ${env.GIT_URL.replace("https://", "https://${GITHUB_USR}:${GITHUB_PSW}@")}"
         }
       }
