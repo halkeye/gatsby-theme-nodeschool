@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[3],{m5BC:function(t,n,e){"use strict";e.r(n);e("ERkP");var u=e("4ChH"),o=e("nmMi"),s=e("l1C2");n.default=function(){return Object(s.b)(u.a,null,Object(s.b)(o.a,{title:"404: Not found"}),Object(s.b)("h1",null,"NOT FOUND"),Object(s.b)("p",null,"You just hit a route that doesn't exist... the sadness."))}}}]);
+//# sourceMappingURL=component---gatsby-theme-nodeschool-src-pages-404-js-b321226ce43b08fd5ad2.js.map
