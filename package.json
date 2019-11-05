@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "bootstrap": "lerna bootstrap",
-    "dev": "lerna run --scope gatsby-theme-nodeschool-example dev",
+    "dev": "lerna run --scope gatsby-theme-nodeschool-example dev --stream",
     "lerna": "lerna",
     "publish": "lerna publish"
   },
