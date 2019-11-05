@@ -1,11 +1,11 @@
 /* eslint-env node */
-const withDefault = require('./utils/default-options')
-const url = require('url');
+const withDefault = require(`./utils/default-options`);
+const url = require(`url`);
 module.exports = (options = {}) => {
   const themeOptions = withDefault(options);
   return {
     siteMetadata: themeOptions,
-    pathPrefix: themeOptions.url ? url.parse(themeOptions.url).path : '',
+    pathPrefix: themeOptions.url ? url.parse(themeOptions.url).path : ``,
     plugins: [
       `gatsby-plugin-emotion`,
       `gatsby-plugin-react-helmet`,
@@ -23,25 +23,6 @@ module.exports = (options = {}) => {
       `gatsby-plugin-sass`,
       `gatsby-transformer-sharp`,
       `gatsby-transformer-yaml`,
-      {
-        resolve: `gatsby-plugin-mdx`,
-        options: {
-          extensions: [`.mdx`, `.md`],
-          gatsbyRemarkPlugins: [
-            {
-              resolve: `gatsby-remark-images`,
-              options: {
-                // should this be configurable by the end-user?
-                maxWidth: 1380,
-                linkImagesToOriginal: false,
-              },
-            },
-            { resolve: `gatsby-remark-copy-linked-files` },
-            { resolve: `gatsby-remark-smartypants` },
-          ],
-          remarkPlugins: [require(`remark-slug`)],
-        },
-      },
       themeOptions.meetupGroup ? {
         resolve: `gatsby-source-meetup`,
         options: {
@@ -66,8 +47,27 @@ module.exports = (options = {}) => {
       {
         resolve: `gatsby-source-filesystem`,
         options: {
-          path: 'data/docs',
-          name: 'data/docs'
+          path: `data/docs`,
+          name: `docs`,
+        },
+      },
+      {
+        resolve: `gatsby-plugin-mdx`,
+        options: {
+          extensions: [`.mdx`, `.md`],
+          gatsbyRemarkPlugins: [
+            {
+              resolve: `gatsby-remark-images`,
+              options: {
+                // should this be configurable by the end-user?
+                maxWidth: 1380,
+                linkImagesToOriginal: false,
+              },
+            },
+            { resolve: `gatsby-remark-copy-linked-files` },
+            { resolve: `gatsby-remark-smartypants` },
+          ],
+          remarkPlugins: [require(`remark-slug`)],
         },
       },
     ].filter(Boolean),

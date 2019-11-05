@@ -1,88 +1,14 @@
 {
-  "name": "gatsby-theme-nodeschool",
-  "description": "Gatsby Theme for NodeSchool",
-  "version": "0.0.1",
-  "author": "Nodeschool YVR <npm@gavinmogan.com>",
-  "homepage": "https://halkeye.github.io/gatsby-theme-nodeschool/",
-  "main": "index.js",
-  "files": [
-    "gatsby-browser.js",
-    "gatsby-config.js",
-    "gatsby-node.js",
-    "gatsby-ssr.js",
-    "index.js",
-    "README.md",
-    "src"
-  ],
-  "dependencies": {
-    "@emotion/core": "^10.0.22",
-    "@emotion/styled": "^10.0.22",
-    "@mdx-js/mdx": "^1.5.1",
-    "@mdx-js/react": "^1.5.1",
-    "gatsby-image": "^2.2.29",
-    "gatsby-plugin-catch-links": "^2.1.15",
-    "gatsby-plugin-emotion": "^4.1.12",
-    "gatsby-plugin-mdx": "^1.0.55",
-    "gatsby-plugin-offline": "^3.0.16",
-    "gatsby-plugin-prefetch-google-fonts": "^1.4.3",
-    "gatsby-plugin-react-helmet": "^3.1.13",
-    "gatsby-plugin-sass": "^2.1.20",
-    "gatsby-plugin-sentry": "^1.0.1",
-    "gatsby-plugin-sharp": "^2.2.32",
-    "gatsby-remark-copy-linked-files": "^2.1.28",
-    "gatsby-remark-images": "^3.1.28",
-    "gatsby-remark-smartypants": "^2.1.14",
-    "gatsby-source-filesystem": "^2.1.33",
-    "gatsby-source-meetup": "^1.0.0",
-    "gatsby-transformer-sharp": "^2.3.2",
-    "gatsby-transformer-yaml": "^2.2.15",
-    "mkdirp": "^0.5.1",
-    "node-sass": "^4.13.0",
-    "prismjs": "^1.17.1",
-    "prop-types": "^15.7.2",
-    "react": "^16.11.0",
-    "react-dom": "^16.11.0",
-    "react-helmet": "^5.2.1",
-    "react-hexagon": "^1.1.3",
-    "remark-slug": "^5.1.2"
+  "name": "root",
+  "private": true,
+  "scripts": {
+    "bootstrap": "lerna bootstrap",
+    "dev": "lerna run --scope gatsby-theme-nodeschool-example dev",
+    "lerna": "lerna",
+    "publish": "lerna publish"
   },
   "devDependencies": {
-    "eslint-plugin-babel": "^5.3.0",
-    "eslint-plugin-jest": "^22.20.0",
-    "eslint-plugin-promise": "^4.2.1",
-    "gh-pages": "^2.1.1",
-    "np": "^5.1.2",
-    "npm-run-all": "^4.1.5",
-    "prettier": "^1.18.2",
-    "prettier-eslint-cli": "^5.0.0"
+    "lerna": "^3.18.3"
   },
-  "keywords": [
-    "gatsby",
-    "theme",
-    "nodeschool"
-  ],
-  "license": "MIT",
-  "scripts": {
-    "build": "TZ=UTC gatsby build",
-    "build:pp": "TZ=UTC gatsby build --prefix-paths",
-    "build:gh": "run-s clean build:pp deploy",
-    "clean": "rm -rf public",
-    "develop": "gatsby develop -p 3000 -H 0.0.0.0",
-    "deploy:github": "gh-pages -d public",
-    "dev": "npm run develop",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "start": "npm run develop",
-    "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/halkeye/gatsby-theme-nodeschool"
-  },
-  "bugs": {
-    "url": "https://github.com/halkeye/gatsby-theme-nodeschool/issues"
-  },
-  "peerDependencies": {
-    "gatsby": "^2.17.7"
-  }
+  "workspaces": ["packages/*"]
 }

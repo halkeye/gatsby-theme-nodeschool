@@ -37,7 +37,7 @@ const IndexPage = () => {
     }
   `);
   return (
-    <Layout>
+    <Layout noWrapper>
       <SEO title="Home" />
 
       <main className="main cf">

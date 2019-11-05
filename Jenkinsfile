@@ -13,6 +13,7 @@ pipeline {
   stages {
     stage('Install') {
       steps {
+        sh 'yarn lerna bootstrap'
         dir('example') {
           sh 'yarn install'
         }

@@ -7,8 +7,9 @@
   "dependencies": {
     "gatsby": "^2.17.7",
     "gatsby-plugin-manifest": "^2.2.26",
-    "gatsby-source-filesystem": "^2.1.35",
-    "gatsby-theme-nodeschool": "../",
+    "gatsby-plugin-sentry": "^1.0.1",
+    "gatsby-source-filesystem": "^2.1.33",
+    "gatsby-theme-nodeschool": "*",
     "gh-pages": "^2.1.1"
   },
   "license": "MIT",
