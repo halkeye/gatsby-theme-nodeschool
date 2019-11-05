@@ -40,13 +40,7 @@ const docsPageTemplate = require.resolve(`./src/templates/docs.jsx`);
  * created for it would be `/install/quickstart/`.
  */
 exports.onCreateNode = ({ node, getNode, actions: { createNodeField } }) => {
-  console.log(`node`, node);
   if (node.internal.type === `Mdx`) {
-    console.log({
-      node,
-      name: `slug`,
-      value: path.basename(createFilePath({ node, getNode })),
-    });
     createNodeField({
       node,
       name: `slug`,
