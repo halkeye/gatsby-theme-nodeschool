@@ -7051,11 +7051,6 @@ gatsby-link@^2.2.22:
     "@types/reach__router" "^1.2.6"
     prop-types "^15.7.2"
 
-gatsby-mdx@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/gatsby-mdx/-/gatsby-mdx-1.0.0.tgz#c4bfabca103078b44b56f8077dce390af203b43a"
-  integrity sha512-GIB6EqtQKIEMYnNoh9+009WBn/QrwD+PH3caqaB6HqiIiAUh6ytsgS2NvJJiIwJ0Vu4g9ZSIk/ywgWNKQEGNog==
-
 gatsby-page-utils@^0.0.28:
   version "0.0.28"
   resolved "https://registry.yarnpkg.com/gatsby-page-utils/-/gatsby-page-utils-0.0.28.tgz#e3139727c596c2ec934ca4c7ea957aef0fc4c50a"
