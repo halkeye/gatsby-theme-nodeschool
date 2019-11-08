@@ -6,7 +6,7 @@ const Debug = require(`debug`);
 const { createFilePath } = require(`gatsby-source-filesystem`);
 
 const debug = Debug(`gatsby-theme-nodeschool`);
-//const withDefaults = require(`./utils/default-options`);
+//const withDefaults = require(`./src/default-options`);
 
 // Ensure that content directories exist at site-level
 exports.onPreBootstrap = ({ store }/*, themeOptions*/) => {

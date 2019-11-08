@@ -1,5 +1,5 @@
 /* eslint-env node */
-const withDefault = require(`./utils/default-options`);
+const withDefault = require(`./src/default-options`);
 const url = require(`url`);
 module.exports = (options = {}) => {
   const themeOptions = withDefault(options);
