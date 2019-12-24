@@ -23,8 +23,8 @@ export const PastEvents = () => {
               lon
               name
               repinned
-              state
-              zip
+              #state
+              #zip
             }
             time
             utc_offset

@@ -20,8 +20,8 @@ export const UpcomingEvents = () => {
               lon
               name
               repinned
-              state
-              zip
+              #state
+              #zip
             }
             time
             utc_offset
