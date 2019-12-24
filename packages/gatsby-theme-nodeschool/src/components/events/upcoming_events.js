@@ -1,7 +1,9 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
+import { useTranslation } from "react-i18next";
 
 export const UpcomingEvents = () => {
+  const { t } = useTranslation();
   const data = useStaticQuery(graphql`
     query {
       allMeetupEvent(filter: {status: {eq: "upcoming"}}, limit: 1, sort: {order: ASC, fields: time}) {
@@ -50,10 +52,10 @@ export const UpcomingEvents = () => {
     return (
       <>
         <p className="register">
-          <strong><a href={edge.node.link} title="Registration Link">Register</a></strong> for our event on <strong>{(new Date(edge.node.time)).toLocaleDateString()}</strong>
+          <strong><a href={edge.node.link} title="Registration Link">{t(`Register`)}</a></strong> {t(`for our event on`)} <strong>{(new Date(edge.node.time)).toLocaleDateString()}</strong>
         </p>
         <p className="location">
-          <strong>Location:</strong>&nbsp;
+          <strong>{t(`Location`)}:</strong>&nbsp;
            <address>{address.map(line => <span key={line}>{line}<br/></span>)}</address>
            {edge.node.how_to_find_us}
         </p>

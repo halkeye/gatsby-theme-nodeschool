@@ -1,7 +1,9 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
+import { useTranslation } from "react-i18next";
 
 export const Community = () => {
+  const { t } = useTranslation();
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -14,16 +16,16 @@ export const Community = () => {
   `);
   return (
     <>
-    <h2 id="community">Community</h2>
+    <h2 id="community">{t(`Community`)}</h2>
 
     <p>
-      The NodeSchool community is <strong>open to anyone</strong>. Whether
-      you're able to attend an event or not, you can join the discussion
-      around learning Node {
+      {t(`The NodeSchool community is`)} <strong>{t(`open to anyone`)}</strong>. 
+      {t(`Whether you're able to attend an event or not, you can join the discussion around learning Node`)} 
+      {
         [
-          data.site.siteMetadata.slack ? 'in our Slack channel' : null,
-          data.site.siteMetadata.slack ? 'by following us on Twitter' : null
-        ].filter(Boolean).join(' or ')
+          data.site.siteMetadata.slack ? t(`in our Slack channel`) : null,
+          data.site.siteMetadata.slack ? t(`by following us on Twitter`) : null
+        ].filter(Boolean).join(` ` + t(`or`) + ` `)
       }
     </p>
     </>
