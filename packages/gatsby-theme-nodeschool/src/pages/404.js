@@ -1,4 +1,5 @@
 import React from "react";
+import "../i18n";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";

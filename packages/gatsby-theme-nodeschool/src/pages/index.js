@@ -1,5 +1,6 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
+import "../i18n";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";

@@ -1,5 +1,6 @@
 /* eslint-env node */
 const fs = require(`fs`);
+const fsExtra = require(`fs-extra`);
 const path = require(`path`);
 const mkdirp = require(`mkdirp`);
 const Debug = require(`debug`);
@@ -82,4 +83,11 @@ exports.createPages = async ({ graphql, actions, reporter }/*, themeOptions*/) =
       },
     });
   });
+};
+
+exports.onPostBootstrap = ({ store }) => {
+  const { program } = store.getState();
+  const publicLocales = path.join(program.directory, `public/locales`);
+  console.log(`Copying locales`);
+  fsExtra.copySync(path.join(__dirname, `/src/locales`), publicLocales);
 };
