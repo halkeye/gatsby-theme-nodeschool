@@ -20,11 +20,13 @@ export const Community = () => {
 
     <p>
       {t(`The NodeSchool community is`)} <strong>{t(`open to anyone`)}</strong>. 
-      {t(`Whether you're able to attend an event or not, you can join the discussion around learning Node`)} 
+      {` `}
+      {t(`Whether you're able to attend an event or not, you can join the discussion around learning Node`)}
+      {` `}
       {
         [
           data.site.siteMetadata.slack ? t(`in our Slack channel`) : null,
-          data.site.siteMetadata.slack ? t(`by following us on Twitter`) : null
+          data.site.siteMetadata.twitter ? t(`by following us on Twitter`) : null
         ].filter(Boolean).join(` ` + t(`or`) + ` `)
       }
     </p>

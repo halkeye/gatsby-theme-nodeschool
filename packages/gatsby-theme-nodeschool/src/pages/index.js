@@ -84,7 +84,11 @@ const IndexPage = () => {
 
             <h2 id="events">{t(`Events`)}</h2>
             <p>
-              <strong>{data.site.siteMetadata.title}</strong> {t(`events are run by an enthusiastic group of volunteers. The workshops will be held monthly and will always be free`)}.
+              <strong>{data.site.siteMetadata.title}</strong>
+              {` `}
+              {t(`events are run by an enthusiastic group of volunteers`)}.
+              {` `}
+              {t(`The workshops will be held monthly and will always be free`)}.
             </p>
             <p>
               {t(`The events offer a low-key environment to learn or practice Node and are generally three hours long`)}.
@@ -95,15 +99,20 @@ const IndexPage = () => {
             <h3>&quot;{t(`What should I expect?`)}&quot;</h3>
             <p>
               {t(`NodeSchool is a self-directed learning environment, where you bring your own laptop to learn`)}. 
+              {` `}
               {t(`The intention is for attendees to work on the Node workshops from`)}
+              {` `}
                <a 
                 rel="noopener noreferrer"
                 target="_blank"
                 href="http://nodeschool.io/#workshopper-list"
                 >nodeschool.io</a
               >. 
+              {` `}
               {t(`But if you have a personal project you are working on, do it!`)} 
+              {` `}
               {t(`The goal of NodeSchool is to help people explore and learn Node`)}. 
+              {` `}
               {t(`There will be mentors on hand at the events to help you when you hit any road blocks`)}.
             </p>
 
@@ -115,6 +124,7 @@ const IndexPage = () => {
             </p>
             <p className="indent">
               <strong>1.</strong> 
+              {` `}
               {t(`Install Homebrew by copying the following command into a terminal/bash prompt`)}:
             </p>
             <code className="terminal"><pre>
@@ -127,18 +137,21 @@ $ ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/
             </p>
             <p>
               {t(`If you have any issues installing either Homebrew or Node no worries`)}. 
+              {` `}
               {t(`We&apos;ll do our best to help you get set up once you arrive at an event`)}.
             </p>
 
             <h3>&quot;{t(`What is a Workshopper?`)}&quot;</h3>
             <p>
               {t(`Workshopper is the name used for the open source lesson modules associated with NodeSchool`)}. 
+              {` `}
               {t(`All are self guided (you don&apos;t need to attend a workshop to do one) and most work offline`)}.
             </p>
 
             <h3>&quot;{t(`How do I run a Workshopper?`)}&quot;</h3>
             <p>
               {t(`To get started with a Workshopper tutorial you&apos;ll have to install and then run that program in terminal/bash`)}. 
+              {` `}
               {t(`Here&apos;s an example of how to install and run the Beginner Node Workshopper`)}:
             </p>
             <code className="terminal">
@@ -152,24 +165,37 @@ $ ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/
 
             <p>
               {t(`We, the organizers of`)} <strong>{data.site.siteMetadata.title}</strong>, 
+              {` `}
               {t(`are dedicated to providing a harassment-free community for everyone, regardless of sex, gender identity or expression, sexual orientation, disability, physical appearance, age, body size, race, nationality, or religious beliefs`)}. 
-              {t(`We do not tolerate harassment of community members in any form. Participants violating these rules may be sanctioned or expelled from the community at the discretion of the organizers of`)}
+              {` `}
+              {t(`We do not tolerate harassment of community members in any form`)}.
+              {` `}
+              {t(`Participants violating these rules may be sanctioned or expelled from the community at the discretion of the organizers of`)}
+              {` `}
                <strong>{data.site.siteMetadata.title}</strong>.
             </p>
 
             <p>
               {t(`Harassment includes offensive verbal or written comments related to sex, gender identity or expression, sexual orientation, disability, physical appearance, age, body size, race, nationality, or religious beliefs, deliberate intimidation, threats, stalking, following, harassing photography or recording, sustained disruption of talks or other events, inappropriate physical contact, and unwelcome sexual attention`)}. 
+              {` `}
               {t(`Sexual language and imagery is not appropriate for any events at`)}
+              {` `}
                <strong>{data.site.siteMetadata.title}</strong> 
+              {` `}
               {t(`meetups or in any related communication channels`)}. 
+              {` `}
               {t(`Community members asked to stop any harassing behavior are expected to comply immediately`)}. 
+              {` `}
               {t(`Sponsors and presenters are also subject to the anti-harassment policy`)}.
             </p>
 
             <p>
               {t(`If a community member engages in harassing behavior, the organizers of`)}
+              {` `}
                <strong>{data.site.siteMetadata.title}</strong> 
+              {` `}
               {t(`may take any action they deem appropriate, including warning the offender or expulsion from the community`)}. 
+              {` `}
               {t(`If you are being harassed, notice that someone else is being harassed, or have any concerns, please contact an organizer immediately`)}.
             </p>
 
@@ -220,8 +246,11 @@ $ ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/
                 <img src={data.schoolhouseImage.publicURL} alt={data.site.siteMetadata.title} />
                 <p className="about">
                   <strong>NodeSchool</strong> 
+                  {` `}
                   {t(`is a selection of open source workshops that teach web software skills`)}. 
+                  {` `}
                   {t(`You can do them on your own or at one of the monthly`)}
+                  {` `}
                    <strong>{data.site.siteMetadata.title}</strong> {t(`events`)}.
                 </p>
               </a>
