@@ -23,6 +23,7 @@ const IndexPage = () => {
         siteMetadata {
           title
           twitter
+          github
           meetupGroup
           mailchimpSubscribeUrl
           credits {
@@ -102,7 +103,7 @@ const IndexPage = () => {
               {` `}
               {t(`The intention is for attendees to work on the Node workshops from`)}
               {` `}
-               <a 
+              <a 
                 rel="noopener noreferrer"
                 target="_blank"
                 href="http://nodeschool.io/#workshopper-list"
@@ -123,7 +124,7 @@ const IndexPage = () => {
               &quot;Homebrew&quot;.
             </p>
             <p className="indent">
-              <strong>1.</strong> 
+              <strong>1.</strong>
               {` `}
               {t(`Install Homebrew by copying the following command into a terminal/bash prompt`)}:
             </p>
@@ -164,7 +165,7 @@ $ ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/
             <h2 id="codeofconduct">{t(`Code of Conduct`)}</h2>
 
             <p>
-              {t(`We, the organizers of`)} <strong>{data.site.siteMetadata.title}</strong>, 
+              {t(`We, the organizers of`)} <strong>{data.site.siteMetadata.title}</strong>,
               {` `}
               {t(`are dedicated to providing a harassment-free community for everyone, regardless of sex, gender identity or expression, sexual orientation, disability, physical appearance, age, body size, race, nationality, or religious beliefs`)}. 
               {` `}
@@ -172,19 +173,19 @@ $ ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/
               {` `}
               {t(`Participants violating these rules may be sanctioned or expelled from the community at the discretion of the organizers of`)}
               {` `}
-               <strong>{data.site.siteMetadata.title}</strong>.
+              <strong>{data.site.siteMetadata.title}</strong>.
             </p>
 
             <p>
-              {t(`Harassment includes offensive verbal or written comments related to sex, gender identity or expression, sexual orientation, disability, physical appearance, age, body size, race, nationality, or religious beliefs, deliberate intimidation, threats, stalking, following, harassing photography or recording, sustained disruption of talks or other events, inappropriate physical contact, and unwelcome sexual attention`)}. 
+              {t(`Harassment includes offensive verbal or written comments related to sex, gender identity or expression, sexual orientation, disability, physical appearance, age, body size, race, nationality, or religious beliefs, deliberate intimidation, threats, stalking, following, harassing photography or recording, sustained disruption of talks or other events, inappropriate physical contact, and unwelcome sexual attention`)}.
               {` `}
               {t(`Sexual language and imagery is not appropriate for any events at`)}
               {` `}
-               <strong>{data.site.siteMetadata.title}</strong> 
+              <strong>{data.site.siteMetadata.title}</strong>
               {` `}
-              {t(`meetups or in any related communication channels`)}. 
+              {t(`meetups or in any related communication channels`)}.
               {` `}
-              {t(`Community members asked to stop any harassing behavior are expected to comply immediately`)}. 
+              {t(`Community members asked to stop any harassing behavior are expected to comply immediately`)}.
               {` `}
               {t(`Sponsors and presenters are also subject to the anti-harassment policy`)}.
             </p>
@@ -192,9 +193,9 @@ $ ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/
             <p>
               {t(`If a community member engages in harassing behavior, the organizers of`)}
               {` `}
-               <strong>{data.site.siteMetadata.title}</strong> 
+              <strong>{data.site.siteMetadata.title}</strong>
               {` `}
-              {t(`may take any action they deem appropriate, including warning the offender or expulsion from the community`)}. 
+              {t(`may take any action they deem appropriate, including warning the offender or expulsion from the community`)}.
               {` `}
               {t(`If you are being harassed, notice that someone else is being harassed, or have any concerns, please contact an organizer immediately`)}.
             </p>
@@ -226,7 +227,7 @@ $ ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/
                   >Twitter</a>
                 <span className="divider">|</span>
                 <a
-                  href="https://github.com/nodeschool/vancouver"
+                  href={`https://github.com/${data.site.siteMetadata.github}`}
                   title={`${data.site.siteMetadata.title} GitHub`}
                   >GitHub</a>
                 <span className="divider">|</span>
@@ -245,13 +246,13 @@ $ ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/
               <a className="logo" href="http://nodeschool.io">
                 <img src={data.schoolhouseImage.publicURL} alt={data.site.siteMetadata.title} />
                 <p className="about">
-                  <strong>NodeSchool</strong> 
+                  <strong>NodeSchool</strong>
                   {` `}
-                  {t(`is a selection of open source workshops that teach web software skills`)}. 
+                  {t(`is a selection of open source workshops that teach web software skills`)}.
                   {` `}
                   {t(`You can do them on your own or at one of the monthly`)}
                   {` `}
-                   <strong>{data.site.siteMetadata.title}</strong> {t(`events`)}.
+                  <strong>{data.site.siteMetadata.title}</strong> {t(`events`)}.
                 </p>
               </a>
 
