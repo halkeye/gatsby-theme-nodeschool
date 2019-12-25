@@ -1,7 +1,9 @@
 import React from 'react';
 import { useStaticQuery, graphql } from "gatsby";
+import { useTranslation } from "react-i18next";
 
 export const EventFooter = () => {
+  const { t } = useTranslation();
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -13,9 +15,15 @@ export const EventFooter = () => {
   `);
   return (
     <p className="additional">
-      <strong>NodeSchool</strong> strives to be a welcoming and safe event for all attendees.
-      Attendees should follow the <a href="#codeofconduct">code of conduct</a>.
-      If you need further information about an event, please contact the organizers at 
+      <strong>NodeSchool</strong>
+      {` `}
+      {t(`strives to be a welcoming and safe event for all attendees`)}.
+      {` `}
+      {t(`Attendees should follow the`)}.
+      {` `}<a href="#codeofconduct">{t(`Code of Conduct`).toLowerCase()}</a>.
+      {` `}
+      {t(`If you need further information about an event, please contact the organizers at`)}.
+      {` `}
       <a
         style={{fontWeight: `bold`}}
         href={`mailto:${data.site.siteMetadata.email}`} l
