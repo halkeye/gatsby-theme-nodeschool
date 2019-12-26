@@ -26,7 +26,7 @@ export const EventFooter = () => {
       {` `}
       <a
         style={{fontWeight: `bold`}}
-        href={`mailto:${data.site.siteMetadata.email}`} l
+        href={`mailto:${data.site.siteMetadata.email}`}
         rel="noopener noreferrer"
         target="_blank"
       >
