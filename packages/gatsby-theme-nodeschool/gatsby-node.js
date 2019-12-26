@@ -97,6 +97,7 @@ exports.onPostBootstrap = ({ store }) => {
 exports.createSchemaCustomization = ({ actions }) => {
   const { createTypes } = actions;
   const typeDefs = `
+    scalar Long
     type MeetupEventVenue {
       address_1: String!
       address_2: String
@@ -114,18 +115,18 @@ exports.createSchemaCustomization = ({ actions }) => {
       id: ID!
       status: String!
       visibility: String
-      created: Int
+      created: Long
       description: String!
       name: String!
-      venue: MeetupEventVenue!
-      time: Int!
+      venue: MeetupEventVenue
+      time: Long!
       utc_offset: Int!
-      updated: Int!
-      rsvp_limit: Int!
+      updated: Long!
+      rsvp_limit: Int
       member_pay_fee: Boolean!
       local_time: String!
       link: String!
-      how_to_find_us: String!
+      how_to_find_us: String
       duration: Int!
       date_in_series_pattern: Boolean!
     }
@@ -135,10 +136,10 @@ exports.createSchemaCustomization = ({ actions }) => {
 
 
 exports.sourceNodes = function (_ref, themeOptions) {
-  if(!themeOptions.meetupGroup){
+  if (!themeOptions.meetupGroup) {
     return;
   }
-  const {actions, createNodeId, createContentDigest} = _ref;
+  const { actions, createNodeId, createContentDigest } = _ref;
   const createNode = actions.createNode; // Gatsby adds a configOption that's not needed for this plugin, delete it
 
   const processGroup = (group) => {
@@ -157,7 +158,7 @@ exports.sourceNodes = function (_ref, themeOptions) {
   }; // Processes a Meetup Event as a child of a Meetup Group
 
 
-  const processEvent = (event, parent)=>{
+  const processEvent = (event, parent) => {
     const nodeId = createNodeId(`meetup-event-${event.id}`);
     const nodeData = {
       ...event,
@@ -178,28 +179,47 @@ exports.sourceNodes = function (_ref, themeOptions) {
     desc: `true`,
     page: 10,
   };
+  const apiOptionsEvents = [
+    {
+      status: `past`,
+      desc: `true`,
+      page: 10,
+    },
+    {
+      status: `upcoming`,
+      desc: `false`,
+      page: 1,
+    },
+  ];
 
   const queryStringOptions = queryString.stringify(apiOptions);
   const apiGroupUrl = `https://api.meetup.com/${groupUrlName}?${queryStringOptions}`;
-  const apiEventsUrl = `https://api.meetup.com/${groupUrlName}/events?${queryStringOptions}`; // Gatsby expects sourceNodes to return a promise
-
+  
   return (// Fetch a response from the apiUrl
-    Promise.all([fetch(apiGroupUrl), fetch(apiEventsUrl)]) // Parse the response as JSON
-    .then(function (responses) {
-      return Promise.all(responses.map(function (response) {
-        return response.json();
-      }));
-    }) // Process the JSON data into a node
-    .then(function (dataArray) {
-      const [groupData, eventData] = dataArray; // For each query result (or 'hit')
+    // Gatsby expects sourceNodes to return a promise
+    Promise.all([
+      fetch(apiGroupUrl), 
+      ...apiOptionsEvents.map(options => {
+        const apiEventsUrl = `https://api.meetup.com/${groupUrlName}/events?${queryString.stringify(options)}`;
+        return fetch(apiEventsUrl);
+      }),
+    ]) // Parse the response as JSON
+      .then(function (responses) {
+        return Promise.all(responses.map(function (response) {
+          return response.json();
+        }));
+      }) // Process the JSON data into a node
+      .then(function (dataArray) {
+        const [groupData, ...eventsDataSeparated] = dataArray; // For each query result (or 'hit')
+        const eventData = eventsDataSeparated.reduce((acc, events) => ([...acc, ...events]), []);
 
-      const groupNode = processGroup(groupData);
-      groupNode.events___NODE = Object.values(eventData).map(function (event) {
-        const nodeData = processEvent(event, groupNode.id);
-        createNode(nodeData);
-        return nodeData.id;
-      });
-      createNode(groupNode);
-    })
+        const groupNode = processGroup(groupData);
+        groupNode.events___NODE = Object.values(eventData).map(function (event) {
+          const nodeData = processEvent(event, groupNode.id);
+          createNode(nodeData);
+          return nodeData.id;
+        });
+        createNode(groupNode);
+      })
   );
 };
