@@ -22,8 +22,8 @@ export const UpcomingEvents = () => {
               lon
               name
               repinned
-              #state
-              #zip
+              state
+              zip
             }
             time
             utc_offset
@@ -40,6 +40,7 @@ export const UpcomingEvents = () => {
       }
     }
   `);
+  console.log('data: ', data);
   return data.allMeetupEvent.edges.map(edge => {
     const address = [
       edge.node.venue.name,

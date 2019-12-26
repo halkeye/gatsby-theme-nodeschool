@@ -18,8 +18,8 @@ module.exports = {
         icon: path.relative(
           __dirname,
           require.resolve(
-            `gatsby-theme-nodeschool/src/images/nodeschool-logo.png`
-          )
+            `gatsby-theme-nodeschool/src/images/nodeschool-logo.png`,
+          ),
         ),
       },
     },
@@ -44,7 +44,7 @@ module.exports = {
         github: `nodeschool/campinas`,
         url: `https://halkeye.github.io/gatsby-theme-nodeschool/`,
         slack: ``,
-        meetupGroup: `Nodeschool-Campinas`,
+        meetupGroup: `nodeschool-vancouver`,
         email: `nodeschoolcps@gmail.com`,
         mailchimpSubscribeUrl: `https://nodeschoolyvr.us20.list-manage.com/subscribe/post?u=703e823487e1f52bfbe0cc32d&amp;id=34f1146956`,
         credits: {
