@@ -54,7 +54,7 @@ PeopleHexagons.propTypes = {
       github: PropTypes.string.isRequired,
       twitter: PropTypes.string,
       id: PropTypes.string,
-    })
+    }),
   ),
 };
 

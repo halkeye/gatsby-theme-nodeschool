@@ -26,7 +26,7 @@ export const Community = () => {
       {
         [
           data.site.siteMetadata.slack ? t(`in our Slack channel`) : null,
-          data.site.siteMetadata.twitter ? t(`by following us on Twitter`) : null
+          data.site.siteMetadata.twitter ? t(`by following us on Twitter`) : null,
         ].filter(Boolean).join(` ` + t(`or`) + ` `)
       }
     </p>

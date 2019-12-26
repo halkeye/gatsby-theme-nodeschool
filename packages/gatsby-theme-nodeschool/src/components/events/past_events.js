@@ -42,7 +42,7 @@ export const PastEvents = () => {
       }
     }
   `);
-  return data.allMeetupEvent.edges.map(edge => <SingleEvent {...edge.node} />);
+  return data.allMeetupEvent.edges.map(edge => <SingleEvent key={edge.node.id} {...edge.node} />);
 };
 
 export default PastEvents;

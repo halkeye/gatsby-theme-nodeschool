@@ -1,5 +1,6 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
+import { useTranslation } from "react-i18next";
 import Hexagon from 'react-hexagon';
 import styled from "@emotion/styled";
 
@@ -35,6 +36,7 @@ const Container = styled.div`
 `;
 
 export const Photos = () => {
+  const { t } = useTranslation();
   const data = useStaticQuery(graphql`
     query {
       allFile(filter: {relativeDirectory: {eq: "photos"}, relativePath: {ne: "photos/.keep"}}, sort: {fields: relativePath, order: DESC}) {
@@ -58,7 +60,7 @@ export const Photos = () => {
   `);
   return (
     <>
-      <h2 id="photos">Photos</h2>
+      <h2 id="photos">{t(`Photos`)}</h2>
     <Container>
       {data.allFile.edges.map(edge => {
         return (
