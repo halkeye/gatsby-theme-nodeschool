@@ -16,6 +16,7 @@ module.exports = themeOptions => {
   return {
     title: `Unknown Node School`,
     description: `Website for Unknown Node School.`,
+    defaultLanguage: `en`,
     url: ``,
     twitter: ``,
     github: ``,
