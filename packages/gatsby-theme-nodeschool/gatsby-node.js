@@ -99,7 +99,7 @@ exports.createSchemaCustomization = ({ actions }) => {
   const typeDefs = `
     scalar Long
     type MeetupEventVenue {
-      address_1: String!
+      address_1: String
       address_2: String
       city: String!
       country: String!
