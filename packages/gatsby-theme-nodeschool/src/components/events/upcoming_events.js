@@ -58,11 +58,11 @@ export const UpcomingEvents = () => {
         </p>
         {edge.node.venue && (
           <>
-            <p className="location">
-              <strong>{t(`Location`)}:</strong>&nbsp;
+            <div className="location">
+              <p><strong>{t(`Location`)}:</strong></p>
               <address>{address.map(line => <span key={line}>{line}<br/></span>)}</address>
               {edge.node.how_to_find_us}
-            </p>
+            </div>
             <div className="map">
 
               <iframe
