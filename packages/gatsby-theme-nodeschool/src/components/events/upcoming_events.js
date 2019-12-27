@@ -1,6 +1,7 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import { useTranslation } from "react-i18next";
+import defaultLanguage from '../../default-language.json';
 
 export const UpcomingEvents = () => {
   const { t } = useTranslation();
@@ -54,7 +55,7 @@ export const UpcomingEvents = () => {
     return (
       <div key={edge.node.id}>
         <p className="register">
-          <strong><a href={edge.node.link} title="Registration Link">{t(`Register`)}</a></strong> {t(`for our event on`)} <strong>{(new Date(edge.node.time)).toLocaleDateString(`pt-BR`)}</strong>
+          <strong><a href={edge.node.link} title="Registration Link">{t(`Register`)}</a></strong> {t(`for our event on`)} <strong>{(new Date(edge.node.time)).toLocaleDateString(defaultLanguage)}</strong>
         </p>
         {edge.node.venue && (
           <>
