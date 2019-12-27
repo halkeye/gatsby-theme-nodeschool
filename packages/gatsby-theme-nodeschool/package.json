@@ -37,7 +37,6 @@
     "gatsby-transformer-sharp": "^2.3.2",
     "gatsby-transformer-yaml": "^2.2.15",
     "i18next": "^19.0.2",
-    "i18next-xhr-backend": "^3.2.2",
     "mkdirp": "^0.5.1",
     "node-sass": "^4.13.0",
     "prismjs": "^1.17.1",
