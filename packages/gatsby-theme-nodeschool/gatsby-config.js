@@ -23,15 +23,27 @@ module.exports = (options = {}) => {
       `gatsby-plugin-sass`,
       `gatsby-transformer-sharp`,
       `gatsby-transformer-yaml`,
-      // themeOptions.meetupGroup ? {
-      //   resolve: `gatsby-source-meetup`,
-      //   options: {
-      //     groupUrlName: themeOptions.meetupGroup,
-      //     status: `upcoming,past`,
-      //     desc: `true`,
-      //     page: 10,
-      //   },
-      // } : null,
+      themeOptions.meetupGroup ? {
+        resolve: `gatsby-source-meetup`,
+        options: {
+          groupUrlName: themeOptions.meetupGroup,
+          status: `upcoming,past`,
+          desc: `true`,
+          page: 10,
+          eventsOptions: [
+            {
+              status: `upcoming`,
+              desc: `false`,
+              page: 1,
+            },
+            {
+              status: `past`,
+              desc: `true`,
+              page: 10,
+            },
+          ],
+        },
+      } : null,
       // this (optional) plugin enables Progressive Web App + Offline functionality
       // To learn more, visit: https://gatsby.dev/offline
       // `gatsby-plugin-offline`,
