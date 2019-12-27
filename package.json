@@ -4,7 +4,6 @@
   "scripts": {
     "bootstrap": "lerna bootstrap",
     "dev": "lerna run --scope gatsby-theme-nodeschool-example dev --stream",
-    "dev:pt-br": "lerna run --scope gatsby-theme-nodeschool-example-pt-br dev --stream",
     "lerna": "lerna",
     "publish": "lerna publish"
   },
