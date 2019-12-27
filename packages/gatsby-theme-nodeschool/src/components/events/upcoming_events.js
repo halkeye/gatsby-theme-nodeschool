@@ -22,8 +22,8 @@ export const UpcomingEvents = () => {
               lon
               name
               repinned
-              #state
-              #zip
+              state
+              zip
             }
             time
             utc_offset
@@ -41,37 +41,43 @@ export const UpcomingEvents = () => {
     }
   `);
   return data.allMeetupEvent.edges.map(edge => {
-    const address = [
-      edge.node.venue.name,
-      edge.node.venue.address_1,
-      edge.node.venue.address_2,
-      [edge.node.venue.city,edge.node.venue.state].filter(Boolean).join(`, `),
-      edge.node.venue.zip,
-      edge.node.venue.localized_country_name,
-    ].filter(Boolean);
+    const address = edge.node.venue
+      ?[
+        edge.node.venue.name,
+        edge.node.venue.address_1,
+        edge.node.venue.address_2,
+        [edge.node.venue.city,edge.node.venue.state].filter(Boolean).join(`, `),
+        edge.node.venue.zip,
+        edge.node.venue.localized_country_name,
+      ].filter(Boolean)
+      :[];
     return (
-      <>
+      <div key={edge.node.id}>
         <p className="register">
-          <strong><a href={edge.node.link} title="Registration Link">{t(`Register`)}</a></strong> {t(`for our event on`)} <strong>{(new Date(edge.node.time)).toLocaleDateString()}</strong>
+          <strong><a href={edge.node.link} title="Registration Link">{t(`Register`)}</a></strong> {t(`for our event on`)} <strong>{(new Date(edge.node.time)).toLocaleDateString(`pt-BR`)}</strong>
         </p>
-        <p className="location">
-          <strong>{t(`Location`)}:</strong>&nbsp;
-           <address>{address.map(line => <span key={line}>{line}<br/></span>)}</address>
-           {edge.node.how_to_find_us}
-        </p>
-        <div className="map">
+        {edge.node.venue && (
+          <>
+            <div className="location">
+              <p><strong>{t(`Location`)}:</strong></p>
+              <address>{address.map(line => <span key={line}>{line}<br/></span>)}</address>
+              {edge.node.how_to_find_us}
+            </div>
+            <div className="map">
 
-          <iframe
-            title="google maps"
-            src={`https://maps.google.com/maps?q=${encodeURIComponent(address.join(`\n`))}&t=&z=13&ie=UTF8&iwloc=&output=embed`}
-            width="600"
-            height="450"
-            frameBorder="0"
-            style={{border:0}}
-            allowFullScreen
-          ></iframe>
-        </div>
-      </>
+              <iframe
+                title="google maps"
+                src={`https://maps.google.com/maps?q=${encodeURIComponent(address.join(`\n`))}&t=&z=13&ie=UTF8&iwloc=&output=embed`}
+                width="600"
+                height="450"
+                frameBorder="0"
+                style={{border:0}}
+                allowFullScreen
+              ></iframe>
+            </div>
+          </>
+        )}
+      </div>
     );
   });
 };

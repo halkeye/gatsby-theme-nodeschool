@@ -30,6 +30,18 @@ module.exports = (options = {}) => {
           status: `upcoming,past`,
           desc: `true`,
           page: 10,
+          eventsOptions: [
+            {
+              status: `upcoming`,
+              desc: `false`,
+              page: 1,
+            },
+            {
+              status: `past`,
+              desc: `true`,
+              page: 10,
+            },
+          ],
         },
       } : null,
       // this (optional) plugin enables Progressive Web App + Offline functionality
