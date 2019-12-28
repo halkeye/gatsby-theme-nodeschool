@@ -1,6 +1,5 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import "../i18n";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";

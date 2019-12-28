@@ -7,12 +7,11 @@ const Debug = require(`debug`);
 const { createFilePath } = require(`gatsby-source-filesystem`);
 
 const debug = Debug(`gatsby-theme-nodeschool`);
-const withDefaults = require(`./src/default-options`);
+// const withDefaults = require(`./src/default-options`);
 
 // Ensure that content directories exist at site-level
-exports.onPreBootstrap = ({ store }, themeOptions) => {
+exports.onPreBootstrap = ({ store }/*, themeOptions*/) => {
   const { program } = store.getState();
-  const { defaultLanguage } = withDefaults(themeOptions);
 
   const dirs = [
     path.join(program.directory, `data/attendees`),
@@ -27,8 +26,6 @@ exports.onPreBootstrap = ({ store }, themeOptions) => {
       mkdirp.sync(dir);
     }
   });
-
-  fs.writeFileSync(path.join(__dirname, `/src/default-language.json`), `"${defaultLanguage}"`);
 };
 
 // These templates are simply data-fetching wrappers that import components
