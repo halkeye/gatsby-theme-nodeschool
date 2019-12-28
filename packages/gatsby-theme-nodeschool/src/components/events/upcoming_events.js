@@ -1,16 +1,12 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import { useTranslation } from "react-i18next";
+import formatDateLocaleString from "../../helpers/formatDateLocaleString";
 
 export const UpcomingEvents = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const data = useStaticQuery(graphql`
     query {
-      site {
-        siteMetadata {
-          defaultLanguage
-        }
-      }
       allMeetupEvent(filter: {status: {eq: "upcoming"}}, limit: 1, sort: {order: ASC, fields: time}) {
         edges {
           node {
@@ -45,7 +41,6 @@ export const UpcomingEvents = () => {
       }
     }
   `);
-  const {site:{siteMetadata:{defaultLanguage}}} = data;
   return data.allMeetupEvent.edges.map(edge => {
     const address = edge.node.venue
       ?[
@@ -60,7 +55,7 @@ export const UpcomingEvents = () => {
     return (
       <div key={edge.node.id}>
         <p className="register">
-          <strong><a href={edge.node.link} title="Registration Link">{t(`Register`)}</a></strong> {t(`for our event on`)} <strong>{(new Date(edge.node.time)).toLocaleDateString(defaultLanguage)}</strong>
+          <strong><a href={edge.node.link} title="Registration Link">{t(`Register`)}</a></strong> {t(`for our event on`)} <strong>{formatDateLocaleString(new Date(edge.node.time), i18n.language)}</strong>
         </p>
         {edge.node.venue && (
           <>
