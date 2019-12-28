@@ -1,12 +1,16 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import { useTranslation } from "react-i18next";
-import defaultLanguage from '../../default-language.json';
 
 export const UpcomingEvents = () => {
   const { t } = useTranslation();
   const data = useStaticQuery(graphql`
     query {
+      site {
+        siteMetadata {
+          defaultLanguage
+        }
+      }
       allMeetupEvent(filter: {status: {eq: "upcoming"}}, limit: 1, sort: {order: ASC, fields: time}) {
         edges {
           node {
@@ -41,6 +45,7 @@ export const UpcomingEvents = () => {
       }
     }
   `);
+  const {site:{siteMetadata:{defaultLanguage}}} = data;
   return data.allMeetupEvent.edges.map(edge => {
     const address = edge.node.venue
       ?[
