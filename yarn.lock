@@ -7297,9 +7297,9 @@ gatsby-source-filesystem@^2.1.33:
     valid-url "^1.0.9"
     xstate "^4.6.7"
 
-"gatsby-source-meetup@https://github.com/pethersonmoreno/gatsby-source-meetup/raw/pack-files/gatsby-source-meetup-0.0.1.tgz":
+"gatsby-source-meetup@https://github.com/pethersonmoreno/gatsby-source-meetup/raw/pack-files/gatsby-source-meetup-0.0.1-v2.tgz":
   version "0.0.1"
-  resolved "https://github.com/pethersonmoreno/gatsby-source-meetup/raw/pack-files/gatsby-source-meetup-0.0.1.tgz#758e17a888b3c54faa51744f21bc36ff4232966c"
+  resolved "https://github.com/pethersonmoreno/gatsby-source-meetup/raw/pack-files/gatsby-source-meetup-0.0.1-v2.tgz#59e6e39422e4f0d69bc615a62b5736a066265e3c"
   dependencies:
     node-fetch "^2.2.1"
     query-string "^6.2.0"
