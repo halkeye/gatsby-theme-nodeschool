@@ -54,7 +54,7 @@ const IndexPage = () => {
               <h3>{t(`Get Notified`)}</h3>
 
               <p>
-                {t(`Make sure you know what&apos;s going on within the community and whenever we&apos;re having an event by signing up to our mailing list below`)}:
+                {t(`Make sure you know what's going on within the community and whenever we're having an event by signing up to our mailing list below`)}:
               </p>
 
               <form
@@ -138,21 +138,21 @@ $ ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/
             <p>
               {t(`If you have any issues installing either Homebrew or Node no worries`)}. 
               {` `}
-              {t(`We&apos;ll do our best to help you get set up once you arrive at an event`)}.
+              {t(`We'll do our best to help you get set up once you arrive at an event`)}.
             </p>
 
             <h3>&quot;{t(`What is a Workshopper?`)}&quot;</h3>
             <p>
               {t(`Workshopper is the name used for the open source lesson modules associated with NodeSchool`)}. 
               {` `}
-              {t(`All are self guided (you don&apos;t need to attend a workshop to do one) and most work offline`)}.
+              {t(`All are self guided (you don't need to attend a workshop to do one) and most work offline`)}.
             </p>
 
             <h3>&quot;{t(`How do I run a Workshopper?`)}&quot;</h3>
             <p>
-              {t(`To get started with a Workshopper tutorial you&apos;ll have to install and then run that program in terminal/bash`)}. 
+              {t(`To get started with a Workshopper tutorial you'll have to install and then run that program in terminal/bash`)}. 
               {` `}
-              {t(`Here&apos;s an example of how to install and run the Beginner Node Workshopper`)}:
+              {t(`Here's an example of how to install and run the Beginner Node Workshopper`)}:
             </p>
             <code className="terminal">
               <pre>$ npm install -g learnyounode</pre>
