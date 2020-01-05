@@ -7356,9 +7356,10 @@ gatsby-source-filesystem@^2.1.33:
     valid-url "^1.0.9"
     xstate "^4.6.7"
 
-"gatsby-source-meetup@https://github.com/pethersonmoreno/gatsby-source-meetup/raw/pack-files/gatsby-source-meetup-0.0.1-v2.tgz":
-  version "0.0.1"
-  resolved "https://github.com/pethersonmoreno/gatsby-source-meetup/raw/pack-files/gatsby-source-meetup-0.0.1-v2.tgz#59e6e39422e4f0d69bc615a62b5736a066265e3c"
+gatsby-source-meetup@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/gatsby-source-meetup/-/gatsby-source-meetup-1.1.0.tgz#24d785d96c9aa49c5dd8024c2257029c3642b0f2"
+  integrity sha512-LoCbUlux6gxPx9TjpXMB5P/2Q2pkEqCv/6BfVjHneCWmaF1flfA0LowXW9EuQrhNILmx2kJnxcnw6hqaLmvgug==
   dependencies:
     node-fetch "^2.2.1"
     query-string "^6.2.0"
@@ -12782,7 +12783,16 @@ query-string@^5.0.1:
     object-assign "^4.1.0"
     strict-uri-encode "^1.0.0"
 
-query-string@^6.2.0, query-string@^6.8.3:
+query-string@^6.2.0:
+  version "6.9.0"
+  resolved "https://registry.yarnpkg.com/query-string/-/query-string-6.9.0.tgz#1c3b727c370cf00f177c99f328fda2108f8fa3dd"
+  integrity sha512-KG4bhCFYapExLsUHrFt+kQVEegF2agm4cpF/VNc6pZVthIfCc/GK8t8VyNIE3nyXG9DK3Tf2EGkxjR6/uRdYsA==
+  dependencies:
+    decode-uri-component "^0.2.0"
+    split-on-first "^1.0.0"
+    strict-uri-encode "^2.0.0"
+
+query-string@^6.8.3:
   version "6.8.3"
   resolved "https://registry.yarnpkg.com/query-string/-/query-string-6.8.3.tgz#fd9fb7ffb068b79062b43383685611ee47777d4b"
   integrity sha512-llcxWccnyaWlODe7A9hRjkvdCKamEKTh+wH8ITdTc3OhchaqUZteiSCX/2ablWHVrkVIe04dntnaZJ7BdyW0lQ==
