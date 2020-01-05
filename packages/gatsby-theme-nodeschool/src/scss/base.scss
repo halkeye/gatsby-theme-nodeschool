@@ -92,6 +92,7 @@ a {
 }
 
 .terminal {
+  overflow-x: auto;
   position: relative;
   background-color: $base;
   color: white;
@@ -100,6 +101,7 @@ a {
   padding: 2em 0;
 
   pre {
+    overflow: unset;
     font-size: 1em;
     line-height: 180%;
     margin: 0;
