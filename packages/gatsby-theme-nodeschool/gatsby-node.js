@@ -1,17 +1,17 @@
 /* eslint-env node */
 const fs = require(`fs`);
+const fsExtra = require(`fs-extra`);
 const path = require(`path`);
 const mkdirp = require(`mkdirp`);
 const Debug = require(`debug`);
 const { createFilePath } = require(`gatsby-source-filesystem`);
 
 const debug = Debug(`gatsby-theme-nodeschool`);
-//const withDefaults = require(`./src/default-options`);
+// const withDefaults = require(`./src/default-options`);
 
 // Ensure that content directories exist at site-level
 exports.onPreBootstrap = ({ store }/*, themeOptions*/) => {
   const { program } = store.getState();
-  // const { contentPath, assetPath } = withDefaults(themeOptions)
 
   const dirs = [
     path.join(program.directory, `data/attendees`),
@@ -82,4 +82,11 @@ exports.createPages = async ({ graphql, actions, reporter }/*, themeOptions*/) =
       },
     });
   });
+};
+
+exports.onPostBootstrap = ({ store }) => {
+  const { program } = store.getState();
+  const publicLocales = path.join(program.directory, `public/locales`);
+  console.log(`Copying locales`);
+  fsExtra.copySync(path.join(__dirname, `/src/locales`), publicLocales);
 };

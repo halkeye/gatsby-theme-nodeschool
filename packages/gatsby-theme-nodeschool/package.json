@@ -19,6 +19,7 @@
     "@emotion/styled": "^10.0.22",
     "@mdx-js/mdx": "^1.5.1",
     "@mdx-js/react": "^1.5.1",
+    "dateformat": "^3.0.3",
     "gatsby-image": "^2.2.29",
     "gatsby-plugin-catch-links": "^2.1.15",
     "gatsby-plugin-emotion": "^4.1.12",
@@ -33,8 +34,9 @@
     "gatsby-remark-images": "^3.1.28",
     "gatsby-remark-smartypants": "^2.1.14",
     "gatsby-source-filesystem": "^2.1.33",
-    "gatsby-source-meetup": "^1.0.0",
-    "gatsby-transformer-sharp": "^2.3.2",
+    "gatsby-source-meetup": "^1.1.0",
+    "gatsby-theme-localization": "^1.5.0",
+    "gatsby-transformer-sharp": "^2.3.9",
     "gatsby-transformer-yaml": "^2.2.15",
     "mkdirp": "^0.5.1",
     "node-sass": "^4.13.0",
@@ -44,6 +46,7 @@
     "react-dom": "^16.11.0",
     "react-helmet": "^5.2.1",
     "react-hexagon": "^1.1.3",
+    "react-i18next": "^10.12.3",
     "remark-slug": "^5.1.2"
   },
   "devDependencies": {
