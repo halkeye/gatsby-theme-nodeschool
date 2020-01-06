@@ -34,7 +34,7 @@ const PeopleContainer = styled.div`
   }
 `;
 
-export const PeopleHexagons = ({ people }) => (
+const PeopleHexagons = ({ people }) => (
   <PeopleContainer>
     {people.map(person => (
       <Hexagon

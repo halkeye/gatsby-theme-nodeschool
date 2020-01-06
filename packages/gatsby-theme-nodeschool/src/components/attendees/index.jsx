@@ -1,6 +1,6 @@
 import React from "react";
 
-export const Attendees = () => {
+const Attendees = () => {
   return (
     <>
       {/* attendees */}

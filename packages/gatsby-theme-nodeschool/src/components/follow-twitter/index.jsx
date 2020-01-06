@@ -2,7 +2,7 @@ import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import { useTranslation } from "react-i18next";
 
-export const FollowTwitter = () => {
+const FollowTwitter = () => {
   const { t } = useTranslation();
   const data = useStaticQuery(graphql`
     query {

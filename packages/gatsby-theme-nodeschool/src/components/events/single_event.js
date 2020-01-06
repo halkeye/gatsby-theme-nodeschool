@@ -1,5 +1,6 @@
 import React from "react";
-export const SingleEvent = ({description, name, venue, time, utc_offset, updated }) => {
+
+const SingleEvent = ({description, name, venue }) => {
   return (
     <div>
       <h1>{name}</h1>
