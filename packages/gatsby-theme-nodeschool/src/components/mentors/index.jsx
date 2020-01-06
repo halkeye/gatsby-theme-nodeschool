@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from "gatsby";
 import { useTranslation } from "react-i18next";
 import PeopleHexagons from '../people-hexagons';
 
-export const Mentors = () => {
+const Mentors = () => {
   const { t } = useTranslation();
   const data = useStaticQuery(graphql`
     query {

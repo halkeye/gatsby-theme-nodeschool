@@ -8,6 +8,7 @@ pipeline {
   options {
     timeout(time: 20, unit: 'MINUTES')
     ansiColor('xterm')
+    disableConcurrentBuilds()
   }
 
   stages {
@@ -15,12 +16,15 @@ pipeline {
       steps {
         sh 'yarn install'
         sh 'yarn lerna bootstrap'
-        dir('packages/gatsby-theme-nodeschool-example') {
-          sh 'yarn install'
-        }
+        sh 'yarn workspaces run install'
       }
     }
 
+    stage('Lint') {
+      steps {
+        sh 'yarn workspaces run lint'
+      }
+    }
     stage('Build') {
       steps {
         dir('packages/gatsby-theme-nodeschool-example') {

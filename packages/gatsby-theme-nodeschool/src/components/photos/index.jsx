@@ -35,7 +35,7 @@ const Container = styled.div`
   }
 `;
 
-export const Photos = () => {
+const Photos = () => {
   const { t } = useTranslation();
   const data = useStaticQuery(graphql`
     query {
