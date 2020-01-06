@@ -13,7 +13,7 @@ const loadLanguageResources = (languages, languageNamespaces) =>
 
 module.exports = (options = {}) => {
   const themeOptions = withDefault(options);
-  const languages = [`en`, `pt`, `pt-BR`];
+  const languages = [themeOptions.defaultLanguage];
   const languageNamespaces = [`translation`];
   return {
     siteMetadata: themeOptions,
@@ -44,7 +44,7 @@ module.exports = (options = {}) => {
           i18nPlugin: {
             langKeyDefault: themeOptions.defaultLanguage,
             useLangKeyLayout: false,
-            prefixDefault: true,
+            prefixDefault: false,
           },
         },
       },
