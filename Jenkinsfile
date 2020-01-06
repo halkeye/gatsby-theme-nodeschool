@@ -13,6 +13,7 @@ pipeline {
   stages {
     stage('Install') {
       steps {
+        sh 'yarn install'
         sh 'yarn lerna bootstrap'
         dir('packages/gatsby-theme-nodeschool-example') {
           sh 'yarn install'
