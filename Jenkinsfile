@@ -16,7 +16,7 @@ pipeline {
       steps {
         sh 'yarn install'
         sh 'yarn lerna bootstrap'
-        sh 'yarn worksplaces run install'
+        sh 'yarn workspaces run install'
       }
     }
 
