@@ -2,10 +2,9 @@
 const fs = require(`fs`);
 const path = require(`path`);
 const mkdirp = require(`mkdirp`);
-const Debug = require(`debug`);
+const debug = require(`debug`)(`gatsby-theme-nodeschool`);
 const { createFilePath } = require(`gatsby-source-filesystem`);
 
-const debug = Debug(`gatsby-theme-nodeschool`);
 // const withDefaults = require(`./src/default-options`);
 
 // Ensure that content directories exist at site-level

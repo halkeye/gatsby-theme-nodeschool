@@ -1,3 +1,4 @@
+/* eslint-env node */
 module.exports = themeOptions => {
   if (!themeOptions) {
     themeOptions = {};
@@ -10,7 +11,7 @@ module.exports = themeOptions => {
       name: ``,
       url: ``,
     },
-    ...themeOptions.credits
+    ...themeOptions.credits,
   };
 
   return {
@@ -24,6 +25,6 @@ module.exports = themeOptions => {
     meetupGroup: ``,
     email: ``,
     mailchimpSubscribeUrl: ``,
-    ...themeOptions
-  }
-}
+    ...themeOptions,
+  };
+};

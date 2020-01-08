@@ -2,7 +2,7 @@ import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import SingleEvent from './single_event';
 
-export const PastEvents = () => {
+const PastEvents = () => {
   const data = useStaticQuery(graphql`
     query {
       allMeetupEvent(filter: {status: {eq: "post"}}) {
