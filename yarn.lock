@@ -7447,9 +7447,9 @@ gatsby-transformer-sharp@^2.3.9:
     sharp "^0.23.4"
 
 gatsby-transformer-yaml@^2.2.15:
-  version "2.2.20"
-  resolved "https://registry.yarnpkg.com/gatsby-transformer-yaml/-/gatsby-transformer-yaml-2.2.20.tgz#37e23e18354a5f7eebc357a257152251ca75bf35"
-  integrity sha512-Gl+FVxbbWA7zOOE9S+eYEmXGXEVIJYhsAEyunJM+VCoAbAf8Jrs7pXplJJW05sUE1b9iCnGx9TvWx6Fzob1CZw==
+  version "2.2.22"
+  resolved "https://registry.yarnpkg.com/gatsby-transformer-yaml/-/gatsby-transformer-yaml-2.2.22.tgz#4cf12dd5f38894505f5d14bf8a7a07f8de358fad"
+  integrity sha512-et3Bt6a4/JS1gCmRgfE8+kbg5wC4RG+IW/N+GrIPGFLDtA32i65kkZgJNq9so1BjdleoNGK8dihfili3GiGPBQ==
   dependencies:
     "@babel/runtime" "^7.7.6"
     js-yaml "^3.13.1"
