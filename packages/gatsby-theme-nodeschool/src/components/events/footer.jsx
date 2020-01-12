@@ -25,7 +25,7 @@ const EventFooter = () => {
       {t(`If you need further information about an event, please contact the organizers at`)}.
       {` `}
       <a
-        style={{fontWeight: `bold`}}
+        style={{ fontWeight: `bold` }}
         href={`mailto:${data.site.siteMetadata.email}`}
         rel="noopener noreferrer"
         target="_blank"

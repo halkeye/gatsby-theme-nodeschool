@@ -72,7 +72,7 @@ exports.createPages = async ({ graphql, actions, reporter }/*, themeOptions*/) =
   }
 
   // Create a page for each Post
-  result.data.allMdx.edges.forEach(({node}) => {
+  result.data.allMdx.edges.forEach(({ node }) => {
     createPage({
       path: node.fields.slug,
       component: docsPageTemplate,

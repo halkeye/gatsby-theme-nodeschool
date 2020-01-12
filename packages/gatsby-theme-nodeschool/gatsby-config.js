@@ -27,7 +27,7 @@ module.exports = (options = {}) => {
           },
           i18next: {
             fallbackLng: {
-              default: [ `en` ],
+              default: [`en`],
             },
             react: {
               wait: false,

@@ -1,6 +1,6 @@
 import React from "react";
 
-const SingleEvent = ({description, name, venue }) => {
+const SingleEvent = ({ description, name, venue }) => {
   return (
     <div>
       <h1>{name}</h1>
