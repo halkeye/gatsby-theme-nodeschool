@@ -2,8 +2,7 @@
 const withDefault = require(`./src/default-options`);
 const url = require(`url`);
 
-const loadLanguageResources = (languages, languageNamespaces) => 
-  languages.reduce((resources, language) =>{
+const loadLanguageResources = (languages, languageNamespaces) => languages.reduce((resources, language) =>{
     resources[language]=languageNamespaces.reduce((langNamespaces, namespace) =>{
       langNamespaces[namespace]=require(`${__dirname}/src/locales/${language}/${namespace}.json`);
       return langNamespaces;
@@ -30,7 +29,7 @@ module.exports = (options = {}) => {
           i18next: {
             resources: loadLanguageResources(languages, languageNamespaces),
             fallbackLng: {
-              default: [ themeOptions.defaultLanguage ],
+              default: [themeOptions.defaultLanguage],
             },
             react: {
               wait: false,
