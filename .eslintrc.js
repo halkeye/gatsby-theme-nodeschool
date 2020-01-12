@@ -50,6 +50,7 @@ module.exports = {
     "keyword-spacing": [`error`],
     "no-class-assign": `error`,
     "no-func-assign": `error`,
+    "no-path-concat": `error`,
     "no-undef": [`error`],
     "no-var": `error`,
     "object-curly-spacing": [`error`, `always`],
@@ -61,7 +62,7 @@ module.exports = {
     "react/prop-types": `off`,
     "semi": [2, `always`],
     "space-before-function-paren": [`error`, `always`],
-    "space-infix-ops": ["error"],
+    "space-infix-ops": [`error`],
     "space-in-parens": [`error`, `never`],
   },
   "env": {
