@@ -3,8 +3,8 @@ const withDefault = require(`./src/default-options`);
 const url = require(`url`);
 
 const loadLanguageResources = (languages, languageNamespaces) => languages.reduce((resources, language) =>{
-    resources[language]=languageNamespaces.reduce((langNamespaces, namespace) =>{
-      langNamespaces[namespace]=require(`${__dirname}/src/locales/${language}/${namespace}.json`);
+    resources[language] = languageNamespaces.reduce((langNamespaces, namespace) =>{
+      langNamespaces[namespace] = require(`${__dirname}/src/locales/${language}/${namespace}.json`);
       return langNamespaces;
     }, {});
     return resources;

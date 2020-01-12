@@ -61,6 +61,7 @@ module.exports = {
     "react/prop-types": `off`,
     "semi": [2, `always`],
     "space-before-function-paren": [`error`, `always`],
+    "space-infix-ops": ["error"],
     "space-in-parens": [`error`, `never`],
   },
   "env": {

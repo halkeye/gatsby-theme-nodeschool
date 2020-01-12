@@ -1,6 +1,6 @@
 import dateFormat from 'dateformat';
 
-const localeFormats={
+const localeFormats = {
   en: `m/d/yyyy`,
   pt: `dd/mm/yyyy`,
   'pt-br': `dd/mm/yyyy`,

@@ -43,7 +43,7 @@ export const UpcomingEvents = () => {
   `);
   return data.allMeetupEvent.edges.map(edge => {
     const address = edge.node.venue
-      ?[
+      ? [
         edge.node.venue.name,
         edge.node.venue.address_1,
         edge.node.venue.address_2,
@@ -51,7 +51,7 @@ export const UpcomingEvents = () => {
         edge.node.venue.zip,
         edge.node.venue.localized_country_name,
       ].filter(Boolean)
-      :[];
+      : [];
     return (
       <div key={edge.node.id}>
         <p className="register">
