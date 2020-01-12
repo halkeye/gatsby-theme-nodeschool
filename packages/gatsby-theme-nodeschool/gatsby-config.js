@@ -1,8 +1,19 @@
 /* eslint-env node */
 const withDefault = require(`./src/default-options`);
 const url = require(`url`);
+
+const loadLanguageResources = (languages, languageNamespaces) => languages.reduce((resources, language) =>{
+    resources[language]=languageNamespaces.reduce((langNamespaces, namespace) =>{
+      langNamespaces[namespace]=require(`${__dirname}/src/locales/${language}/${namespace}.json`);
+      return langNamespaces;
+    }, {});
+    return resources;
+  }, {});
+
 module.exports = (options = {}) => {
   const themeOptions = withDefault(options);
+  const languages = [themeOptions.defaultLanguage];
+  const languageNamespaces = [`translation`];
   return {
     siteMetadata: themeOptions,
     pathPrefix: themeOptions.url ? url.parse(themeOptions.url).path : ``,
@@ -10,28 +21,19 @@ module.exports = (options = {}) => {
       {
         resolve: `gatsby-theme-localization`,
         options: {
-          languages: [`en`, `pt`, `pt-BR`],
-          namespaces: [`translation`],
+          languages: languages,
+          namespaces: languageNamespaces,
           localesDir: `${__dirname}/src/locales`,
           allowIndex: true,
           defaultLng: themeOptions.defaultLanguage,
-          suspenseFallback: `${__dirname}/src/components/fallback`,
-          embedTranslations: {
-            preloadFallbackLng: true,
-            preloadNamespaces: [
-              {
-                regex: `/.*/`,
-                namespaces: [`translation`],
-              },
-            ],
-          },
           i18next: {
+            resources: loadLanguageResources(languages, languageNamespaces),
             fallbackLng: {
-              default: [`en`],
+              default: [themeOptions.defaultLanguage],
             },
             react: {
               wait: false,
-              useSuspense: true,
+              useSuspense: false,
             },
             debug: process.env.NODE_ENV !== `production`,
             interpolation: {
@@ -41,7 +43,7 @@ module.exports = (options = {}) => {
           i18nPlugin: {
             langKeyDefault: themeOptions.defaultLanguage,
             useLangKeyLayout: false,
-            prefixDefault: true,
+            prefixDefault: false,
           },
         },
       },
