@@ -7469,9 +7469,9 @@ gatsby-transformer-yaml@^2.2.15:
     unist-util-select "^1.5.0"
 
 gatsby@^2.17.7:
-  version "2.19.7"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.19.7.tgz#670d04f25259a914db0049ebd56c14bc04f62d38"
-  integrity sha512-pdCXdzH7Ht0KcpGJPV//WIWgZ10vxO5Gqs4N3NvfAAAKnhZotJ8W5pbSfbw+7ec5zxNw57SWPE5hV6Unm9rIYA==
+  version "2.19.9"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.19.9.tgz#45421225adfe8c4f2bbe038bc719f3f31b4a812e"
+  integrity sha512-KPaXRtEl2JGPebTxGMV0BPo4MXIrv6fgtElTFHg3qoyqF903V3CufWQiolK+FXyBrjFspJgkWGkPcRef936LZg==
   dependencies:
     "@babel/code-frame" "^7.5.5"
     "@babel/core" "^7.7.5"
