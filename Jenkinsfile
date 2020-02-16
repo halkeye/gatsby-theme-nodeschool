@@ -1,12 +1,12 @@
 pipeline {
   agent {
     docker {
-      image 'node:12'
+      image 'node:13'
     }
   }
 
   options {
-    timeout(time: 20, unit: 'MINUTES')
+    timeout(time: 60, unit: 'MINUTES')
     ansiColor('xterm')
     disableConcurrentBuilds()
   }
