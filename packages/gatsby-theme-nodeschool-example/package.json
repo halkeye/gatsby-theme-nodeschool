@@ -10,7 +10,8 @@
     "gatsby-plugin-sentry": "^1.0.1",
     "gatsby-source-filesystem": "^2.1.33",
     "gatsby-theme-nodeschool": "^0.2.0",
-    "gh-pages": "^2.1.1"
+    "gh-pages": "^2.1.1",
+    "husky": "^4.2.3"
   },
   "license": "MIT",
   "scripts": {
