@@ -6,9 +6,9 @@ const localeFormats = {
   'pt-br': `dd/mm/yyyy`,
 };
 
-const formatDateLocaleString = (date, locale)=>{
+function formatDateLocaleString (date, locale = `en`) {
   const localeFormat = localeFormats[locale.toLowerCase()] || localeFormats.en;
   return dateFormat(date, localeFormat);
-};
+}
 
 export default formatDateLocaleString;
