@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[3],{m5BC:function(t,n,e){"use strict";e.r(n);e("ERkP");var u=e("liE7"),s=e("4ChH"),a=e("nmMi"),o=e("l1C2");n.default=function(){var t=Object(u.useTranslation)().t;return Object(o.b)(s.a,null,Object(o.b)(a.a,{title:"404: Not found"}),Object(o.b)("h1",null,"NOT FOUND"),Object(o.b)("p",null,t("You just hit a route that doesn&#39;t exist... the sadness"),"."))}}}]);
-//# sourceMappingURL=component---gatsby-theme-nodeschool-src-pages-404-js-711e66c0c37837988218.js.map
