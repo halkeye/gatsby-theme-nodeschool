@@ -7,7 +7,8 @@
     "test": "yarn workspaces run test"
   },
   "devDependencies": {
-    "husky": "^4.0.0"
+    "eslint": "^6.8.0",
+    "husky": "^4.2.3"
   },
   "workspaces": [
     "packages/*"
@@ -16,5 +17,8 @@
     "hooks": {
       "pre-commit": "yarn workspaces run precommit"
     }
+  },
+  "dependencies": {
+    "lerna": "^3.20.2"
   }
 }
