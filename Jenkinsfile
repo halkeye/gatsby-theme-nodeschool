@@ -25,7 +25,11 @@ pipeline {
     }
     stage('Build') {
       steps {
+        dir('packages/gatsby-theme-nodeschool') {
+          sh 'yarn link'
+        }
         dir('packages/gatsby-theme-nodeschool-example') {
+          sh 'yarn link gatsby-theme-nodeschool'
           sh 'yarn clean'
           sh 'yarn build:pp'
           sh 'test -e public/index.html || exit 1'
