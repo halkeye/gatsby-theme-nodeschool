@@ -15,8 +15,8 @@
   },
   "license": "MIT",
   "scripts": {
-    "lint": "true",
-    "precommit": "true",
+    "precommit": "lint-staged",
+    "lint": "eslint --ext .js --ext .jsx .",
     "build": "TZ=UTC gatsby build",
     "build:pp": "TZ=UTC gatsby build --prefix-paths",
     "build:gh": "run-s clean build:pp deploy:github",
@@ -35,5 +35,13 @@
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "eslint --fix"
+    ]
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0"
   }
 }
