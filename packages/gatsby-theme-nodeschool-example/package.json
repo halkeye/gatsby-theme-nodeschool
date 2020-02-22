@@ -16,6 +16,7 @@
   "license": "MIT",
   "scripts": {
     "lint": "true",
+    "precommit": "true",
     "build": "TZ=UTC gatsby build",
     "build:pp": "TZ=UTC gatsby build --prefix-paths",
     "build:gh": "run-s clean build:pp deploy:github",

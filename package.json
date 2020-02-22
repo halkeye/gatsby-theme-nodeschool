@@ -2,22 +2,19 @@
   "name": "root",
   "private": true,
   "scripts": {
-    "bootstrap": "lerna bootstrap",
-    "dev": "lerna run --scope gatsby-theme-nodeschool-example dev --stream",
+    "dev": "yarn workspace gatsby-theme-nodeschool-example run dev --stream",
     "lint": "yarn workspaces run lint",
-    "lerna": "lerna",
-    "publish": "lerna publish"
+    "test": "yarn workspaces run test"
   },
   "devDependencies": {
-    "husky": "^4.0.0",
-    "lerna": "^3.20.2"
+    "husky": "^4.0.0"
   },
   "workspaces": [
     "packages/*"
   ],
   "husky": {
     "hooks": {
-      "pre-commit": "lerna run --concurrency 1 --stream precommit"
+      "pre-commit": "yarn workspaces run precommit"
     }
   }
 }

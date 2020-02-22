@@ -15,14 +15,12 @@ pipeline {
     stage('Install') {
       steps {
         sh 'yarn install'
-        sh 'yarn lerna bootstrap'
-        sh 'yarn workspaces run install'
       }
     }
 
     stage('Lint') {
       steps {
-        sh 'yarn workspaces run lint'
+        sh 'yarn lint'
       }
     }
     stage('Build') {
