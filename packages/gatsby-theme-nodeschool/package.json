@@ -21,7 +21,7 @@
     "@mdx-js/react": "^1.5.1",
     "dateformat": "^3.0.3",
     "gatsby-image": "^2.2.43",
-    "gatsby-plugin-catch-links": "^2.1.27",
+    "gatsby-plugin-catch-links": "^2.1.28",
     "gatsby-plugin-emotion": "^4.1.12",
     "gatsby-plugin-mdx": "^1.0.82",
     "gatsby-plugin-offline": "^3.0.40",
