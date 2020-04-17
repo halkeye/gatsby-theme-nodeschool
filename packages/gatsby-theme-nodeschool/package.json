@@ -36,7 +36,7 @@
     "gatsby-source-filesystem": "^2.2.2",
     "gatsby-source-meetup": "^1.1.0",
     "gatsby-theme-localization": "^1.5.0",
-    "gatsby-transformer-sharp": "^2.4.4",
+    "gatsby-transformer-sharp": "^2.4.6",
     "gatsby-transformer-yaml": "^2.3.1",
     "mkdirp": "^1.0.4",
     "node-sass": "^4.13.0",
