@@ -6,7 +6,7 @@
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "gatsby": "^2.21.11",
-    "gatsby-plugin-manifest": "^2.2.48",
+    "gatsby-plugin-manifest": "^2.4.1",
     "gatsby-plugin-sentry": "^1.0.1",
     "gatsby-source-filesystem": "^2.3.0",
     "gatsby-theme-nodeschool": "^0.2.0",
