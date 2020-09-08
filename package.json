@@ -4,7 +4,8 @@
   "scripts": {
     "dev": "yarn workspace gatsby-theme-nodeschool-example run dev --stream",
     "lint": "yarn workspaces run lint",
-    "test": "yarn workspaces run test"
+    "test": "yarn workspaces run test",
+    "build": "yarn workspaces run build"
   },
   "devDependencies": {
     "eslint": "^6.8.0",
