@@ -30,7 +30,7 @@
     "gatsby-plugin-sass": "^2.3.14",
     "gatsby-plugin-sentry": "^1.0.1",
     "gatsby-plugin-sharp": "^2.4.13",
-    "gatsby-remark-copy-linked-files": "^2.3.18",
+    "gatsby-remark-copy-linked-files": "^2.3.19",
     "gatsby-remark-images": "^3.3.32",
     "gatsby-remark-smartypants": "^2.3.12",
     "gatsby-source-filesystem": "^2.3.32",
