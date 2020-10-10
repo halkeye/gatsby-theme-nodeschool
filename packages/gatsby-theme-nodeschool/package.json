@@ -37,7 +37,7 @@
     "gatsby-source-meetup": "^1.1.0",
     "gatsby-theme-localization": "^1.5.1",
     "gatsby-transformer-sharp": "^2.5.17",
-    "gatsby-transformer-yaml": "^2.4.13",
+    "gatsby-transformer-yaml": "^2.4.14",
     "mkdirp": "^1.0.4",
     "node-sass": "^4.14.1",
     "prismjs": "^1.21.0",
