@@ -33,7 +33,7 @@
     "gatsby-remark-copy-linked-files": "^2.3.19",
     "gatsby-remark-images": "^3.3.40",
     "gatsby-remark-smartypants": "^2.3.13",
-    "gatsby-source-filesystem": "^2.4.0",
+    "gatsby-source-filesystem": "^2.4.1",
     "gatsby-source-meetup": "^1.1.0",
     "gatsby-theme-localization": "^1.5.1",
     "gatsby-transformer-sharp": "^2.5.20",
