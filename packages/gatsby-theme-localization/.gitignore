@@ -1,10 +1,10 @@
 .cache
 public
 node_modules
-gatsby-theme-localization/**/*.js
-gatsby-theme-localization/**/*.d.ts
-!gatsby-theme-localization/src/*
-!gatsby-theme-localization/jest*
-!gatsby-theme-localization/get-tag.js
+**/*.js
+**/*.d.ts
+!src/*
+!jest*
+!get-tag.js
 cypress/videos
 cypress/screenshots
