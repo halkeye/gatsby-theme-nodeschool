@@ -26,9 +26,16 @@ pipeline {
 
     stage('Lint') {
       steps {
-        sh 'lerna run bootstrap lint'
+        sh 'lerna run lint'
       }
     }
+
+    stage('Test') {
+      steps {
+        sh 'lerna run test'
+      }
+    }
+
     stage('Build') {
       steps {
         sh 'lerna run build'

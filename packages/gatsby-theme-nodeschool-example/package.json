@@ -5,7 +5,6 @@
   "version": "0.2.0",
   "author": "Gavin Mogan <npm@gavinmogan.com>",
   "dependencies": {
-    "@halkeye/gatsby-theme-localization": "^0.2.0",
     "gatsby": "^3.14.0",
     "gatsby-plugin-manifest": "^3.14.0",
     "gatsby-plugin-sentry": "^1.0.1",
@@ -40,5 +39,11 @@
     "*.{js,jsx}": [
       "eslint --fix"
     ]
+  },
+  "devDependencies": {
+    "eslint-plugin-babel": "^5.3.1",
+    "eslint-plugin-jest": "^24.4.2",
+    "eslint-plugin-promise": "^5.1.0",
+    "jest": "^27.2.0"
   }
 }
