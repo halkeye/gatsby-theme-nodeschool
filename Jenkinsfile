@@ -5,6 +5,10 @@ pipeline {
     }
   }
 
+  environment {
+    HOME = "${WORKSPACE}"
+  }
+
   options {
     timeout(time: 60, unit: 'MINUTES')
     ansiColor('xterm')
