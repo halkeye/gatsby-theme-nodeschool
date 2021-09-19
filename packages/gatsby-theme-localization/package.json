@@ -1,0 +1,31 @@
+{
+  "name": "gatsby-starter-theme-workspace",
+  "private": true,
+  "version": "0.0.1",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "develop": "yarn workspace example develop",
+    "build:example": "yarn workspace example build",
+    "build:plugin": "yarn workspace gatsby-theme-localization build",
+    "serve:example": "node serve.js",
+    "test:setup": "yarn build:plugin && yarn build:example && yarn serve:example",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "test:e2e:dev": "start-server-and-test test:setup http://localhost:42069 cy:open",
+    "test:e2e": "start-server-and-test test:setup http://localhost:42069 cy:run",
+    "test": "yarn workspace gatsby-theme-localization test",
+    "pretty": "prettier --write \"./**/*.{js,ts,tsx}\""
+  },
+  "workspaces": [
+    "gatsby-theme-localization",
+    "example"
+  ],
+  "devDependencies": {
+    "cypress": "^3.4.1",
+    "express": "^4.17.1",
+    "nodemon": "^1.19.3",
+    "prettier": "^1.18.2",
+    "start-server-and-test": "^1.10.2"
+  }
+}
