@@ -1,22 +1,9 @@
 {
   "name": "root",
   "private": true,
-  "scripts": {
-    "1dev": "yarn workspace gatsby-theme-nodeschool-example run dev --stream",
-    "1lint": "yarn workspaces run lint",
-    "1test": "yarn workspaces run test",
-    "1build": "yarn workspaces run build"
-  },
-  "devDependencies": {
-    "eslint": "^7.13.0",
-    "husky": "^4.3.0"
-  },
+  "scripts": {},
+  "devDependencies": {},
   "workspaces": [
     "packages/*"
-  ],
-  "husky": {
-    "hooks": {
-      "pre-commit": "yarn workspaces run precommit"
-    }
-  }
+  ]
 }
