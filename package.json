@@ -2,10 +2,10 @@
   "name": "root",
   "private": true,
   "scripts": {
-    "dev": "yarn workspace gatsby-theme-nodeschool-example run dev --stream",
-    "lint": "yarn workspaces run lint",
-    "test": "yarn workspaces run test",
-    "build": "yarn workspaces run build"
+    "1dev": "yarn workspace gatsby-theme-nodeschool-example run dev --stream",
+    "1lint": "yarn workspaces run lint",
+    "1test": "yarn workspaces run test",
+    "1build": "yarn workspaces run build"
   },
   "devDependencies": {
     "eslint": "^7.13.0",
@@ -18,8 +18,5 @@
     "hooks": {
       "pre-commit": "yarn workspaces run precommit"
     }
-  },
-  "dependencies": {
-    "lerna": "^3.22.1"
   }
 }

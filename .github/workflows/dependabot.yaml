@@ -1,24 +1,14 @@
-name: "Dependabot Automerge - Action"
+name: auto-merge
 
 on:
-  pull_request_target:
-    types:
-      - opened
+  pull_request:
 
 jobs:
-  worker:
+  auto-merge:
     runs-on: ubuntu-latest
-
-    if: github.actor == 'dependabot[bot]'
     steps:
-      - name: PR Comment
-        uses: actions/github-script@v2
+      - uses: actions/checkout@v2
+      - uses: ahmadnassri/action-dependabot-auto-merge@v2
         with:
-          script: |
-            github.issues.createComment({
-              issue_number: ${{ github.event.number }},
-              owner: context.payload.repository.owner.login,
-              repo: context.payload.repository.name,
-              body: '@dependabot merge'
-            })
-          github-token: ${{github.token}}
+          target: minor
+          github-token: ${{ secrets.mytoken }}
