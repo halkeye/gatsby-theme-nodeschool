@@ -1,7 +1,7 @@
 pipeline {
   agent {
     docker {
-      image 'node:13'
+      image 'node:16'
     }
   }
 
@@ -12,39 +12,42 @@ pipeline {
   }
 
   stages {
+    stage('Lerna') {
+      steps {
+        sh 'npm install -g lerna'
+      }
+    }
+
     stage('Install') {
       steps {
-        sh 'yarn install'
+        sh 'lerna bootstrap'
       }
     }
 
     stage('Lint') {
       steps {
-        sh 'yarn lint'
+        sh 'lerna run bootstrap lint'
       }
     }
     stage('Build') {
       steps {
-        dir('packages/gatsby-theme-nodeschool') {
-          sh 'yarn link'
-        }
-        dir('packages/gatsby-theme-nodeschool-example') {
-          sh 'yarn link gatsby-theme-nodeschool'
-          sh 'yarn clean'
-          sh 'yarn build:pp'
-          sh 'test -e public/index.html || exit 1'
-        }
+        sh 'lerna run build'
+        sh 'lerna run build:pp'
+        sh 'test -e packages/gatsby-theme-nodeschool-example/public/index.html || exit 1'
       }
     }
 
     stage('Deploy') {
       when { branch 'master' }
-      environment { GITHUB = credentials('github-halkeye') }
+      environment {
+        GITHUB = credentials('github-halkeye')
+        GIT_URL = env.GIT_URL.replace("https://", "https://${GITHUB_USR}:${GITHUB_PSW}@")
+      }
       steps {
         sh 'git config --global user.email "jenkins@gavinmogan.com"'
         sh 'git config --global user.name "jenkins.gavinmogan.com"'
         dir('packages/gatsby-theme-nodeschool-example') {
-          sh "npm run deploy:github -- -r ${env.GIT_URL.replace("https://", "https://${GITHUB_USR}:${GITHUB_PSW}@")}"
+          sh 'npm run deploy:github -- -r "$GIT_URL"'
         }
       }
     }

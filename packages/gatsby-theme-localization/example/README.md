@@ -1,1 +1,0 @@
-# Gatsby Theme Minimal Example
