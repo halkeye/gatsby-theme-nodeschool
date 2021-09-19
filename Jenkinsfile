@@ -7,6 +7,8 @@ pipeline {
 
   environment {
     HOME = "${WORKSPACE}"
+    NPM_CONFIG_PREFIX=".npm"
+    NPM_CONFIG_CACHE="npm_cache"
   }
 
   options {
@@ -16,35 +18,37 @@ pipeline {
   }
 
   stages {
-    stage('Lerna') {
+    stage('Yarn') {
       steps {
-        sh 'npm install -g lerna'
+        sh 'npm install -g yarn'
+        // sh 'yarn plugin import workspace-tools'
+        // sh 'yarn set version berry'
       }
     }
 
     stage('Install') {
       steps {
-        sh 'lerna bootstrap'
+        sh 'yarn install'
       }
     }
 
     stage('Lint') {
       steps {
-        sh 'lerna run lint'
+        sh 'yarn workspaces foreach run lint'
       }
     }
 
     stage('Test') {
       steps {
-        sh 'lerna run test'
+        sh 'yarn workspaces foreach run test'
       }
     }
 
     stage('Build') {
       steps {
-        sh 'lerna run build'
-        sh 'lerna run build:pp'
-        sh 'test -e packages/gatsby-theme-nodeschool-example/public/index.html || exit 1'
+        sh 'yarn workspaces foreach run build'
+        sh 'yarn workspace @halkeye/gatsby-theme-nodeschool-example run build:pp'
+        sh 'test -e packages/@halkeye/gatsby-theme-nodeschool-example/public/index.html || exit 1'
       }
     }
 
@@ -57,9 +61,7 @@ pipeline {
       steps {
         sh 'git config --global user.email "jenkins@gavinmogan.com"'
         sh 'git config --global user.name "jenkins.gavinmogan.com"'
-        dir('packages/gatsby-theme-nodeschool-example') {
-          sh 'npm run deploy:github -- -r "$GIT_URL"'
-        }
+        sh 'yarn workspace @halkeye/gatsby-theme-nodeschool-example deploy:github -- -r "$GIT_URL"'
       }
     }
 

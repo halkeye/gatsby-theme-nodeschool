@@ -19,7 +19,7 @@ module.exports = (options = {}) => {
     pathPrefix: themeOptions.url ? url.parse(themeOptions.url).path : ``,
     plugins: [
       {
-        resolve: `gatsby-theme-localization`,
+        resolve: `@halkeye/gatsby-theme-localization`,
         options: {
           languages: languages,
           namespaces: languageNamespaces,
@@ -47,10 +47,11 @@ module.exports = (options = {}) => {
           },
         },
       },
+      `gatsby-plugin-slug`,
       `gatsby-plugin-emotion`,
       `gatsby-plugin-react-helmet`,
       {
-        resolve: `gatsby-plugin-prefetch-google-fonts`,
+        resolve: `gatsby-plugin-google-fonts-v2`,
         options: {
           fonts: [
             {
@@ -61,6 +62,7 @@ module.exports = (options = {}) => {
         },
       },
       `gatsby-plugin-sass`,
+      `gatsby-plugin-sharp`,
       `gatsby-transformer-sharp`,
       `gatsby-transformer-yaml`,
       themeOptions.meetupGroup ? {
@@ -88,7 +90,6 @@ module.exports = (options = {}) => {
       // To learn more, visit: https://gatsby.dev/offline
       // `gatsby-plugin-offline`,
       `gatsby-plugin-catch-links`,
-      `gatsby-plugin-sharp`,
       {
         resolve: `gatsby-source-filesystem`,
         options: {
@@ -117,9 +118,8 @@ module.exports = (options = {}) => {
               },
             },
             { resolve: `gatsby-remark-copy-linked-files` },
-            { resolve: `gatsby-remark-smartypants` },
-          ],
-          remarkPlugins: [require(`remark-slug`)],
+            { resolve: `gatsby-remark-smartypants` }
+          ]
         },
       },
     ].filter(Boolean),

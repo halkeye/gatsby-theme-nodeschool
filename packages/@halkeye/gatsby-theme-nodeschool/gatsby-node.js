@@ -30,23 +30,6 @@ exports.onPreBootstrap = ({ store }/*, themeOptions*/) => {
 // const PostTemplate = require.resolve(`./src/templates/posts-query`)
 const docsPageTemplate = require.resolve(`./src/templates/docs.jsx`);
 
-/*
- * Create a slug for each doc. This allows for the docs to be nested in folders
- * and have the URLs match the folder structure.
- *
- * For example, if a doc is created at `docs/install/quickstart.md`, the slug
- * created for it would be `/install/quickstart/`.
- */
-exports.onCreateNode = ({ node, getNode, actions: { createNodeField } }) => {
-  if (node.internal.type === `Mdx`) {
-    createNodeField({
-      node,
-      name: `slug`,
-      value: path.basename(createFilePath({ node, getNode })),
-    });
-  }
-};
-
 exports.createPages = async ({ graphql, actions, reporter }/*, themeOptions*/) => {
   const { createPage } = actions;
   // const { basePath } = withDefaults(themeOptions);

@@ -1,6 +1,7 @@
 {
   "packages": [
-    "packages/*"
+    "packages/*",
+    "packages/@halkeye/*"
   ],
   "version": "0.2.0"
 }

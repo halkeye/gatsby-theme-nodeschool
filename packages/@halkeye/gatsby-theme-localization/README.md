@@ -5,7 +5,7 @@
 </p>
 
 # gatsby-theme-localization
-Opinionated Gatsby theme which provides a full solution for localization in Gatsby. This theme is built upon the awesome [gatsby-plugin-i18n](https://www.npmjs.com/package/gatsby-plugin-i18n) and [react-i18next](https://react.i18next.com/) and acts as a bridge between the two. I couldn't find a full solution for localization with Gatsby which works the way I want it to, so I made a custom solution for my personal website and put everything I learned in this Gatsby theme in hopes to help out anyone who may struggle with the same.
+Opinionated Gatsby theme which provides a full solution for localization in Gatsby. This theme is built upon the awesome [gatsby-plugin-react-i18next](https://www.npmjs.com/package/gatsby-plugin-react-i18next) and [react-i18next](https://react.i18next.com/) and acts as a bridge between the two. I couldn't find a full solution for localization with Gatsby which works the way I want it to, so I made a custom solution for my personal website and put everything I learned in this Gatsby theme in hopes to help out anyone who may struggle with the same.
 
 ## Documentation
 This is a basic overview to get you started. For more advanced features or better documentation, please visit the [full documentation](https://gatsby-theme-localization.onestopjs.dev).
@@ -30,7 +30,7 @@ module.exports = {
           debug: process.env.NODE_ENV !== 'production'
         },
         i18nPlugin: {
-          // whatever you want to pass to gatsby-plugin-i18n
+          // whatever you want to pass to gatsby-plugin-react-i18next
           langKeyDefault: 'en',
           useLangKeyLayout: false
         }
@@ -55,7 +55,7 @@ This theme exports a drop-in replacement for Gatsby's link. In fact, it forwards
 In your locales folder, you need to create a folder for each language you support, and a JSON file for each namespace you want. It is important that all files exist, otherwise it will crash. This is intentional as I think it is better to crash your build rather than have missing texts.
 
 ## How it works
-gatsby-plugin-i18n creates the routes for each language but doesn't do anything for the actual translations, so we are free to use any plugin we like. I18next handles the actual translation. My theme synchronizes the two awesome libraries.
+gatsby-plugin-react-i18next creates the routes for each language but doesn't do anything for the actual translations, so we are free to use any plugin we like. I18next handles the actual translation. My theme synchronizes the two awesome libraries.
 Make sure to read both plugins' documentation to make use of their full capabilities. 
 
 ## Options API
@@ -70,7 +70,7 @@ For example usage, refer to the [example gatsby-config](https://github.com/onest
 | defaultLng | 'en'            | Default language, used for a number of things (such as fallback when language cannot be detected) |
 | localesDir | './src/locales' | Directory where your JSON files are stored (relative to the root of your project) |
 | i18next    | {}              | Object with options which will be passed to i18next |
-| i18nPlugin | {}              | Object with options which will be passed to gatsby-plugin-i18n  |
+| i18nPlugin | {}              | Object with options which will be passed to gatsby-plugin-react-i18next  |
 | suspenseFallback | undefined              | Path to fallback component for Suspense |
 
 ## Exports
