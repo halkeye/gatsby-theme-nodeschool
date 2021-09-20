@@ -1,8 +1,14 @@
 pipeline {
   agent {
     docker {
-      image 'node:13'
+      image 'node:16'
     }
+  }
+
+  environment {
+    HOME = "${WORKSPACE}"
+    NPM_CONFIG_PREFIX=".npm"
+    NPM_CONFIG_CACHE="npm_cache"
   }
 
   options {
@@ -12,6 +18,14 @@ pipeline {
   }
 
   stages {
+    stage('Yarn') {
+      steps {
+        sh 'npm install -g yarn'
+        // sh 'yarn plugin import workspace-tools'
+        // sh 'yarn set version berry'
+      }
+    }
+
     stage('Install') {
       steps {
         sh 'yarn install'
@@ -23,29 +37,31 @@ pipeline {
         sh 'yarn lint'
       }
     }
+
+    stage('Test') {
+      steps {
+        sh 'yarn test'
+      }
+    }
+
     stage('Build') {
       steps {
-        dir('packages/gatsby-theme-nodeschool') {
-          sh 'yarn link'
-        }
-        dir('packages/gatsby-theme-nodeschool-example') {
-          sh 'yarn link gatsby-theme-nodeschool'
-          sh 'yarn clean'
-          sh 'yarn build:pp'
-          sh 'test -e public/index.html || exit 1'
-        }
+        sh 'yarn build'
+        sh 'yarn workspace @halkeye/gatsby-theme-nodeschool-example run build:pp'
+        sh 'test -e packages/@halkeye/gatsby-theme-nodeschool-example/public/index.html || exit 1'
       }
     }
 
     stage('Deploy') {
       when { branch 'master' }
-      environment { GITHUB = credentials('github-halkeye') }
+      environment {
+        GITHUB = credentials('github-halkeye')
+        GIT_URL = env.GIT_URL.replace("https://", "https://${GITHUB_USR}:${GITHUB_PSW}@")
+      }
       steps {
         sh 'git config --global user.email "jenkins@gavinmogan.com"'
         sh 'git config --global user.name "jenkins.gavinmogan.com"'
-        dir('packages/gatsby-theme-nodeschool-example') {
-          sh "npm run deploy:github -- -r ${env.GIT_URL.replace("https://", "https://${GITHUB_USR}:${GITHUB_PSW}@")}"
-        }
+        sh 'yarn workspace @halkeye/gatsby-theme-nodeschool-example deploy:github -- -r "$GIT_URL"'
       }
     }
 

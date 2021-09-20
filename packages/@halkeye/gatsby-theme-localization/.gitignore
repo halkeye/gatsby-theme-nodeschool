@@ -1,0 +1,12 @@
+.cache
+public
+node_modules
+*.js
+*.d.ts
+**/*.js
+**/*.d.ts
+!src/*
+!jest*
+!get-tag.js
+cypress/videos
+cypress/screenshots

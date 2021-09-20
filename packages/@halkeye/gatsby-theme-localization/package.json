@@ -1,0 +1,60 @@
+{
+  "name": "@halkeye/gatsby-theme-localization",
+  "version": "0.2.0",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "author": "Gavin Mogan <npm@gavinmogan.com>",
+  "description": "Full solution for Gatsby localization",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/halkeye/gatsby-theme-nodeschool"
+  },
+  "bugs": {
+    "url": "https://github.com/halkeye/gatsby-theme-nodeschool/issues"
+  },
+  "peerDependencies": {
+    "gatsby": "*",
+    "react": "*"
+  },
+  "scripts": {
+    "build": "tsc",
+    "develop": "gatsby develop",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@types/node": "^16.9.4",
+    "@types/react": "^17.0.21",
+    "@types/react-dom": "^17.0.9",
+    "chokidar": "^3.5.2",
+    "gatsby-plugin-react-i18next": "^1.1.1",
+    "i18next": "^20.6.1",
+    "i18next-xhr-backend": "^3.1.2",
+    "react-i18next": "^11.12.0",
+    "utility-types": "^3.10.0"
+  },
+  "devDependencies": {
+    "@types/enzyme": "^3.10.9",
+    "@types/jest": "^27.0.1",
+    "@wojtekmaj/enzyme-adapter-react-17": "^0.6.3",
+    "enzyme": "^3.11.0",
+    "gatsby": "^3.14.0",
+    "jest": "^27.2.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "ts-jest": "^27.0.5",
+    "typescript": "^4.4.3"
+  },
+  "keywords": [
+    "gatsby",
+    "gatsby-plugin",
+    "gatsby-theme",
+    "gatsby-theme-localization",
+    "localization",
+    "i18n",
+    "internationalization",
+    "intl",
+    "translation",
+    "multi-language"
+  ]
+}
