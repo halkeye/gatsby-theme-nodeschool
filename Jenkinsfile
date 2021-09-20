@@ -56,7 +56,7 @@ pipeline {
       when { branch 'master' }
       environment {
         GITHUB = credentials('github-halkeye')
-        GIT_URL = env.GIT_URL.replace("https://", "https://${GITHUB_USR}:${GITHUB_PSW}@")
+        GIT_URL = env.GIT_URL.replace("https://", "https://git:${env.GITHUB_PSW}@")
       }
       steps {
         sh 'git config --global user.email "jenkins@gavinmogan.com"'
