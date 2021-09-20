@@ -54,13 +54,18 @@ pipeline {
 
     stage('Deploy') {
       when { branch 'master' }
-      environment { GITHUB = credentials('github-halkeye') }
+      environment {
+        GITHUB = credentials('github-halkeye')
+        DEPLOY_URL = env.GIT_URL.replace("https://", "https://${GITHUB}@")
+      }
       steps {
-        sh 'git config --global user.email "jenkins@gavinmogan.com"'
-        sh 'git config --global user.name "jenkins.gavinmogan.com"'
-        dir('packages/gatsby-theme-nodeschool-example') {
-          sh "npm run deploy:github -- -r ${env.GIT_URL.replace("https://", "https://${GITHUB_USR}:${GITHUB_PSW}@")}"
-        }
+        sh '''
+          git config --global user.email "jenkins@gavinmogan.com"
+          git config --global user.name "jenkins.gavinmogan.com"
+
+          git remote set-url origin "${DEPLOY_URL}"
+          yarn workspace @halkeye/gatsby-theme-nodeschool-example run deploy:github
+        '''
       }
     }
   }
