@@ -1,6 +1,8 @@
 .cache
 public
 node_modules
+*.js
+*.d.ts
 **/*.js
 **/*.d.ts
 !src/*
