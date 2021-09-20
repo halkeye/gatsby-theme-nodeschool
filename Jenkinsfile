@@ -34,19 +34,19 @@ pipeline {
 
     stage('Lint') {
       steps {
-        sh 'yarn workspaces foreach run lint'
+        sh 'yarn lint'
       }
     }
 
     stage('Test') {
       steps {
-        sh 'yarn workspaces foreach run test'
+        sh 'yarn test'
       }
     }
 
     stage('Build') {
       steps {
-        sh 'yarn workspaces foreach run build'
+        sh 'yarn build'
         sh 'yarn workspace @halkeye/gatsby-theme-nodeschool-example run build:pp'
         sh 'test -e packages/@halkeye/gatsby-theme-nodeschool-example/public/index.html || exit 1'
       }

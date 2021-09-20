@@ -6,9 +6,9 @@
     "lerna:clean": "lerna run clean --include-dependencies --stream",
     "lerna:outdated": "npm outdated && npx lerna exec --no-bail -- npm outdated",
     "dev": "yarn workspace @halkeye/gatsby-theme-nodeschool-example run dev --stream",
-    "lint": "yarn workspaces foreach run lint",
-    "test": "yarn workspaces foreach run test",
-    "build": "yarn workspaces foreach run build"
+    "lint": "yarn workspaces foreach -p -v run lint",
+    "test": "yarn workspaces foreach -p -v run test",
+    "build": "yarn workspaces foreach -v run build"
   },
   "workspaces": [
     "packages/@halkeye/*"
