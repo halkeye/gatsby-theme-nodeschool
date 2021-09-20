@@ -47,7 +47,6 @@ pipeline {
     stage('Build') {
       steps {
         sh 'yarn build'
-        sh 'yarn workspace @halkeye/gatsby-theme-nodeschool-example run build:pp'
         sh 'test -e packages/@halkeye/gatsby-theme-nodeschool-example/public/index.html || exit 1'
       }
     }
