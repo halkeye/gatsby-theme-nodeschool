@@ -2198,9 +2198,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@halkeye/gatsby-plugin-google-fonts@workspace:*, @halkeye/gatsby-plugin-google-fonts@workspace:packages/@halkeye/gatsby-plugin-google-fonts-v2":
+"@halkeye/gatsby-plugin-google-fonts@workspace:*, @halkeye/gatsby-plugin-google-fonts@workspace:packages/@halkeye/gatsby-plugin-google-fonts":
   version: 0.0.0-use.local
-  resolution: "@halkeye/gatsby-plugin-google-fonts@workspace:packages/@halkeye/gatsby-plugin-google-fonts-v2"
+  resolution: "@halkeye/gatsby-plugin-google-fonts@workspace:packages/@halkeye/gatsby-plugin-google-fonts"
   dependencies:
     "@types/jest": ^27.0.1
     "@types/node": ^16.9.4
