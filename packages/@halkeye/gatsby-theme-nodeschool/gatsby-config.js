@@ -51,7 +51,7 @@ module.exports = (options = {}) => {
       `gatsby-plugin-emotion`,
       `gatsby-plugin-react-helmet`,
       {
-        resolve: `gatsby-plugin-google-fonts-v2`,
+        resolve: `@halkeye/gatsby-plugin-google-fonts`,
         options: {
           fonts: [
             {

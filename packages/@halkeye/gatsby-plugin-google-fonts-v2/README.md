@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <a href="https://www.gatsbyjs.com/plugins/gatsby-plugin-google-fonts-v2/"><img src="https://user-images.githubusercontent.com/7539124/111890619-cfa41180-89c9-11eb-865d-e728208970b6.png" alt="Gatsby Plugin Google Fonts - v2" width="200"></a>
+  <a href="https://www.gatsbyjs.com/plugins/@halkeye/gatsby-plugin-google-fonts/"><img src="https://user-images.githubusercontent.com/7539124/111890619-cfa41180-89c9-11eb-865d-e728208970b6.png" alt="Gatsby Plugin Google Fonts - v2" width="200"></a>
   <br>
   Gatsby Plugin Google Fonts - v2
   <br>
@@ -12,10 +12,10 @@ A simple **GatsbyJS** plugin that loads **Google Fonts** using the new **v2 API*
 
 ```bash
 # With NPM
-$ npm install gatsby-plugin-google-fonts-v2
+$ npm install @halkeye/gatsby-plugin-google-fonts
 
 # With Yarn
-$ yarn add gatsby-plugin-google-fonts-v2
+$ yarn add @halkeye/gatsby-plugin-google-fonts
 ```
 
 ## 🎉 Add to Gatsby Config
@@ -25,7 +25,7 @@ In `gatbsy-config.js`
 ```javascript
 plugins: [
   {
-    resolve: `gatsby-plugin-google-fonts-v2`,
+    resolve: `@halkeye/gatsby-plugin-google-fonts`,
     options: {
       fonts: [
         {
@@ -77,7 +77,7 @@ plugins: [
 
 ## Related
 
-> [GatsbyJS](https://www.gatsbyjs.com) - Website GatsbyJS <br/> [Gatsby Plugin Google Fonts - v2](https://www.gatsbyjs.com/plugins/gatsby-plugin-google-fonts-v2/) - Plugin in GatsbyJS <br/> [Google Fonts](https://fonts.google.com/) - Website Google Fonts
+> [GatsbyJS](https://www.gatsbyjs.com) - Website GatsbyJS <br/> [Gatsby Plugin Google Fonts - v2](https://www.gatsbyjs.com/plugins/@halkeye/gatsby-plugin-google-fonts/) - Plugin in GatsbyJS <br/> [Google Fonts](https://fonts.google.com/) - Website Google Fonts
 
 ---
 
