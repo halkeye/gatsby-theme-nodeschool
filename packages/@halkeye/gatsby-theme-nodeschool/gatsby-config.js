@@ -118,8 +118,8 @@ module.exports = (options = {}) => {
               },
             },
             { resolve: `gatsby-remark-copy-linked-files` },
-            { resolve: `gatsby-remark-smartypants` }
-          ]
+            { resolve: `gatsby-remark-smartypants` },
+          ],
         },
       },
     ].filter(Boolean),

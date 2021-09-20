@@ -3,7 +3,6 @@ const fs = require(`fs`);
 const path = require(`path`);
 const mkdirp = require(`mkdirp`);
 const debug = require(`debug`)(`gatsby-theme-nodeschool`);
-const { createFilePath } = require(`gatsby-source-filesystem`);
 
 // const withDefaults = require(`./src/default-options`);
 
