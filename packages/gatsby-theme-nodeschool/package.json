@@ -1,5 +1,5 @@
 {
-  "name": "@halkeye/gatsby-theme-nodeschool",
+  "name": "gatsby-theme-nodeschool",
   "description": "Gatsby Theme for NodeSchool",
   "version": "0.2.0",
   "author": "Gavin Mogan <npm@gavinmogan.com>",
@@ -89,8 +89,5 @@
   },
   "bugs": {
     "url": "https://github.com/halkeye/gatsby-theme-nodeschool/issues"
-  },
-  "workspaces": [
-    "../gatsby-theme-localization"
-  ]
+  }
 }

@@ -17,7 +17,7 @@ module.exports = {
         display: `minimal-ui`,
         icon: path.relative(
           __dirname,
-          require.resolve(`@halkeye/gatsby-theme-nodeschool/src/images/nodeschool-logo.png`),
+          require.resolve(`gatsby-theme-nodeschool/src/images/nodeschool-logo.png`),
         ),
       },
     },
@@ -34,7 +34,7 @@ module.exports = {
       },
     },
     {
-      resolve: `@halkeye/gatsby-theme-nodeschool`,
+      resolve: `gatsby-theme-nodeschool`,
       options: {
         title: `NodeSchool Vancouver`,
         description: `Website for NodeSchool Vancouver.`,

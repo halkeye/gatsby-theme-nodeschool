@@ -9,6 +9,7 @@
     "lint": "yarn workspaces foreach -p -v run lint"
   },
   "workspaces": [
-    "packages/@halkeye/*"
+    "packages/@halkeye/*",
+    "packages/*"
   ]
 }
