@@ -1,5 +1,5 @@
 import React from "react";
-import { useStaticQuery, graphql } from "gatsby";
+import { withPrefix, useStaticQuery, graphql } from "gatsby";
 import { useTranslation } from "react-i18next";
 import Hexagon from 'react-hexagon';
 import styled from "@emotion/styled";
@@ -66,8 +66,8 @@ const Photos = () => {
         return (
           <Hexagon
             key={edge.node.id}
-            href={edge.node.childImageSharp.original.src}
-            backgroundImage={edge.node.childImageSharp.fixed.src}
+            href={withPrefix(edge.node.childImageSharp.original.src)}
+            backgroundImage={withPrefix(edge.node.childImageSharp.fixed.src)}
             rel="noopener noreferrer"
             target="_blank"
           />
