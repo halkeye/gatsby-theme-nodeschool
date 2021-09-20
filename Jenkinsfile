@@ -56,7 +56,7 @@ pipeline {
       when { branch 'master' }
       environment {
         GITHUB = credentials('github-halkeye')
-        DEPLOY_URL = env.GIT_URL.replace("https://", "https://${env.GITHUB_USR}:${env.GITHUB_PSW}@")
+        DEPLOY_URL = env.GIT_URL.replace("https://", "https://${env.GITHUB_PSW}@")
       }
       steps {
         sh '''
