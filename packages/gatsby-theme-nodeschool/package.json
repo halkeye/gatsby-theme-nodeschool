@@ -43,7 +43,7 @@
     "gatsby-source-meetup": "^1.1.0",
     "gatsby-transformer-sharp": "^3.14.0",
     "gatsby-transformer-yaml": "^3.14.0",
-    "i18next": "^20.6.1",
+    "i18next": "^21.0.1",
     "mkdirp": "^1.0.4",
     "node-sass": "^6.0.1",
     "prismjs": "^1.25.0",
