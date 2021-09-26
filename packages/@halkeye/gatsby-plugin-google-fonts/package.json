@@ -39,7 +39,7 @@
   ],
   "repository": "https://github.com/pocorschi/@halkeye/gatsby-plugin-google-fonts",
   "dependencies": {
-    "@types/jest": "^27.0.1",
+    "@types/jest": "^27.0.2",
     "@types/react": "^17.0.3",
     "babel-preset-gatsby-package": "^1.1.0",
     "gatsby-plugin-ts": "^3.0.0",
