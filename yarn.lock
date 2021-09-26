@@ -7039,10 +7039,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"dateformat@npm:^4.5.1":
-  version: 4.5.1
-  resolution: "dateformat@npm:4.5.1"
-  checksum: 2c80b0fed4977db338aa70fbdd605a50c06ec36f4ef8d8fd36193a08c4910da1172eec919a74ed93abfc134fc71dca8707877d4fd149c07f0d1c919d598283e3
+"dateformat@npm:^5.0.0":
+  version: 5.0.1
+  resolution: "dateformat@npm:5.0.1"
+  checksum: cbe3527128cc94e0c4560c77bd70041af385ddbfa95cf7fc69726b01f0beeb51daabffaa765898c3882993000a584c9001f2c3c6519ee77e2865a08990592d75
   languageName: node
   linkType: hard
 
@@ -9802,7 +9802,7 @@ __metadata:
     "@mdx-js/mdx": ^1.6.22
     "@mdx-js/react": ^1.6.22
     babel-eslint: 10.1.0
-    dateformat: ^4.5.1
+    dateformat: ^5.0.0
     eslint: 7.32.0
     eslint-plugin-babel: 5.3.1
     eslint-plugin-jest: 24.4.2
