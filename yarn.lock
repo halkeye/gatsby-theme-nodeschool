@@ -2256,7 +2256,7 @@ __metadata:
     babel-eslint: 10.1.0
     eslint: 7.32.0
     eslint-plugin-babel: 5.3.1
-    eslint-plugin-jest: 25.0.4
+    eslint-plugin-jest: 25.0.5
     eslint-plugin-promise: 5.1.0
     gatsby: 3.14.2
     gatsby-plugin-manifest: 3.14.0
@@ -8196,18 +8196,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-jest@npm:25.0.4":
-  version: 25.0.4
-  resolution: "eslint-plugin-jest@npm:25.0.4"
+"eslint-plugin-jest@npm:25.0.5":
+  version: 25.0.5
+  resolution: "eslint-plugin-jest@npm:25.0.5"
   dependencies:
     "@typescript-eslint/experimental-utils": ^5.0.0
   peerDependencies:
-    "@typescript-eslint/eslint-plugin": ^4.0.0
+    "@typescript-eslint/eslint-plugin": ^4.0.0 || ^5.0.0
     eslint: ^6.0.0 || ^7.0.0
   peerDependenciesMeta:
     "@typescript-eslint/eslint-plugin":
       optional: true
-  checksum: 4d928255a92c0304dfae569c0102e19fe1e7fa024e1e77cfc7a51bcfe2790133a6e482aaa5aee97d0866e237b84fc8c98ae42eb3b3efa1a8d9746cc97922ad39
+  checksum: 68826a0dfdda7aec1eed6eb5234c0a2e4adeed30e85b2ad464c3f7eff07aa3c59a5d7b6714085573d86f2cc48f16570f010b688c1dd08947bed6c2fd669f530b
   languageName: node
   linkType: hard
 
@@ -9893,7 +9893,7 @@ __metadata:
     dateformat: ^5.0.0
     eslint: 7.32.0
     eslint-plugin-babel: 5.3.1
-    eslint-plugin-jest: 25.0.4
+    eslint-plugin-jest: 25.0.5
     eslint-plugin-promise: 5.1.0
     gatsby: 3.14.2
     gatsby-plugin-catch-links: ^3.14.0
