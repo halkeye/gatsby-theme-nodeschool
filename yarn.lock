@@ -2240,7 +2240,7 @@ __metadata:
     react: 17.0.2
     react-dom: 17.0.2
     react-i18next: ^11.12.0
-    ts-jest: 27.0.5
+    ts-jest: 27.0.6
     typescript: 4.4.4
     utility-types: ^3.10.0
   peerDependencies:
@@ -13413,7 +13413,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lodash.memoize@npm:^4.1.2":
+"lodash.memoize@npm:4.x, lodash.memoize@npm:^4.1.2":
   version: 4.1.2
   resolution: "lodash.memoize@npm:4.1.2"
   checksum: 9ff3942feeccffa4f1fafa88d32f0d24fdc62fd15ded5a74a5f950ff5f0c6f61916157246744c620173dddf38d37095a92327d5fd3861e2063e736a5c207d089
@@ -19604,7 +19604,38 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"ts-jest@npm:27.0.5, ts-jest@npm:^27.0.5":
+"ts-jest@npm:27.0.6":
+  version: 27.0.6
+  resolution: "ts-jest@npm:27.0.6"
+  dependencies:
+    bs-logger: 0.x
+    fast-json-stable-stringify: 2.x
+    jest-util: ^27.0.0
+    json5: 2.x
+    lodash.memoize: 4.x
+    make-error: 1.x
+    semver: 7.x
+    yargs-parser: 20.x
+  peerDependencies:
+    "@babel/core": ">=7.0.0-beta.0 <8"
+    "@types/jest": ^27.0.0
+    babel-jest: ">=27.0.0 <28"
+    jest: ^27.0.0
+    typescript: ">=3.8 <5.0"
+  peerDependenciesMeta:
+    "@babel/core":
+      optional: true
+    "@types/jest":
+      optional: true
+    babel-jest:
+      optional: true
+  bin:
+    ts-jest: cli.js
+  checksum: bbca6486a632c99340f37f0e266335d3763a978274c9a0ece4bb2f451b2e243c5c210870d7092c453463c856d1329ec5ebbf1bdfa19303a9babd6ada5423aaf5
+  languageName: node
+  linkType: hard
+
+"ts-jest@npm:^27.0.5":
   version: 27.0.5
   resolution: "ts-jest@npm:27.0.5"
   dependencies:
