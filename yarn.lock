@@ -2229,7 +2229,7 @@ __metadata:
     "@types/node": ^16.9.4
     "@types/react": ^17.0.21
     "@types/react-dom": ^17.0.9
-    "@wojtekmaj/enzyme-adapter-react-17": 0.6.3
+    "@wojtekmaj/enzyme-adapter-react-17": 0.6.5
     chokidar: ^3.5.2
     enzyme: 3.11.0
     gatsby: 3.14.3
@@ -4214,9 +4214,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@wojtekmaj/enzyme-adapter-react-17@npm:0.6.3":
-  version: 0.6.3
-  resolution: "@wojtekmaj/enzyme-adapter-react-17@npm:0.6.3"
+"@wojtekmaj/enzyme-adapter-react-17@npm:0.6.5":
+  version: 0.6.5
+  resolution: "@wojtekmaj/enzyme-adapter-react-17@npm:0.6.5"
   dependencies:
     "@wojtekmaj/enzyme-adapter-utils": ^0.1.1
     enzyme-shallow-equal: ^1.0.0
@@ -4230,7 +4230,7 @@ __metadata:
     enzyme: ^3.0.0
     react: ^17.0.0-0
     react-dom: ^17.0.0-0
-  checksum: b1c5754d61163c7dac781c359f5332cefe02daf3d1bda7528943b75eb9ac7ab561a76aac486e795c32177e533151032ee21cf833fc36a4c3362be7e2286f4742
+  checksum: 110f9a8a59ccc61ab5e1be47e15f61903b5868960872e1c8925c68dced184067cea47404e15e15d9d07c4d526d7e7b5324b81d885ff037dab6451dabf12e8f1f
   languageName: node
   linkType: hard
 
