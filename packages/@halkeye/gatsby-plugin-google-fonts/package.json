@@ -18,7 +18,7 @@
   "devDependencies": {
     "@types/node": "16.9.4",
     "babel-jest": "27.3.1",
-    "babel-preset-gatsby": "1.14.0",
+    "babel-preset-gatsby": "2.0.0",
     "identity-obj-proxy": "3.0.0",
     "jest": "27.3.1",
     "react": "17.0.2",
@@ -26,7 +26,7 @@
     "typescript": "4.4.4"
   },
   "peerDependencies": {
-    "gatsby": "^3.1.1"
+    "gatsby": "^3.1.1 || ^4.0.0"
   },
   "homepage": "https://github.com/pocorschi/@halkeye/gatsby-plugin-google-fonts",
   "keywords": [
@@ -41,7 +41,7 @@
   "dependencies": {
     "@types/jest": "^27.0.1",
     "@types/react": "^17.0.3",
-    "babel-preset-gatsby-package": "^1.1.0",
+    "babel-preset-gatsby-package": "^2.0.0",
     "gatsby-plugin-ts": "^3.0.0",
     "ts-jest": "^27.0.5"
   }
