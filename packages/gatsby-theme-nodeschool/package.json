@@ -62,7 +62,7 @@
     "babel-eslint": "10.1.0",
     "eslint": "7.32.0",
     "eslint-plugin-babel": "5.3.1",
-    "eslint-plugin-jest": "25.2.2",
+    "eslint-plugin-jest": "25.2.3",
     "eslint-plugin-promise": "5.1.1",
     "gatsby": "4.1.0",
     "gh-pages": "3.2.3",
