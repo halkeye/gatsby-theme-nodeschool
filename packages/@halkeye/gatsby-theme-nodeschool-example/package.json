@@ -5,8 +5,8 @@
   "version": "1.0.0",
   "author": "Gavin Mogan <npm@gavinmogan.com>",
   "dependencies": {
-    "gatsby": "4.1.1",
-    "gatsby-plugin-manifest": "4.1.0",
+    "gatsby": "4.1.2",
+    "gatsby-plugin-manifest": "4.1.1",
     "gatsby-plugin-sentry": "1.0.1",
     "gatsby-source-filesystem": "4.1.0",
     "gatsby-theme-nodeschool": "workspace:*",
@@ -45,7 +45,7 @@
     "eslint-plugin-babel": "5.3.1",
     "eslint-plugin-jest": "25.2.4",
     "eslint-plugin-promise": "5.1.1",
-    "gatsby": "4.1.1",
+    "gatsby": "4.1.2",
     "jest": "27.3.1"
   },
   "workspaces": [
