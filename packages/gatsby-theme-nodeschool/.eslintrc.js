@@ -1,7 +1,7 @@
 /* eslint-env node */
 module.exports = {
   "root": true,
-  "parser": `babel-eslint`,
+  "parser": `@babel/eslint-parser`,
   "extends": [
     `eslint:recommended`,
     `plugin:react/recommended`,
@@ -11,7 +11,7 @@ module.exports = {
     `plugin:jest/recommended`,
   ],
   "plugins": [
-    `babel`,
+    `@babel`,
     `import`,
     `jest`,
     `jsx-a11y`,
@@ -23,7 +23,7 @@ module.exports = {
     "import/extensions": [`.js`, `.jsx`],
     "import/resolver": {
       "node": {
-        "extensions": [`.js`,`.jsx`],
+        "extensions": [`.js`, `.jsx`],
       },
     },
     "linkComponents": [
@@ -32,11 +32,10 @@ module.exports = {
   },
   "rules": {
     "array-bracket-spacing": [`error`, `never`],
-    "babel/new-cap": 1,
-    "babel/no-invalid-this": 1,
-    "babel/no-unused-expressions": 1,
-    "babel/semi": [2, `always`],
-    "babel/valid-typeof": 1,
+    "@babel/new-cap": 1,
+    "@babel/no-invalid-this": 1,
+    "@babel/no-unused-expressions": 1,
+    "@babel/semi": [2, `always`],
     "brace-style": [`error`, `1tbs`],
     "comma-dangle": [`error`, `always-multiline`],
     "implicit-arrow-linebreak": [`error`, `beside`],
@@ -54,7 +53,7 @@ module.exports = {
     "no-undef": [`error`],
     "no-var": `error`,
     "object-curly-spacing": [`error`, `always`],
-    "quotes":[`error`, `backtick`],
+    "quotes": [`error`, `backtick`],
     "react/jsx-no-undef": [`error`],
     "react/no-children-prop": `error`,
     "react/no-danger": `off`,
