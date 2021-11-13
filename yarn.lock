@@ -133,7 +133,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/eslint-plugin@npm:^7.14.5":
+"@babel/eslint-plugin@npm:7.14.5":
   version: 7.14.5
   resolution: "@babel/eslint-plugin@npm:7.14.5"
   dependencies:
@@ -2282,7 +2282,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@halkeye/gatsby-theme-nodeschool-example@workspace:packages/@halkeye/gatsby-theme-nodeschool-example"
   dependencies:
-    "@babel/eslint-plugin": ^7.14.5
+    "@babel/eslint-plugin": 7.14.5
     eslint: 8.2.0
     eslint-plugin-babel: 5.3.1
     eslint-plugin-jest: 25.2.4
@@ -10145,7 +10145,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "gatsby-theme-nodeschool@workspace:packages/gatsby-theme-nodeschool"
   dependencies:
-    "@babel/eslint-plugin": ^7.14.5
+    "@babel/eslint-plugin": 7.14.5
     "@emotion/core": ^11.0.0
     "@emotion/react": ^11.4.1
     "@emotion/styled": ^11.3.0
