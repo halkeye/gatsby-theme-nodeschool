@@ -10178,7 +10178,7 @@ __metadata:
     gh-pages: 3.2.3
     i18next: ^21.0.0
     jest: 27.3.1
-    lint-staged: 12.0.0
+    lint-staged: 12.0.1
     mkdirp: ^1.0.4
     node-sass: ^6.0.1
     npm-run-all: 4.1.5
@@ -13476,9 +13476,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lint-staged@npm:12.0.0":
-  version: 12.0.0
-  resolution: "lint-staged@npm:12.0.0"
+"lint-staged@npm:12.0.1":
+  version: 12.0.1
+  resolution: "lint-staged@npm:12.0.1"
   dependencies:
     cli-truncate: 3.1.0
     colorette: ^2.0.16
@@ -13494,7 +13494,7 @@ __metadata:
     supports-color: 9.0.2
   bin:
     lint-staged: bin/lint-staged.js
-  checksum: 70405751b543497011b53f3be4cdf2054df92efc56b44ab586ec394aa35c75f576918fb38245ec43861596a492c0aeaf18a52f2ed2638e5f7fce0d220e4829a9
+  checksum: 0a3a0cd6b5dc57c66736baeed3eb00eab4a07ac43fac19460f94606d66079fec153bd61bb9ac384f6a8e99dae41cdd3c9a8454ea3971ce6443d7611a418cbb88
   languageName: node
   linkType: hard
 
