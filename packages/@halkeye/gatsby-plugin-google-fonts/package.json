@@ -16,7 +16,7 @@
     "coverage": "jest --coverage"
   },
   "devDependencies": {
-    "@types/node": "16.11.10",
+    "@types/node": "16.11.11",
     "babel-jest": "27.4.0",
     "babel-preset-gatsby": "2.2.0",
     "identity-obj-proxy": "3.0.0",
