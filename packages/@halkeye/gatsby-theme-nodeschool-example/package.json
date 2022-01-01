@@ -41,7 +41,7 @@
   },
   "devDependencies": {
     "@babel/eslint-plugin": "7.14.5",
-    "eslint": "8.5.0",
+    "eslint": "8.6.0",
     "eslint-plugin-babel": "5.3.1",
     "eslint-plugin-jest": "25.3.3",
     "eslint-plugin-promise": "5.2.0",
