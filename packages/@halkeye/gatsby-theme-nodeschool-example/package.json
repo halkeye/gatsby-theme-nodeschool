@@ -46,7 +46,7 @@
     "eslint-plugin-jest": "25.3.4",
     "eslint-plugin-promise": "5.2.0",
     "gatsby": "4.4.0",
-    "jest": "27.4.6"
+    "jest": "27.4.7"
   },
   "workspaces": [
     "../gatsby-theme-localization",
