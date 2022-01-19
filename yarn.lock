@@ -2481,7 +2481,7 @@ __metadata:
     "@wojtekmaj/enzyme-adapter-react-17": 0.6.6
     chokidar: ^3.5.2
     enzyme: 3.11.0
-    gatsby: 4.5.3
+    gatsby: 4.5.4
     gatsby-plugin-react-i18next: ^1.1.1
     i18next: ^21.0.0
     i18next-xhr-backend: ^3.1.2
@@ -2507,7 +2507,7 @@ __metadata:
     eslint-plugin-babel: 5.3.1
     eslint-plugin-jest: 25.7.0
     eslint-plugin-promise: 5.2.0
-    gatsby: 4.5.3
+    gatsby: 4.5.4
     gatsby-plugin-manifest: 4.5.2
     gatsby-plugin-sentry: 1.0.1
     gatsby-source-filesystem: 4.5.2
@@ -10336,7 +10336,7 @@ __metadata:
     eslint-plugin-babel: 5.3.1
     eslint-plugin-jest: 25.7.0
     eslint-plugin-promise: 5.2.0
-    gatsby: 4.5.3
+    gatsby: 4.5.4
     gatsby-plugin-catch-links: ^4.0.0
     gatsby-plugin-emotion: ^7.0.0
     gatsby-plugin-mdx: ^3.0.0
@@ -10417,9 +10417,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby@npm:4.5.3":
-  version: 4.5.3
-  resolution: "gatsby@npm:4.5.3"
+"gatsby@npm:4.5.4":
+  version: 4.5.4
+  resolution: "gatsby@npm:4.5.4"
   dependencies:
     "@babel/code-frame": ^7.14.0
     "@babel/core": ^7.15.5
@@ -10575,7 +10575,7 @@ __metadata:
     react-dom: ^16.9.0 || ^17.0.0
   bin:
     gatsby: ./cli.js
-  checksum: a86444b3d033bdf7e3dcbf886d1e4d74efeba48c79edbdf24e3945301635152fb7b6d3a04fba0da7356ac725a44ac3ee6e3ea8ebfdc29d217670fb36c143f6b5
+  checksum: 73b7f221b6c2036d66c68bd2e509502b3c5ffc1529e2bba3c5f1102ce58d5fe33c1fde344dd0fa3753381a719e5950c2b03e54697727cfee61475089779b6bff
   languageName: node
   linkType: hard
 
