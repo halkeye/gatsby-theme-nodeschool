@@ -18,7 +18,7 @@
   "devDependencies": {
     "@types/node": "16.11.21",
     "babel-jest": "27.4.6",
-    "babel-preset-gatsby": "2.5.2",
+    "babel-preset-gatsby": "2.6.0",
     "identity-obj-proxy": "3.0.0",
     "jest": "27.4.7",
     "react": "17.0.2",
