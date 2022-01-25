@@ -148,15 +148,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/eslint-plugin@npm:7.14.5":
-  version: 7.14.5
-  resolution: "@babel/eslint-plugin@npm:7.14.5"
+"@babel/eslint-plugin@npm:7.16.5":
+  version: 7.16.5
+  resolution: "@babel/eslint-plugin@npm:7.16.5"
   dependencies:
     eslint-rule-composer: ^0.3.0
   peerDependencies:
     "@babel/eslint-parser": ">=7.11.0"
     eslint: ">=7.5.0"
-  checksum: 7aa5868ee9f2396da650067eb2c918011d830e0aca7af87ed361d6de8c182c2f6535fa1acc8711f76b3d52fc91e50b2784d5756d628d3af9cc93593fd115fafa
+  checksum: 479fb45cb7adf9c9cc02e8bc15a704e94b0eb5b961b9a66381994557d644aa7f4ffe9d7e6d16ed4ac5d2f7929f38d68bf0062f54f19cac9efa1f62e9b6f48a42
   languageName: node
   linkType: hard
 
@@ -2502,7 +2502,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@halkeye/gatsby-theme-nodeschool-example@workspace:packages/@halkeye/gatsby-theme-nodeschool-example"
   dependencies:
-    "@babel/eslint-plugin": 7.14.5
+    "@babel/eslint-plugin": 7.16.5
     eslint: 8.7.0
     eslint-plugin-babel: 5.3.1
     eslint-plugin-jest: 25.7.0
@@ -10343,7 +10343,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "gatsby-theme-nodeschool@workspace:packages/gatsby-theme-nodeschool"
   dependencies:
-    "@babel/eslint-plugin": 7.14.5
+    "@babel/eslint-plugin": 7.16.5
     "@emotion/core": ^11.0.0
     "@emotion/react": ^11.4.1
     "@emotion/styled": ^11.3.0
