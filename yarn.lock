@@ -2506,7 +2506,7 @@ __metadata:
     eslint: 8.8.0
     eslint-plugin-babel: 5.3.1
     eslint-plugin-jest: 26.0.0
-    eslint-plugin-promise: 5.2.0
+    eslint-plugin-promise: 6.0.0
     gatsby: 4.6.0
     gatsby-plugin-manifest: 4.6.0
     gatsby-plugin-sentry: 1.0.1
@@ -8586,12 +8586,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-promise@npm:5.2.0":
-  version: 5.2.0
-  resolution: "eslint-plugin-promise@npm:5.2.0"
+"eslint-plugin-promise@npm:6.0.0":
+  version: 6.0.0
+  resolution: "eslint-plugin-promise@npm:6.0.0"
   peerDependencies:
-    eslint: ^7.0.0
-  checksum: 5d6b2d28408c5afde6386942862427af3d83c9a130eb2555bb54b26a1761914e2c7326aca1be26dd3fee6405e65a2ee9432a4526147e5962545060ea0ef64058
+    eslint: ^7.0.0 || ^8.0.0
+  checksum: 7e761507c51267b77e4ad710e7c8938aa4f8f69b975886034e57497a1816e9527eda364e25aac03d1b4e0df2e738ba98e49ad075d028824fcfea533a1419751c
   languageName: node
   linkType: hard
 
@@ -10355,7 +10355,7 @@ __metadata:
     eslint: 8.8.0
     eslint-plugin-babel: 5.3.1
     eslint-plugin-jest: 26.0.0
-    eslint-plugin-promise: 5.2.0
+    eslint-plugin-promise: 6.0.0
     gatsby: 4.6.0
     gatsby-plugin-catch-links: ^4.0.0
     gatsby-plugin-emotion: ^7.0.0
