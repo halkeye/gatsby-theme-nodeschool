@@ -2481,7 +2481,7 @@ __metadata:
     "@wojtekmaj/enzyme-adapter-react-17": 0.6.6
     chokidar: ^3.5.2
     enzyme: 3.11.0
-    gatsby: 4.7.0
+    gatsby: 4.7.1
     gatsby-plugin-react-i18next: ^1.1.1
     i18next: ^21.0.0
     i18next-xhr-backend: ^3.1.2
@@ -2507,7 +2507,7 @@ __metadata:
     eslint-plugin-babel: 5.3.1
     eslint-plugin-jest: 26.1.0
     eslint-plugin-promise: 6.0.0
-    gatsby: 4.7.0
+    gatsby: 4.7.1
     gatsby-plugin-manifest: 4.7.0
     gatsby-plugin-sentry: 1.0.1
     gatsby-source-filesystem: 4.7.0
@@ -9826,9 +9826,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-link@npm:^4.7.0":
-  version: 4.7.0
-  resolution: "gatsby-link@npm:4.7.0"
+"gatsby-link@npm:^4.7.1":
+  version: 4.7.1
+  resolution: "gatsby-link@npm:4.7.1"
   dependencies:
     "@babel/runtime": ^7.15.4
     "@types/reach__router": ^1.3.10
@@ -9838,7 +9838,7 @@ __metadata:
     "@gatsbyjs/reach-router": ^1.3.5
     react: ^16.9.0 || ^17.0.0
     react-dom: ^16.9.0 || ^17.0.0
-  checksum: e5a725a69cddb81b24c00a7a887a9cd22a030009363731000bb61dcf828e2b4f10454b4db58ebb9a0d77cd92d24fc5b4b34b4cce662fb4808f91e76d4b92fe3c
+  checksum: 307d9550d33f53d8723e5fa52af6791d4f58209bd5c07ddf82a3687d54b434ec21d4de1c51f3127ca7ce68115fcefc837bec47e40bdd33f25165bdc71c8ab898
   languageName: node
   linkType: hard
 
@@ -10362,7 +10362,7 @@ __metadata:
     eslint-plugin-babel: 5.3.1
     eslint-plugin-jest: 26.1.0
     eslint-plugin-promise: 6.0.0
-    gatsby: 4.7.0
+    gatsby: 4.7.1
     gatsby-plugin-catch-links: ^4.0.0
     gatsby-plugin-emotion: ^7.0.0
     gatsby-plugin-mdx: ^3.0.0
@@ -10443,9 +10443,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby@npm:4.7.0":
-  version: 4.7.0
-  resolution: "gatsby@npm:4.7.0"
+"gatsby@npm:4.7.1":
+  version: 4.7.1
+  resolution: "gatsby@npm:4.7.1"
   dependencies:
     "@babel/code-frame": ^7.14.0
     "@babel/core": ^7.15.5
@@ -10518,7 +10518,7 @@ __metadata:
     gatsby-core-utils: ^3.7.0
     gatsby-graphiql-explorer: ^2.7.0
     gatsby-legacy-polyfills: ^2.7.0
-    gatsby-link: ^4.7.0
+    gatsby-link: ^4.7.1
     gatsby-page-utils: ^2.7.0
     gatsby-plugin-page-creator: ^4.7.0
     gatsby-plugin-typescript: ^4.7.0
@@ -10606,7 +10606,7 @@ __metadata:
       optional: true
   bin:
     gatsby: ./cli.js
-  checksum: 4ba609495c84b8457bd7d41aacbdb0a70043655b8847a45f1118be4137795e19af695988a0fb5102a9fbf54cfc1b049f57ac0312d4255d2955d1b4fa6ed11534
+  checksum: defa3d2c3a69ecaa7533c99be9d53861ca93d5fb6185387a09d3a49dbf923f4c785c072c763f7ff42e4ed98d0bd349057b891af9312f814951fffb7811047a8d
   languageName: node
   linkType: hard
 
