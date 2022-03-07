@@ -2494,7 +2494,7 @@ __metadata:
     "@wojtekmaj/enzyme-adapter-react-17": 0.6.6
     chokidar: ^3.5.2
     enzyme: 3.11.0
-    gatsby: 4.9.1
+    gatsby: 4.9.2
     gatsby-plugin-react-i18next: ^1.1.1
     i18next: ^21.0.0
     i18next-xhr-backend: ^3.1.2
@@ -2520,7 +2520,7 @@ __metadata:
     eslint-plugin-babel: 5.3.1
     eslint-plugin-jest: 26.1.1
     eslint-plugin-promise: 6.0.0
-    gatsby: 4.9.1
+    gatsby: 4.9.2
     gatsby-plugin-manifest: 4.9.0
     gatsby-plugin-sentry: 1.0.1
     gatsby-source-filesystem: 4.9.0
@@ -11087,7 +11087,7 @@ __metadata:
     eslint-plugin-babel: 5.3.1
     eslint-plugin-jest: 26.1.1
     eslint-plugin-promise: 6.0.0
-    gatsby: 4.9.1
+    gatsby: 4.9.2
     gatsby-plugin-catch-links: ^4.0.0
     gatsby-plugin-emotion: ^7.0.0
     gatsby-plugin-mdx: ^3.0.0
@@ -11168,9 +11168,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby@npm:4.9.1":
-  version: 4.9.1
-  resolution: "gatsby@npm:4.9.1"
+"gatsby@npm:4.9.2":
+  version: 4.9.2
+  resolution: "gatsby@npm:4.9.2"
   dependencies:
     "@babel/code-frame": ^7.14.0
     "@babel/core": ^7.15.5
@@ -11268,7 +11268,7 @@ __metadata:
     joi: ^17.4.2
     json-loader: ^0.5.7
     latest-version: 5.1.0
-    lmdb: 2.2.1
+    lmdb: ^2.2.3
     lodash: ^4.17.21
     md5-file: ^5.0.0
     meant: ^1.0.3
@@ -11333,7 +11333,7 @@ __metadata:
       optional: true
   bin:
     gatsby: ./cli.js
-  checksum: ff7eec47cfcfe56fc7394a3bfa2056e2eb218879cde675e5e6370d81d0eacfa62f47eb5e8ae91d8dc407cfa0a58cc59fa43912c239d7eccac3c32a38d1e98d7f
+  checksum: a38f9897566688feb53b9148d34b0b040ac8235e8aa29b5e12380a9143b31fee98bafbd54f46344869d5acf504dcbbdddad9455446a0efb6d0c785c63dc11cca
   languageName: node
   linkType: hard
 
@@ -14488,20 +14488,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lmdb@npm:2.2.1":
-  version: 2.2.1
-  resolution: "lmdb@npm:2.2.1"
-  dependencies:
-    msgpackr: ^1.5.4
-    nan: ^2.14.2
-    node-gyp: latest
-    node-gyp-build: ^4.2.3
-    ordered-binary: ^1.2.4
-    weak-lru-cache: ^1.2.2
-  checksum: ee47e0dbfab6950f24ec252534149b789105d87ceb3a3ce4e8d0f3966e5b710a9ba92302f7c873d7910e7dd899f2994410627363a17f80092487184467029569
-  languageName: node
-  linkType: hard
-
 "lmdb@npm:^2.0.2":
   version: 2.2.3
   resolution: "lmdb@npm:2.2.3"
@@ -14527,6 +14513,20 @@ __metadata:
     ordered-binary: ^1.2.4
     weak-lru-cache: ^1.2.2
   checksum: 6030a2ddc80bbc72e5ec5174efea8d7b714575fe2894f4cc843fa1da29c1f097501f8f802649f2f74fa76c02b3d4bcb031a4d61109406094977dd1ecbccec2e7
+  languageName: node
+  linkType: hard
+
+"lmdb@npm:^2.2.3":
+  version: 2.2.4
+  resolution: "lmdb@npm:2.2.4"
+  dependencies:
+    msgpackr: ^1.5.4
+    nan: ^2.14.2
+    node-gyp: latest
+    node-gyp-build: ^4.2.3
+    ordered-binary: ^1.2.4
+    weak-lru-cache: ^1.2.2
+  checksum: df75e8ae266fb0676320366ba8847fe1e6c3c43af1c28c08eba35a35cb68c8f0be06ae305a9fecd6e2db2504dc92462da442272778facc6a8a0d953fbf0267ff
   languageName: node
   linkType: hard
 
