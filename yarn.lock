@@ -2490,7 +2490,7 @@ __metadata:
     "@types/jest": 27.5.2
     "@types/node": ^16.9.4
     "@types/react": ^17.0.21
-    "@types/react-dom": ^17.0.9
+    "@types/react-dom": ^18.0.0
     "@wojtekmaj/enzyme-adapter-react-17": 0.8.0
     chokidar: ^3.5.2
     enzyme: 3.11.0
@@ -4628,12 +4628,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-dom@npm:^17.0.9":
-  version: 17.0.9
-  resolution: "@types/react-dom@npm:17.0.9"
+"@types/react-dom@npm:^18.0.0":
+  version: 18.0.9
+  resolution: "@types/react-dom@npm:18.0.9"
   dependencies:
     "@types/react": "*"
-  checksum: b7e898e1a22643a371f58e801a3d1d8cf13a82d77063c24be73e840ef8d877ca1d04adc5db168d0dac3167dc050a26b1d70efc5fe8566a7f46a3c488a8322989
+  checksum: e744e3feba25fc43733289d4df4d9c0e59fcca7f34e8c89d75f81a339accb2bd70236d69382d47d2c0ad06a1529b2e56aa6171fe175854d60e07156ddceedfcb
   languageName: node
   linkType: hard
 
