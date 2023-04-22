@@ -1,6 +1,6 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "gatsby-plugin-react-i18next";
 
 const FollowTwitter = () => {
   const { t } = useTranslation();
@@ -13,13 +13,16 @@ const FollowTwitter = () => {
       }
     }
   `);
+  if (!data.site.siteMetadata.twitter) {
+    return;
+  }
   return (
     <p>
       <a
-        href={`https://twitter.com/${data.site.siteMetadata.twitter}`}
+        href={`https://twitter.com/${data.site.siteMetadata.twitter }`}
         className="twitter-follow-button"
         data-show-count="false"
-      >{t(`Follow`)} @{data.site.siteMetadata.twitter}</a>
+      >{t('Follow @{{twitter}}', { twitter: data.site.siteMetadata.twitter })}</a>
     </p>
   );
 

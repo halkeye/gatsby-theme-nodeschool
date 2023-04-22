@@ -2,56 +2,44 @@
 const withDefault = require(`./src/default-options`);
 const url = require(`url`);
 
-const loadLanguageResources = (languages, languageNamespaces) => languages.reduce((resources, language) =>{
-    resources[language] = languageNamespaces.reduce((langNamespaces, namespace) =>{
-      langNamespaces[namespace] = require(`${__dirname}/src/locales/${language}/${namespace}.json`);
-      return langNamespaces;
-    }, {});
-    return resources;
-  }, {});
-
 module.exports = (options = {}) => {
-  const themeOptions = withDefault(options);
-  const languages = [themeOptions.defaultLanguage];
-  const languageNamespaces = [`translation`];
+  const themeOptions = withDefault(options); // FIXME - move in here
+  console.log('themeOptions', themeOptions);
   return {
     siteMetadata: themeOptions,
     pathPrefix: themeOptions.url ? url.parse(themeOptions.url).path : ``,
     plugins: [
       {
-        resolve: `@halkeye/gatsby-theme-localization`,
+        resolve: `gatsby-plugin-react-i18next`,
         options: {
-          languages: languages,
-          namespaces: languageNamespaces,
-          localesDir: `${__dirname}/src/locales`,
-          allowIndex: true,
-          defaultLng: themeOptions.defaultLanguage,
-          i18next: {
-            resources: loadLanguageResources(languages, languageNamespaces),
-            fallbackLng: {
-              default: [themeOptions.defaultLanguage],
-            },
-            react: {
-              wait: false,
-              useSuspense: false,
-            },
+          localeJsonSourceName: `translations`, // name given to `gatsby-source-filesystem` plugin.
+          defaultLanguage: themeOptions.defaultLanguage,
+          fallbackLanguage: 'en',
+          languages: [themeOptions.defaultLanguage,],
+          redirect: false,
+          // defaultLanguage: themeOptions.defaultLanguage,
+          siteUrl: themeOptions.url,
+          // if you are using trailingSlash gatsby config include it here, as well (the default is 'always')
+          trailingSlash: 'always',
+          // you can pass any i18next options
+          i18nextOptions: {
+            lng: themeOptions.defaultLanguage,
             debug: process.env.NODE_ENV !== `production`,
+            transSupportBasicHtmlNodes: true,
+            transKeepBasicHtmlNodesFor: ['br', 'strong', 'i', 'p', 'code'],
             interpolation: {
-              escapeValue: false,
+              escapeValue: false // not needed for react as it escapes by default
             },
+            keySeparator: false,
+            nsSeparator: false
           },
-          i18nPlugin: {
-            langKeyDefault: themeOptions.defaultLanguage,
-            useLangKeyLayout: false,
-            prefixDefault: false,
-          },
-        },
+        }
       },
       `gatsby-plugin-slug`,
       `gatsby-plugin-emotion`,
       `gatsby-plugin-react-helmet`,
       {
-        resolve: `@halkeye/gatsby-plugin-google-fonts`,
+        resolve: `@halkeye/gatsby-plugin-google-fonts-v2`,
         options: {
           fonts: [
             {
@@ -61,7 +49,12 @@ module.exports = (options = {}) => {
           ],
         },
       },
-      `gatsby-plugin-sass`,
+      {
+        resolve: `gatsby-plugin-postcss`,
+        options: {
+          postCssPlugins: [require(`postcss-preset-env`)({stage: 0})],
+        },
+      },
       `gatsby-plugin-sharp`,
       `gatsby-transformer-sharp`,
       `gatsby-transformer-yaml`,
@@ -95,13 +88,15 @@ module.exports = (options = {}) => {
         options: {
           name: `images`,
           path: `${__dirname}/src/images`,
+          ignore: ['.keep'],
         },
       },
       {
         resolve: `gatsby-source-filesystem`,
         options: {
-          path: `data/docs`,
-          name: `docs`,
+          name: `translations`,
+          path: `${__dirname}/src/locales`,
+          ignore: ['.keep'],
         },
       },
       {
@@ -117,11 +112,20 @@ module.exports = (options = {}) => {
                 linkImagesToOriginal: false,
               },
             },
-            { resolve: `gatsby-remark-copy-linked-files` },
-            { resolve: `gatsby-remark-smartypants` },
+            {resolve: `gatsby-remark-copy-linked-files`},
+            {resolve: `gatsby-remark-smartypants`},
           ],
         },
       },
-    ].filter(Boolean),
+    ].concat(...['attendees', 'mentors', 'photos', 'docs', 'sponsors', ''].map(section => {
+      return {
+        resolve: `gatsby-source-filesystem`,
+        options: {
+          path: `data/${section}`,
+          name: section || undefined,
+          ignore: ['.keep'],
+        },
+      };
+    })).filter(Boolean)
   };
 };

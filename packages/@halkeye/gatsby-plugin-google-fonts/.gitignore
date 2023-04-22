@@ -1,8 +1,0 @@
-/*.js
-/*.ts
-/*.map
-!index.js
-yarn.lock
-coverage
-*.log
-node_modules

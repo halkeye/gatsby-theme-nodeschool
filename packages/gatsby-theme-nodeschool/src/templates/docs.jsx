@@ -9,11 +9,14 @@ export const query = graphql`
     mdx(id: { eq: $id }) {
       id
       body
-      frontmatter {
-        title
-      }
       fields {
         slug
+      }
+      parent {
+        ... on File {
+          name
+          absolutePath
+        }
       }
     }
   }
@@ -21,9 +24,9 @@ export const query = graphql`
 
 const MDXPage = ({ data }) => (
   <Layout>
-    <SEO title={data.mdx.frontmatter.title || data.mdx.fields.slug} />
+    <SEO title={data.mdx.parent.name || data.mdx.fields.slug} />
 
-    <h1>{data.mdx.frontmatter.title}</h1>
+    <h1>{data.mdx.parent.name}</h1>
     <div>
       <MDXRenderer>{data.mdx.body}</MDXRenderer>
     </div>

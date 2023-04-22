@@ -1,0 +1,96 @@
+/* Navigation */
+.nav {
+  height: 100%;
+  position: fixed;
+  background: var(--accent);
+  z-index: 9999;
+  width: 80px;
+  transition: width 0.2s;
+  overflow: hidden;
+}
+.nav:hover {
+  width: 280px;
+}
+.nav:hover + main {
+  transform: translate3d(200px, 0, 0);
+}
+@media screen and (max-width: 800px) {
+  .nav {
+    display: none;
+ }
+}
+.nav ul, .nav li {
+  margin: 0;
+  padding: 0;
+}
+.nav li {
+  list-style: none;
+}
+.nav li a {
+  width: 280px;
+  height: 80px;
+  display: block;
+  position: relative;
+  transition: background ease-in-out 0.2s;
+  border-bottom: 1px solid rgba(0, 0, 0, );
+}
+.nav li a:hover {
+  background: var(--highlight);
+}
+.nav li a:hover:before, .nav li a:hover:after {
+  color: var(--accent);
+}
+.nav li a:before {
+  content: "";
+  font-family: "icon";
+  font-size: 20px;
+  padding: 28px 0 0 0;
+  line-height: 100%;
+  text-align: center;
+  left: 0;
+  top: 0;
+  position: absolute;
+  display: block;
+  height: 80px;
+  width: 80px;
+  color: var(--highlight);
+  transition: color ease-in-out 0.2s;
+}
+.nav li a.home:before {
+  content: "";
+}
+.nav li a.community:before {
+  content: "";
+}
+.nav li a.events:before {
+  content: "";
+}
+.nav li a.faq:before {
+  content: "";
+}
+.nav li a.mentors:before {
+  content: "";
+}
+.nav li a.attendees:before {
+  content: "";
+}
+.nav li a.photos:before {
+  content: "";
+}
+.nav li a.code:before {
+  content: "";
+}
+.nav li a:after {
+  content: attr(data-text);
+  color: var(--highlight);
+  position: absolute;
+  top: 0;
+  left: 80px;
+  padding: 38px 0 0;
+  display: block;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  white-space: nowrap;
+  transition: color ease-in-out 0.2s;
+}

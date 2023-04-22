@@ -1,0 +1,143 @@
+/* Event Badge */
+
+.event .timeline .row:after {
+  content: " ";
+  display: table;
+}
+.event .timeline .row:after {
+  clear: both;
+}
+.event .timeline .row {
+  *zoom: 1;
+}
+.event {
+  margin: 0;
+  box-shadow: 0 0 30px var(--darken-15-accent);
+  background: var(--secondary);
+  color: var(--tertiary);
+}
+.event a, .event a:link, .event a:visited, .event a:active, .event p a, .event p a:link, .event p a:visited, .event p a:active {
+  color: var(--tertiary);
+  padding: 0 0 1px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, );
+}
+.event .register {
+  display: inline-block;
+  width: 100%;
+  font-size: 20px;
+  line-height: 180%;
+  font-weight: 100;
+  padding: 0 25px;
+  transition: all ease-in-out 0.2s;
+  position: relative;
+}
+.event .register strong {
+  display: inline-block;
+  font-weight: 600;
+}
+@media screen and (max-width: 800px) {
+  .event .register {
+    padding-left: 20px;
+ }
+}
+.event .register:before, .event .register:after {
+  font-family: "icon";
+}
+.event .register:before {
+  content: "";
+  font-size: 24px;
+  display: inline-block;
+  padding: 0 25px 0 8px;
+  margin: 0;
+}
+.event .additional {
+  padding: 20px 20px 30px 100px;
+  margin: 0;
+  position: relative;
+  font-weight: 100;
+  line-height: 200%;
+}
+.event .additional:before {
+  content: "";
+  font-family: "icon";
+  display: block;
+  position: absolute;
+  top: 50px;
+  left: 35px;
+  font-size: 32px;
+}
+.event .schedule, .event .location {
+  line-height: 100%;
+  padding: 30px 20px 20px 90px;
+  margin: 0 0 10px 0;
+  position: relative;
+  font-size: 18px;
+  font-weight: 100;
+}
+.event .schedule:before, .event .location:before {
+  content: "";
+  font-family: "icon";
+  font-size: 24px;
+  display: block;
+  position: absolute;
+  top: 30px;
+  left: 35px;
+}
+.event .location > p {
+  margin: 0;
+}
+.event .schedule {
+  border-top: 1px solid rgba(0, 0, 0, );
+  border-bottom: 1px solid rgba(0, 0, 0, );
+  padding-bottom: 30px;
+  margin: 0;
+}
+.event .schedule:before {
+  content: "";
+}
+.event .timeline {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: block;
+}
+.event .timeline .row {
+  list-style: none;
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  line-height: 180%;
+  border-bottom: 1px solid rgba(0, 0, 0, );
+}
+.event .timeline .row .time, .event .timeline .row .name {
+  display: block;
+  float: left;
+  padding: 20px;
+  text-align: left;
+}
+.event .timeline .row .time {
+  width: 30%;
+  padding: 20px 10px 20px 30px;
+  font-weight: 600;
+}
+.event .timeline .row .name {
+  width: 70%;
+  font-size: 100;
+  border-left: 1px solid rgba(0, 0, 0, );
+}
+.event .map {
+  width: 100%;
+  height: 0;
+  padding: 52.26% 0 0 0;
+  position: relative;
+  background: var(--darken-5-secondary);
+  transition: border-color ease-in-out 0.2s;
+}
+.event .map iframe {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}

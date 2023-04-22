@@ -1,0 +1,13 @@
+/* Variables */
+:root {
+  --base: #333333;
+  --accent: #C0493D;
+  --darken-15-accent: #86332b;
+  --highlight: #e5e1cf;
+  --secondary: #e5e1cf;
+  --darken-5-secondary: #dcd7be;
+  --darken-10-secondary: #d3ccae;
+  --lighten-10-secondary: #f7f6f0;
+  --tertiary: #544f3b;
+}
+

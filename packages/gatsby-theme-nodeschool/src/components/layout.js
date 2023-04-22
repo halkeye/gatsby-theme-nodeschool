@@ -8,7 +8,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import "../scss/index.scss";
+import "../css/index.css";
 
 import styled from "@emotion/styled";
 
@@ -22,7 +22,7 @@ const BodyContainer = styled.div`
   box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 `;
 
-const Layout = ({ noWrapper, children }) => {
+const Layout = ({noWrapper, children}) => {
   return (
     <>
       <div>
