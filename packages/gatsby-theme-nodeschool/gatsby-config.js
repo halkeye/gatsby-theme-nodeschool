@@ -4,7 +4,7 @@ const url = require(`url`);
 
 module.exports = (options = {}) => {
   const themeOptions = withDefault(options); // FIXME - move in here
-  console.log('themeOptions', themeOptions);
+  console.log(`themeOptions`, themeOptions);
   return {
     siteMetadata: themeOptions,
     pathPrefix: themeOptions.url ? url.parse(themeOptions.url).path : ``,
@@ -14,26 +14,26 @@ module.exports = (options = {}) => {
         options: {
           localeJsonSourceName: `translations`, // name given to `gatsby-source-filesystem` plugin.
           defaultLanguage: themeOptions.defaultLanguage,
-          fallbackLanguage: 'en',
-          languages: [themeOptions.defaultLanguage,],
+          fallbackLanguage: `en`,
+          languages: [themeOptions.defaultLanguage],
           redirect: false,
           // defaultLanguage: themeOptions.defaultLanguage,
           siteUrl: themeOptions.url,
           // if you are using trailingSlash gatsby config include it here, as well (the default is 'always')
-          trailingSlash: 'always',
+          trailingSlash: `always`,
           // you can pass any i18next options
           i18nextOptions: {
             lng: themeOptions.defaultLanguage,
             debug: process.env.NODE_ENV !== `production`,
             transSupportBasicHtmlNodes: true,
-            transKeepBasicHtmlNodesFor: ['br', 'strong', 'i', 'p', 'code'],
+            transKeepBasicHtmlNodesFor: [`br`, `strong`, `i`, `p`, `code`],
             interpolation: {
-              escapeValue: false // not needed for react as it escapes by default
+              escapeValue: false, // not needed for react as it escapes by default
             },
             keySeparator: false,
-            nsSeparator: false
+            nsSeparator: false,
           },
-        }
+        },
       },
       `gatsby-plugin-slug`,
       `gatsby-plugin-emotion`,
@@ -52,7 +52,7 @@ module.exports = (options = {}) => {
       {
         resolve: `gatsby-plugin-postcss`,
         options: {
-          postCssPlugins: [require(`postcss-preset-env`)({stage: 0})],
+          postCssPlugins: [require(`postcss-preset-env`)({ stage: 0 })],
         },
       },
       `gatsby-plugin-sharp`,
@@ -88,7 +88,7 @@ module.exports = (options = {}) => {
         options: {
           name: `images`,
           path: `${__dirname}/src/images`,
-          ignore: ['.keep'],
+          ignore: [`.keep`],
         },
       },
       {
@@ -96,7 +96,7 @@ module.exports = (options = {}) => {
         options: {
           name: `translations`,
           path: `${__dirname}/src/locales`,
-          ignore: ['.keep'],
+          ignore: [`.keep`],
         },
       },
       {
@@ -112,20 +112,20 @@ module.exports = (options = {}) => {
                 linkImagesToOriginal: false,
               },
             },
-            {resolve: `gatsby-remark-copy-linked-files`},
-            {resolve: `gatsby-remark-smartypants`},
+            { resolve: `gatsby-remark-copy-linked-files` },
+            { resolve: `gatsby-remark-smartypants` },
           ],
         },
       },
-    ].concat(...['attendees', 'mentors', 'photos', 'docs', 'sponsors', ''].map(section => {
+    ].concat(...[`attendees`, `mentors`, `photos`, `docs`, `sponsors`, ``].map(section => {
       return {
         resolve: `gatsby-source-filesystem`,
         options: {
           path: `data/${section}`,
           name: section || undefined,
-          ignore: ['.keep'],
+          ignore: [`.keep`],
         },
       };
-    })).filter(Boolean)
+    })).filter(Boolean),
   };
 };

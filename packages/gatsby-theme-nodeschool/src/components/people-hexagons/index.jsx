@@ -8,9 +8,9 @@ const PeopleHexagons = ({ people }) => (
         id: person.id,
         href: person.twitter ? `https://twitter.com/${person.twitter}` : `https://github.com/${person.github}`,
         image: `https://avatars3.githubusercontent.com/${ person.github }?v=3&amp;s=120`,
-        rel: "noopener noreferrer",
-        target: "_blank"
-      }
+        rel: `noopener noreferrer`,
+        target: `_blank`,
+      };
   })} />
 );
 

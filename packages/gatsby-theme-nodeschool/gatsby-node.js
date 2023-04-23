@@ -4,8 +4,8 @@ const path = require(`path`);
 const debug = require(`debug`)(`gatsby-theme-nodeschool`);
 
 // Ensure that content directories exist at site-level
-exports.onPreBootstrap = async ({store}/*, themeOptions*/) => {
-  const {program} = store.getState();
+exports.onPreBootstrap = async ({ store }/*, themeOptions*/) => {
+  const { program } = store.getState();
 
   const dirs = [
     path.join(program.directory, `data/attendees`),
@@ -17,7 +17,7 @@ exports.onPreBootstrap = async ({store}/*, themeOptions*/) => {
 
   for (const dir of dirs) {
     debug(`Initializing ${dir} directory`);
-    await fs.promises.mkdir(dir, {recursive: true});
+    await fs.promises.mkdir(dir, { recursive: true });
   }
 };
 
@@ -25,8 +25,8 @@ exports.onPreBootstrap = async ({store}/*, themeOptions*/) => {
 // const PostTemplate = require.resolve(`./src/templates/posts-query`)
 const docsPageTemplate = require.resolve(`./src/templates/docs.jsx`);
 
-exports.createPages = async ({graphql, actions, reporter}/*, themeOptions*/) => {
-  const {createPage} = actions;
+exports.createPages = async ({ graphql, actions, reporter }/*, themeOptions*/) => {
+  const { createPage } = actions;
   // const { basePath } = withDefaults(themeOptions);
 
   const result = await graphql(`
@@ -49,7 +49,7 @@ exports.createPages = async ({graphql, actions, reporter}/*, themeOptions*/) => 
   }
 
   // Create a page for each Post
-  result.data.allMdx.edges.forEach(({node}) => {
+  result.data.allMdx.edges.forEach(({ node }) => {
     createPage({
       path: node.fields.slug,
       component: docsPageTemplate,
@@ -60,23 +60,23 @@ exports.createPages = async ({graphql, actions, reporter}/*, themeOptions*/) => 
   });
 };
 
-exports.onCreateNode = ({node, getNode, actions}) => {
-  const {createNodeField} = actions
+exports.onCreateNode = ({ node, getNode, actions }) => {
+  const { createNodeField } = actions;
 
-  if (node.internal.type === "Mdx") {
+  if (node.internal.type === `Mdx`) {
     // the source name will be on this parent node
-    const {sourceInstanceName} = getNode(node.parent)
+    const { sourceInstanceName } = getNode(node.parent);
 
     // add the source name to the Mdx node
     createNodeField({
       node,
-      name: "source",
-      value: sourceInstanceName
-    })
+      name: `source`,
+      value: sourceInstanceName,
+    });
   }
-}
-exports.createSchemaCustomization = ({actions}) => {
-  const {createTypes} = actions;
+};
+exports.createSchemaCustomization = ({ actions }) => {
+  const { createTypes } = actions;
   createTypes(`
     type SponsorsYaml implements Node {
       name: String

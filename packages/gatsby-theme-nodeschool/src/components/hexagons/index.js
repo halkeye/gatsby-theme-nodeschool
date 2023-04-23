@@ -34,13 +34,13 @@ const Container = styled.div`
   }
 `;
 
-const Hexagons = ({data}) => (
+const Hexagons = ({ data }) => (
   <Container>
     {data.map(d => (
       <RealHexagon
         key={d.id}
         href={d.href}
-        style={{backgroundColor: 'white'}}
+        style={{ backgroundColor: `white` }}
         backgroundImage={d.image}
         rel={d.rel}
         target={d.target}

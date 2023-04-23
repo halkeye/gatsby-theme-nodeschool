@@ -1,5 +1,5 @@
 import React from "react";
-import { useTranslation, Trans} from "gatsby-plugin-react-i18next";
+import { useTranslation, Trans } from "gatsby-plugin-react-i18next";
 
 const Community = () => {
   const { t } = useTranslation();
@@ -10,7 +10,7 @@ const Community = () => {
       <Trans>
         The NodeSchool community is <strong>open to anyone</strong>.
 
-        Whether you're able to attend an event or not, you can join the discussion around learning Node.
+        Whether you&apos;re able to attend an event or not, you can join the discussion around learning Node.
       </Trans>
     </>
   );

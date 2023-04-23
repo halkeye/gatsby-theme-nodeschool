@@ -1,10 +1,10 @@
 import React from "react";
-import {useStaticQuery, graphql} from "gatsby";
-import {useTranslation, Trans} from "gatsby-plugin-react-i18next";
+import { useStaticQuery, graphql } from "gatsby";
+import { useTranslation, Trans } from "gatsby-plugin-react-i18next";
 import formatDateLocaleString from "../../helpers/formatDateLocaleString";
 
 export const UpcomingEvents = () => {
-  const {t, i18n} = useTranslation();
+  const { t, i18n } = useTranslation();
   const data = useStaticQuery(graphql`
     query {
       allMeetupEvent(
@@ -60,7 +60,7 @@ export const UpcomingEvents = () => {
       <div key={edge.node.id}>
         <p className="register">
           <Trans>
-            <strong><a href={edge.node.link} title={t('Registration Link')}>Register</a></strong> for our event on <strong>{{date: formatDateLocaleString(new Date(edge.node.time), i18n.language)}}</strong>
+            <strong><a href={edge.node.link} title={t(`Registration Link`)}>Register</a></strong> for our event on <strong>{{ date: formatDateLocaleString(new Date(edge.node.time), i18n.language) }}</strong>
           </Trans>
         </p>
         {edge.node.venue && (
@@ -79,7 +79,7 @@ export const UpcomingEvents = () => {
                 width="600"
                 height="450"
                 frameBorder="0"
-                style={{border: 0}}
+                style={{ border: 0 }}
                 allowFullScreen
               ></iframe>
             </div>

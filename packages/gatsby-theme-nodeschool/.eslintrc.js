@@ -1,7 +1,6 @@
 /* eslint-env node */
 module.exports = {
   "root": true,
-  "parser": `@babel/eslint-parser`,
   "extends": [
     `eslint:recommended`,
     `plugin:react/recommended`,
@@ -9,6 +8,7 @@ module.exports = {
     `plugin:import/errors`,
     `plugin:import/warnings`,
     `plugin:jest/recommended`,
+    `react-app`,
   ],
   "plugins": [
     `@babel`,

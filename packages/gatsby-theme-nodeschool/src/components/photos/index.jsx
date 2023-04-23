@@ -37,8 +37,8 @@ const Photos = () => {
           id: edge.node.id,
           href: edge.node.childImageSharp.original.src,
           image: edge.node.childImageSharp.fixed.src,
-          rel: "noopener noreferrer",
-            target:"_blank"
+          rel: `noopener noreferrer`,
+            target:`_blank`,
         };
       })} />
     </>

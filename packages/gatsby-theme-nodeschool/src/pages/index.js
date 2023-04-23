@@ -1,6 +1,6 @@
 import React from "react";
-import {graphql} from "gatsby";
-import {useTranslation, Trans} from "gatsby-plugin-react-i18next";
+import { graphql } from "gatsby";
+import { useTranslation, Trans } from "gatsby-plugin-react-i18next";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
@@ -14,8 +14,8 @@ import Photos from "../components/photos";
 import NodeSchoolChapterLogo from "../components/NodeSchoolChapterLogo";
 import EventFooter from "../components/events/footer";
 
-const IndexPage = ({data}) => {
-  const {t} = useTranslation();
+const IndexPage = ({ data }) => {
+  const { t } = useTranslation();
   const nodeschoolTitle = data.site.siteMetadata.title;
   return (
     <Layout noWrapper>
@@ -60,8 +60,8 @@ const IndexPage = ({data}) => {
 
             <h2 id="events">{t(`Events`)}</h2>
             <p>
-              <Trans values={{nodeschoolTitle}}>
-                <strong>{{nodeschoolTitle}}</strong> events are run by an enthusiastic group of volunteers. The workshops will be held monthly and will always be free.
+              <Trans values={{ nodeschoolTitle }}>
+                <strong>{{ nodeschoolTitle }}</strong> events are run by an enthusiastic group of volunteers. The workshops will be held monthly and will always be free.
               </Trans>
             </p>
             <p>
@@ -102,7 +102,7 @@ const IndexPage = ({data}) => {
             </pre></code>
             <p className="indent">
               <Trans>
-                <strong>2.</strong> Once installed, run <code>{{brewInstall: "brew install node"}}</code> which should install the latest version of Node.
+                <strong>2.</strong> Once installed, run <code>{{ brewInstall: `brew install node` }}</code> which should install the latest version of Node.
               </Trans>
             </p>
             <p>
@@ -128,20 +128,20 @@ const IndexPage = ({data}) => {
             <h2 id="codeofconduct">{t(`Code of Conduct`)}</h2>
 
             <p>
-              <Trans values={{nodeschoolTitle}}>
-                We, the organizers of <strong>{{nodeschoolTitle}}</strong> are dedicated to providing a harassment-free community for everyone, regardless of sex, gender identity or expression, sexual orientation, disability, physical appearance, age, body size, race, nationality, or religious beliefs.
+              <Trans values={{ nodeschoolTitle }}>
+                We, the organizers of <strong>{{ nodeschoolTitle }}</strong> are dedicated to providing a harassment-free community for everyone, regardless of sex, gender identity or expression, sexual orientation, disability, physical appearance, age, body size, race, nationality, or religious beliefs.
 
                 We do not tolerate harassment of community members in any form.
 
-                Participants violating these rules may be sanctioned or expelled from the community at the discretion of the organizers of <strong>{{nodeschoolTitle}}</strong>.
+                Participants violating these rules may be sanctioned or expelled from the community at the discretion of the organizers of <strong>{{ nodeschoolTitle }}</strong>.
               </Trans>
             </p>
 
             <p>
-              <Trans values={{nodeschoolTitle}}>
+              <Trans values={{ nodeschoolTitle }}>
                 Harassment includes offensive verbal or written comments related to sex, gender identity or expression, sexual orientation, disability, physical appearance, age, body size, race, nationality, or religious beliefs, deliberate intimidation, threats, stalking, following, harassing photography or recording, sustained disruption of talks or other events, inappropriate physical contact, and unwelcome sexual attention.
 
-                Sexual language and imagery is not appropriate for any events at <strong>{{nodeschoolTitle}}</strong> meetups or in any related communication channels.
+                Sexual language and imagery is not appropriate for any events at <strong>{{ nodeschoolTitle }}</strong> meetups or in any related communication channels.
 
                 Community members asked to stop any harassing behavior are expected to comply immediately.
 
@@ -150,8 +150,8 @@ const IndexPage = ({data}) => {
             </p>
 
             <p>
-              <Trans values={{nodeschoolTitle}}>
-                If a community member engages in harassing behavior, the organizers of <strong>{{nodeschoolTitle}}</strong> may take any action they deem appropriate, including warning the offender or expulsion from the community.
+              <Trans values={{ nodeschoolTitle }}>
+                If a community member engages in harassing behavior, the organizers of <strong>{{ nodeschoolTitle }}</strong> may take any action they deem appropriate, including warning the offender or expulsion from the community.
 
                 If you are being harassed, notice that someone else is being harassed, or have any concerns, please contact an organizer immediately.
               </Trans>
@@ -161,8 +161,8 @@ const IndexPage = ({data}) => {
               <h2 id="credit">{t(`Credits`)}</h2>
 
               <p className="credit">
-                <Trans values={{nodeschoolTitle}}>
-                  The <strong>{{nodeschoolTitle}}</strong> Hex Logo was kindly designed by <a href={data.site.siteMetadata.credits.logo.url} rel="noopener noreferrer" target="_blank" >{{logoAuthor: data.site.siteMetadata.credits.logo.name}}</a>.
+                <Trans values={{ nodeschoolTitle }}>
+                  The <strong>{{ nodeschoolTitle }}</strong> Hex Logo was kindly designed by <a href={data.site.siteMetadata.credits.logo.url} rel="noopener noreferrer" target="_blank" >{{ logoAuthor: data.site.siteMetadata.credits.logo.name }}</a>.
                 </Trans>
               </p>
 
@@ -202,7 +202,7 @@ const IndexPage = ({data}) => {
                 <img src={data.schoolhouseImage.publicURL} alt={data.site.siteMetadata.title} />
                 <p className="about">
                   <Trans>
-                    <strong>NodeSchool</strong> is a selection of open source workshops that teach web software skills. You can do them on your own or at one of the monthly <strong>{{nodeschoolTitle}}</strong> events.
+                    <strong>NodeSchool</strong> is a selection of open source workshops that teach web software skills. You can do them on your own or at one of the monthly <strong>{{ nodeschoolTitle }}</strong> events.
                   </Trans>
                 </p>
               </a>

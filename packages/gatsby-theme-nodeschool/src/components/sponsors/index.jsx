@@ -37,7 +37,7 @@ const Sponsors = () => {
           id: edge.node.name,
           href: edge.node.link,
           image: edge.node.logo?.childImageSharp?.fixed?.src || edge.node.logo?.publicURL,
-        }
+        };
       })} />
     </>
   );

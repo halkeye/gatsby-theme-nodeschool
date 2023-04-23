@@ -22,7 +22,7 @@ const FollowTwitter = () => {
         href={`https://twitter.com/${data.site.siteMetadata.twitter }`}
         className="twitter-follow-button"
         data-show-count="false"
-      >{t('Follow @{{twitter}}', { twitter: data.site.siteMetadata.twitter })}</a>
+      >{t(`Follow @{{twitter}}`, { twitter: data.site.siteMetadata.twitter })}</a>
     </p>
   );
 
