@@ -2,14 +2,14 @@
   "name": "root",
   "private": true,
   "scripts": {
-    "lerna:build": "lerna run build --include-dependencies --stream",
-    "lerna:clean": "lerna run clean --include-dependencies --stream",
-    "lerna:outdated": "npm outdated && npx lerna exec --no-bail -- npm outdated",
-    "dev": "yarn workspace @halkeye/gatsby-theme-nodeschool-example run dev --stream",
-    "lint": "yarn workspaces foreach -p -v run lint"
+    "pre-commit": "npm run pre-commit --workspaces --if-present",
+    "lint": "npm run lint --workspaces",
+    "test": "npm run test --workspaces",
+    "build": "npm run build --workspaces",
+    "dev": "npm run dev --workspace=@halkeye/gatsby-theme-nodeschool-example"
   },
   "workspaces": [
     "packages/@halkeye/*",
-    "packages/*"
+    "packages/gatsby-theme-nodeschool"
   ]
 }

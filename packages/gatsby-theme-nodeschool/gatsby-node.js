@@ -1,13 +1,10 @@
 /* eslint-env node */
 const fs = require(`fs`);
 const path = require(`path`);
-const mkdirp = require(`mkdirp`);
 const debug = require(`debug`)(`gatsby-theme-nodeschool`);
 
-// const withDefaults = require(`./src/default-options`);
-
 // Ensure that content directories exist at site-level
-exports.onPreBootstrap = ({ store }/*, themeOptions*/) => {
+exports.onPreBootstrap = async ({ store }/*, themeOptions*/) => {
   const { program } = store.getState();
 
   const dirs = [
@@ -15,14 +12,13 @@ exports.onPreBootstrap = ({ store }/*, themeOptions*/) => {
     path.join(program.directory, `data/mentors`),
     path.join(program.directory, `data/photos`),
     path.join(program.directory, `data/docs`),
+    path.join(program.directory, `data/sponsors`),
   ];
 
-  dirs.forEach(dir => {
+  for (const dir of dirs) {
     debug(`Initializing ${dir} directory`);
-    if (!fs.existsSync(dir)) {
-      mkdirp.sync(dir);
-    }
-  });
+    await fs.promises.mkdir(dir, { recursive: true });
+  }
 };
 
 // These templates are simply data-fetching wrappers that import components
@@ -38,10 +34,13 @@ exports.createPages = async ({ graphql, actions, reporter }/*, themeOptions*/) =
       allMdx {
         edges {
           node {
+            id
             fields {
               slug
             }
-            id
+            internal {
+              contentFilePath
+            }
           }
         }
       }
@@ -56,10 +55,63 @@ exports.createPages = async ({ graphql, actions, reporter }/*, themeOptions*/) =
   result.data.allMdx.edges.forEach(({ node }) => {
     createPage({
       path: node.fields.slug,
-      component: docsPageTemplate,
+      component: `${docsPageTemplate}?__contentFilePath=${node.internal.contentFilePath}`,
       context: {
         id: node.id,
       },
     });
   });
+};
+
+exports.onCreateNode = ({ node, getNode, actions }) => {
+  const { createNodeField } = actions;
+
+  if (node.internal.type === `Mdx`) {
+    // the source name will be on this parent node
+    const { sourceInstanceName } = getNode(node.parent);
+
+    // add the source name to the Mdx node
+    createNodeField({
+      node,
+      name: `source`,
+      value: sourceInstanceName,
+    });
+  }
+};
+exports.createSchemaCustomization = ({ actions }) => {
+  const { createTypes } = actions;
+  createTypes(`
+    type SponsorsYaml implements Node {
+      name: String
+      logo: File @fileByRelativePath
+      link: String
+    }
+
+    type MentorsYaml implements Node {
+      name: String
+      twitter: String
+      github: String
+    }
+    type SiteSiteMetadata {
+      title: String
+      description: String
+      defaultLanguage: String
+      url: String
+      twitter: String
+      github: String
+      slack: String
+      meetupGroup: String
+      email: String
+      mailchimpSubscribeUrl: String
+      credits: SiteSiteMetadataCredits
+      author: String
+    }
+    type SiteSiteMetadataCredits {
+      logo: SiteSiteMetadataCreditsLogo
+    }
+    type SiteSiteMetadataCreditsLogo {
+      name: String
+      url: String
+    }
+  `);
 };

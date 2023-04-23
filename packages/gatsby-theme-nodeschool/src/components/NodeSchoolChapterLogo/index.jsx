@@ -1,9 +1,9 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
-import { useTranslation } from "react-i18next";
+import { useTranslation, Trans } from "gatsby-plugin-react-i18next";
 
 const NodeSchoolChapterLogo = () => {
-  const { t } = useTranslation();
+  useTranslation();
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -44,9 +44,7 @@ const NodeSchoolChapterLogo = () => {
         letterSpacing: `-1px`,
         color: `#C0493D`, // FIXME - siteMeta color
       }}>
-        {t(`Welcome to`)}
-        <br />
-        {data.site.siteMetadata.title}
+        <Trans>Welcome to the <br/>{{ nodeschoolTitle: data.site.siteMetadata.title }}</Trans>
       </h1>
     </div>
   );

@@ -1,8 +1,11 @@
 /* eslint-env node */
 module.exports = {
   "root": true,
-  "parser": `@babel/eslint-parser`,
+  "globals": {
+    "__PATH_PREFIX__": true,
+  },
   "extends": [
+    `react-app`,
     `eslint:recommended`,
     `plugin:react/recommended`,
     `plugin:jsx-a11y/recommended`,

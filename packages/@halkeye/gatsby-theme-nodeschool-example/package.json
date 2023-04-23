@@ -5,14 +5,14 @@
   "version": "1.0.0",
   "author": "Gavin Mogan <npm@gavinmogan.com>",
   "dependencies": {
-    "gatsby": "4.9.2",
-    "gatsby-plugin-manifest": "4.9.0",
+    "gatsby": "5.8.1",
+    "gatsby-plugin-manifest": "5.8.0",
     "gatsby-plugin-sentry": "1.0.1",
-    "gatsby-source-filesystem": "4.9.0",
-    "gatsby-theme-nodeschool": "workspace:*",
-    "gh-pages": "3.2.3",
-    "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "gatsby-source-filesystem": "5.8.0",
+    "gatsby-theme-nodeschool": "*",
+    "gh-pages": "5.0.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
   },
   "license": "MIT",
   "scripts": {
@@ -40,16 +40,14 @@
     ]
   },
   "devDependencies": {
-    "@babel/eslint-plugin": "7.19.1",
-    "eslint": "8.28.0",
-    "eslint-plugin-babel": "5.3.1",
-    "eslint-plugin-jest": "26.1.1",
-    "eslint-plugin-promise": "6.0.0",
-    "gatsby": "4.9.2",
-    "jest": "27.5.1"
+    "eslint": "8.38.0",
+    "eslint-config-react-app": "^7.0.1",
+    "eslint-plugin-import": "latest",
+    "eslint-plugin-jest": "27.2.1",
+    "eslint-plugin-promise": "6.1.1",
+    "jest": "29.5.0"
   },
   "workspaces": [
-    "../gatsby-theme-localization",
     "../gatsby-theme-nodeschool"
   ]
 }

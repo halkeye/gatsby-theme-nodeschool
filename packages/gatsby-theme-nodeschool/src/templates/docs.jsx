@@ -5,27 +5,38 @@ import Layout from '../components/layout';
 import SEO from "../components/seo";
 
 export const query = graphql`
-  query($id: String!) {
+  query($id: String!, $language: String!) {
+    locales: allLocale(filter: {language: {eq: $language}}) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
     mdx(id: { eq: $id }) {
       id
-      body
-      frontmatter {
-        title
-      }
       fields {
         slug
+      }
+      parent {
+        ... on File {
+          name
+          absolutePath
+        }
       }
     }
   }
 `;
 
-const MDXPage = ({ data }) => (
+const MDXPage = ({ data: { mdx }, children }) => (
   <Layout>
-    <SEO title={data.mdx.frontmatter.title || data.mdx.fields.slug} />
+    <SEO title={mdx.parent.name || mdx.fields.slug} />
 
-    <h1>{data.mdx.frontmatter.title}</h1>
+    <h1>{mdx.parent.name}</h1>
     <div>
-      <MDXRenderer>{data.mdx.body}</MDXRenderer>
+      {children}
     </div>
   </Layout>
 );

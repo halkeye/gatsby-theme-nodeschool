@@ -1,7 +1,7 @@
 pipeline {
   agent {
     docker {
-      image 'node:16'
+      image 'node:18'
     }
   }
 
@@ -18,35 +18,27 @@ pipeline {
   }
 
   stages {
-    stage('Yarn') {
-      steps {
-        sh 'npm install -g yarn'
-        // sh 'yarn plugin import workspace-tools'
-        // sh 'yarn set version berry'
-      }
-    }
-
     stage('Install') {
       steps {
-        sh 'yarn install'
+        sh 'npm install'
       }
     }
 
     stage('Lint') {
       steps {
-        sh 'yarn lint'
+        sh 'npm run lint'
       }
     }
 
     stage('Test') {
       steps {
-        sh 'yarn test'
+        sh 'npm run test'
       }
     }
 
     stage('Build') {
       steps {
-        sh 'yarn build'
+        sh 'npm run build'
         sh 'test -e packages/@halkeye/gatsby-theme-nodeschool-example/public/index.html || exit 1'
       }
     }
@@ -63,7 +55,7 @@ pipeline {
           git config --global user.name "jenkins.gavinmogan.com"
 
           git remote set-url origin "${DEPLOY_URL}"
-          yarn workspace @halkeye/gatsby-theme-nodeschool-example run deploy:github
+          npm run deploy:github --workspace @halkeye/gatsby-theme-nodeschool-example 
         '''
       }
     }

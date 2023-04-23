@@ -1,0 +1,68 @@
+/* Event Badge */
+.mailinglist:after {
+  content: " ";
+  display: table;
+}
+.mailinglist:after {
+  clear: both;
+}
+.mailinglist {
+  *zoom: 1;
+}
+.mailinglist {
+  margin: 40px 0 0 -40px;
+  padding: 40px;
+  width: calc(100% + 80px);
+  background: var(--lighten-10-secondary);
+  color: var(--tertiary);
+  font-size: 16px;
+  position: relative;
+}
+.mailinglist h3 {
+  margin-top: 0;
+}
+.mailinglist h3:before {
+  content: "";
+  font-family: "icon";
+  font-size: 16px;
+  display: inline-block;
+  margin: 0 10px 0 0;
+}
+.mailinglist label {
+  display: block;
+  margin: 0 0 10px;
+}
+.mailinglist label span, .mailinglist label input {
+  display: block;
+  border: none;
+  width: 100%;
+}
+.mailinglist label span {
+  margin: 0 0 10px;
+}
+.mailinglist label input {
+  padding: 15px 10px;
+  font-size: 18px;
+}
+.mailinglist input[type=submit] {
+  border: none;
+  background: var(--accent);
+  display: block;
+  margin: 20px auto 0;
+  color: var(--lighten-10-secondary);
+  width: 100%;
+  padding: 15px 30px;
+  font-size: 20px;
+  border-radius: 3px;
+  font-weight: 600;
+}
+.mailinglist .firstname, .mailinglist .lastname {
+  width: calc(50% - 10px);
+  float: left;
+}
+.mailinglist .lastname {
+  float: right;
+}
+.mailinglist .email {
+  clear: both;
+}

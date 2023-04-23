@@ -1,7 +1,0 @@
-/*.ts
-/*.map
-!index.ts
-yarn.lock
-coverage
-*.log
-node_modules
