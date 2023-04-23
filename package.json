@@ -5,7 +5,7 @@
     "pre-commit": "npm run pre-commit --workspaces --if-present",
     "lint": "npm run lint --workspaces",
     "test": "npm run test --workspaces",
-    "build": "npm run build --workspaces",
+    "build": "npm run build --workspaces --if-present",
     "dev": "npm run dev --workspace=@halkeye/gatsby-theme-nodeschool-example"
   },
   "workspaces": [

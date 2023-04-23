@@ -5,10 +5,10 @@
   "version": "1.0.0",
   "author": "Gavin Mogan <npm@gavinmogan.com>",
   "dependencies": {
-    "gatsby": "5.8.1",
-    "gatsby-plugin-manifest": "5.8.0",
+    "gatsby": "5.9.0",
+    "gatsby-plugin-manifest": "5.9.0",
     "gatsby-plugin-sentry": "1.0.1",
-    "gatsby-source-filesystem": "5.8.0",
+    "gatsby-source-filesystem": "5.9.0",
     "gatsby-theme-nodeschool": "*",
     "gh-pages": "5.0.0",
     "react": "18.2.0",
@@ -40,7 +40,7 @@
     ]
   },
   "devDependencies": {
-    "eslint": "8.38.0",
+    "eslint": "8.39.0",
     "eslint-config-react-app": "^7.0.1",
     "eslint-plugin-import": "latest",
     "eslint-plugin-jest": "27.2.1",
