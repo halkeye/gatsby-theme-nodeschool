@@ -1,41 +1,10 @@
 import React from "react";
 import PropTypes from 'prop-types';
-import styled from "@emotion/styled";
 import RealHexagon from 'react-hexagon';
-
-const Container = styled.div`
-  display: grid;
-  grid-gap: 0px;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 0.25fr));
-
-  width: 100%;
-  z-index: 900;
-  transform: translate3d(-5%, 0, 0);
-  position: relative;
-
-  &:hover {
-    svg {
-      transition: opacity 0.3s, transform 0.2s;
-      opacity: 0.25;
-      &:hover {
-        opacity: 1 !important;
-        transform: scale(1.5);
-        z-index: 9999;
-      }
-    }
-  }
-  svg {
-    padding: 0;
-    margin: 0;
-    polygon {
-      stroke: transparent !important;
-      stroke-width: 0 !important;
-    }
-  }
-`;
+import * as styles from './style.module.css';
 
 const Hexagons = ({ data }) => (
-  <Container>
+  <div className={styles.container}>
     {data.map(d => (
       <RealHexagon
         key={d.id}
@@ -46,7 +15,7 @@ const Hexagons = ({ data }) => (
         target={d.target}
       />
     ))}
-  </Container>
+  </div>
 );
 
 Hexagons.propTypes = {

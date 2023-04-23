@@ -1,11 +1,12 @@
 /* eslint-env node */
 const withDefault = require(`./src/default-options`);
+const path = require(`path`);
 const url = require(`url`);
 
 module.exports = (options = {}) => {
   const themeOptions = withDefault(options); // FIXME - move in here
   console.log(`themeOptions`, themeOptions);
-  return {
+  const config = {
     siteMetadata: themeOptions,
     pathPrefix: themeOptions.url ? url.parse(themeOptions.url).path : ``,
     plugins: [
@@ -36,7 +37,6 @@ module.exports = (options = {}) => {
         },
       },
       `gatsby-plugin-slug`,
-      `gatsby-plugin-emotion`,
       `gatsby-plugin-react-helmet`,
       {
         resolve: `@halkeye/gatsby-plugin-google-fonts-v2`,
@@ -117,15 +117,18 @@ module.exports = (options = {}) => {
           ],
         },
       },
-    ].concat(...[`attendees`, `mentors`, `photos`, `docs`, `sponsors`, ``].map(section => {
-      return {
-        resolve: `gatsby-source-filesystem`,
-        options: {
-          path: `data/${section}`,
-          name: section || undefined,
-          ignore: [`.keep`],
-        },
-      };
-    })).filter(Boolean),
+    ].filter(Boolean),
   };
+  [`attendees`, `mentors`, `photos`, `docs`, `sponsors`, ``].forEach(section => {
+    config.plugins.unshift({
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: path.join(process.cwd(), `data`, section),
+        name: section || undefined,
+        ignore: [`.keep`],
+      },
+    });
+  });
+  return config;
+
 };

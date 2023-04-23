@@ -8,8 +8,8 @@ const Photos = () => {
   const data = useStaticQuery(graphql`
     query {
       allFile(
-        filter: {sourceInstanceName: {eq: "photos"}},
-        sort: {relativePath: DESC}
+        filter: { relativeDirectory: {eq: "photos"}, relativePath: {ne: "photos/.keep"} },
+        sort: { relativePath: DESC }
       ) {
         edges {
           node {
@@ -22,8 +22,6 @@ const Photos = () => {
               }
             }
             id
-            relativeDirectory
-            relativePath
           }
         }
       }

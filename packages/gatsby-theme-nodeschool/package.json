@@ -25,15 +25,11 @@
     "node": ">= 18"
   },
   "dependencies": {
-    "@emotion/core": "^11.0.0",
-    "@emotion/react": "^11.10.6",
-    "@emotion/styled": "^11.10.6",
     "@halkeye/gatsby-plugin-google-fonts-v2": "^1.0.2",
     "@mdx-js/mdx": "^2.3.0",
     "@mdx-js/react": "^2.3.0",
     "dateformat": "^5.0.3",
     "gatsby-plugin-catch-links": "^5.8.0",
-    "gatsby-plugin-emotion": "^8.8.0",
     "gatsby-plugin-mdx": "^5.8.0",
     "gatsby-plugin-offline": "^6.8.0",
     "gatsby-plugin-postcss": "^6.8.0",

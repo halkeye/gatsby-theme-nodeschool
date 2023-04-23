@@ -9,26 +9,12 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import "../css/index.css";
-
-import styled from "@emotion/styled";
-
-const BodyContainer = styled.div`
-  margin: 5em;
-  padding: 1em;
-  background: white;
-  color: black;
-  min-height: 100%;
-  height: 100%;
-  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-`;
+import * as styles from './layout.module.css';
 
 const Layout = ({ noWrapper, children }) => {
   return (
     <>
-      <div>
-        {noWrapper && <main>{children}</main>}
-        {!noWrapper && <BodyContainer>{children}</BodyContainer>}
-      </div>
+      <main className={noWrapper ? `` : styles.bodywrapper}>{children}</main>
     </>
   );
 };
