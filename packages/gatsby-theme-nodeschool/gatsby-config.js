@@ -25,6 +25,7 @@ module.exports = (options = {}) => {
           // you can pass any i18next options
           i18nextOptions: {
             lng: themeOptions.defaultLanguage,
+            fallbackLanguage: `en`,
             debug: process.env.NODE_ENV !== `production`,
             transSupportBasicHtmlNodes: true,
             transKeepBasicHtmlNodesFor: [`br`, `strong`, `i`, `p`, `code`],
@@ -103,18 +104,20 @@ module.exports = (options = {}) => {
         resolve: `gatsby-plugin-mdx`,
         options: {
           extensions: [`.mdx`, `.md`],
-          gatsbyRemarkPlugins: [
-            {
-              resolve: `gatsby-remark-images`,
-              options: {
-                // should this be configurable by the end-user?
-                maxWidth: 1380,
-                linkImagesToOriginal: false,
+          mdxOptions: {
+            remarkPlugins: [
+              {
+                resolve: `gatsby-remark-images`,
+                options: {
+                  // should this be configurable by the end-user?
+                  maxWidth: 1380,
+                  linkImagesToOriginal: false,
+                },
               },
-            },
-            { resolve: `gatsby-remark-copy-linked-files` },
-            { resolve: `gatsby-remark-smartypants` },
-          ],
+              { resolve: `gatsby-remark-copy-linked-files` },
+              { resolve: `gatsby-remark-smartypants` },
+            ],
+          },
         },
       },
     ].filter(Boolean),

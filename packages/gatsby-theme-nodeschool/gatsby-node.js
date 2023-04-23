@@ -34,10 +34,13 @@ exports.createPages = async ({ graphql, actions, reporter }/*, themeOptions*/) =
       allMdx {
         edges {
           node {
+            id
             fields {
               slug
             }
-            id
+            internal {
+              contentFilePath
+            }
           }
         }
       }
@@ -52,7 +55,7 @@ exports.createPages = async ({ graphql, actions, reporter }/*, themeOptions*/) =
   result.data.allMdx.edges.forEach(({ node }) => {
     createPage({
       path: node.fields.slug,
-      component: docsPageTemplate,
+      component: `${docsPageTemplate}?__contentFilePath=${node.internal.contentFilePath}`,
       context: {
         id: node.id,
       },
