@@ -47,4 +47,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         with:
-          working-directory: ./packages/gatsby-theme-nodeschool
+          working_directory: ./packages/gatsby-theme-nodeschool
