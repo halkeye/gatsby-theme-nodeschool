@@ -21,11 +21,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Harden Runner
+        uses: step-security/harden-runner@128a63446a954579617e875aaab7d2978154e969 # v2.4.0
+        with:
+          egress-policy: audit
+
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@8e5e7e5ab8b370d6c329ec480221332ada57f0ab # v3.5.2
 
       - name: crowdin action
-        uses: crowdin/github-action@v1
+        uses: crowdin/github-action@3cabba4ddfd0579a1236b3fb68405236dc489ccc # v1.8.0
         with:
           upload_sources: true
           upload_translations: true
