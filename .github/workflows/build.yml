@@ -1,0 +1,34 @@
+name: Build and deploy
+on:
+  push:
+    branches:
+      - master
+      - main
+  pull_request:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '18.x'
+
+      - run: npm install
+
+      - name: Verify the integrity of provenance attestations and registry signatures for installed dependencies
+        run: npm audit signatures
+
+      - run: npm run lint
+
+      - run: npm run test
+
+      - run: npm run build
+
+      - run: npm run extract
+        working-directory: packages/gatsby-theme-nodeschool
+
+      - name: Check to see if any dirty files
+        # such as extract
+        run: git diff --exit-code
