@@ -5,7 +5,7 @@
   "version": "1.0.0",
   "author": "Gavin Mogan <npm@gavinmogan.com>",
   "dependencies": {
-    "gatsby": "5.9.0",
+    "gatsby": "5.9.1",
     "gatsby-plugin-manifest": "5.9.0",
     "gatsby-plugin-sentry": "1.0.1",
     "gatsby-source-filesystem": "5.9.0",
