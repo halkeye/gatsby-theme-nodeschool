@@ -5,10 +5,10 @@
   "version": "1.0.0",
   "author": "Gavin Mogan <npm@gavinmogan.com>",
   "dependencies": {
-    "gatsby": "5.10.0",
-    "gatsby-plugin-manifest": "5.10.0",
+    "gatsby": "5.12.4",
+    "gatsby-plugin-manifest": "5.12.0",
     "gatsby-plugin-sentry": "1.0.1",
-    "gatsby-source-filesystem": "5.10.0",
+    "gatsby-source-filesystem": "5.12.0",
     "gatsby-theme-nodeschool": "*",
     "gh-pages": "5.0.0",
     "react": "18.2.0",
