@@ -21,7 +21,7 @@ jobs:
           node-version: '18.x'
           cache: npm
 
-      - run: npm install
+      - run: npm ci
 
       - name: Verify the integrity of provenance attestations and registry signatures for installed dependencies
         run: npm audit signatures
@@ -94,7 +94,7 @@ jobs:
           node-version: '18.x'
           cache: npm
 
-      - run: npm install
+      - run: npm ci
 
       - name: Verify the integrity of provenance attestations and registry signatures for installed dependencies
         run: npm audit signatures
