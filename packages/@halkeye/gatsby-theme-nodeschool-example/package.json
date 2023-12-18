@@ -6,7 +6,7 @@
   "author": "Gavin Mogan <npm@gavinmogan.com>",
   "dependencies": {
     "gatsby": "5.12.12",
-    "gatsby-plugin-manifest": "5.12.3",
+    "gatsby-plugin-manifest": "5.13.0",
     "gatsby-plugin-sentry": "1.0.1",
     "gatsby-source-filesystem": "5.12.1",
     "gatsby-theme-nodeschool": "*",
