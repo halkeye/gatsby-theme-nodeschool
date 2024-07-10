@@ -30,7 +30,7 @@ jobs:
         uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4.1.7
 
       - name: crowdin action
-        uses: crowdin/github-action@c953b17499daa6be3e5afbf7a63616fb02d8b18d # v1.19.0
+        uses: crowdin/github-action@30849777a3cba6ee9a09e24e195272b8287a0a5b # v1.20.4
         with:
           upload_sources: true
           upload_translations: true
