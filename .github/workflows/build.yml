@@ -44,7 +44,7 @@ jobs:
         with:
           path: ./packages/@halkeye/gatsby-theme-nodeschool-example/public
 
-      - uses: actions/cache@e12d46a63a90f2fae62d114769bbf2a179198b5c # v3
+      - uses: actions/cache@f4b3439a656ba812b8cb417d2d49f9c810103092 # v3
         id: restore-build
         with:
           path: ./packages/gatsby-theme-nodeschool/*
@@ -99,7 +99,7 @@ jobs:
       - name: Verify the integrity of provenance attestations and registry signatures for installed dependencies
         run: npm audit signatures
 
-      - uses: actions/cache@e12d46a63a90f2fae62d114769bbf2a179198b5c # v3
+      - uses: actions/cache@f4b3439a656ba812b8cb417d2d49f9c810103092 # v3
         id: restore-build
         with:
           path: ./packages/gatsby-theme-nodeschool/*
