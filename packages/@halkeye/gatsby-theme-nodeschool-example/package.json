@@ -10,7 +10,7 @@
     "gatsby-plugin-sentry": "1.0.1",
     "gatsby-source-filesystem": "5.14.0",
     "gatsby-theme-nodeschool": "*",
-    "gh-pages": "6.2.0",
+    "gh-pages": "6.3.0",
     "react": "18.3.1",
     "react-dom": "18.3.1"
   },
