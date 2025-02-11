@@ -80,7 +80,7 @@
     "babel-jest": "^29.5.0",
     "babel-plugin-i18next-extract": "^1.0.0",
     "babel-preset-gatsby": "^3.9.0",
-    "eslint": "8.57.1",
+    "eslint": "9.20.1",
     "eslint-plugin-babel": "5.3.1",
     "eslint-plugin-jest": "28.11.0",
     "eslint-plugin-promise": "7.2.1",
